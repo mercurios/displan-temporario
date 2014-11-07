@@ -1,0 +1,354 @@
+@charset "utf-8";
+/*Geral*/
+#topo{
+	background-color: #f7f7f7;
+	border: solid 1px #bab3ab;
+	border-top: none;
+	margin-top: auto;
+}
+#logo{
+	background-image: url(../img/logo.png);
+	width: 154px;
+	height: 142px;
+	text-indent: -99999px;
+	margin-top: 30px;
+}
+#contato-topo{
+	margin-top: 15px;
+	float: right;
+	margin-right: -10px;
+}
+#contato-topo .contato-p1{
+	font-size: 12px;
+	margin-left: 20px;
+	color: #606060;
+}
+#contato-topo .contato-p2{
+	font-size: 24px;
+	margin-top: -10px;
+	margin-left: -12px;
+	color: #606060;
+}
+#contato-topo img{
+	float: right;
+	margin-top: -50px;
+	margin-right: 35px;
+}
+img.temp{
+	position: absolute;
+	top: -2px;
+	left: -20px;
+}
+#navbar{
+	margin-left: 440px;
+	margin-top: -45px;
+}
+b.caret{
+	color: black;
+}
+#navbar a.btn{
+	background: none;
+	border: none;
+	box-shadow: none;
+	font-size: 18px;
+	color: #3c4250;
+	font-family: Arial, serif;
+}
+#navbar a.btn:hover{
+	text-decoration: underline;
+}
+#myCarousel{
+	position: absolute;
+	margin-top: -200px;
+	z-index: -1;
+}
+.carousel-ul{
+	list-style: none;
+}
+#wrapper{
+	margin-top: 410px;
+	padding-bottom: 10px;
+	border: solid 1px #bab3ab;
+	box-shadow: 1px 1px 2px #888888;
+}
+#wrapper .title{
+	background-color: #ececec;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#wrapper .title h3{
+	margin-left: 30px;
+	color: #606060;
+}
+#wrapper .content{
+	margin-top: 20px;
+	padding-left: 10px;
+}
+#wrapper .content .border-right{
+	padding-right: 20px;
+	border-right: 1px solid #ececec;
+}
+#wrapper .content h5{
+	font-weight: lighter;
+}
+/*footer*/
+footer{
+	background-color: #2f5094;
+	height: 440px;
+	margin-bottom: 0;
+}
+#footer{
+	margin-left: 110px;
+	margin-top: 20px;
+}
+
+#footer i{
+	margin-right: 5px;
+}
+#footer h4{
+	margin-top: 20px;
+	margin-bottom: -15px;
+}
+#footer h4,
+#footer hr,
+#footer p{
+	color: white;
+}
+#footer p{
+	margin-top: -10px;
+}
+/*formulário*/
+#contato{
+	margin-left: 20px;
+}
+#formulario form{
+	margin-left: -180px;
+}
+#formulario legend, #formulario label{
+	display: none;
+}
+#formulario form input.btn{
+	margin-left: 490px;
+}
+#footer img.phone{
+	width: 14px;
+	height: 14px;
+	float: left;
+	margin-top: 22px;
+	margin-right: 4px;
+}
+#copy{
+	background-color: #26427b;
+	width: 112.5%;
+	margin-left: -130px;
+	color: white;
+	height: 80px;
+}
+#copy address{
+	margin-left: 220px;
+	padding-top: 30px;
+}
+#by h6{
+	padding-left: 5px;
+	padding-top: 5px;
+}
+#by img{
+	margin-top: -10px;
+}
+/*responsividade*/
+@media (max-width: 1024px){
+	#navbar{
+		margin-left: 70px;
+		margin-top: 75px;
+		width: 71%;
+	}
+	#contato-topo{
+		width: 30%;
+	}
+	#myCarousel{
+		margin-top: -182px;
+	}
+	#wrapper{
+		margin-top: 260px;
+	}
+	#footer{
+		margin-left: 82px;
+	}
+	#formulario form fieldset input,
+	#formulario form fieldset textarea{
+		width: 290px;
+	}
+	#formulario form fieldset input.btn{
+		margin-left: 400px;
+		width: 16%;
+	}
+	#copy{
+		width: 114%;
+		margin-top: 10px;
+		margin-left: -102px;
+	}
+	#copy address{
+		margin-left: 120px;
+	}
+}
+@media (max-width: 768px){
+	#logo{
+		margin-top: 40px;
+		margin-left: 20px;
+	}
+	#contato-topo{
+		width: 40%;
+	}
+	#navbar{
+		margin-left: 200px;
+		margin-top: 30px;
+		width: 35%;
+	}
+	#myCarousel{
+		margin-top: -100px;
+	}
+	.a-carousel a{
+		margin-top: -150px;
+	}
+	#wrapper{
+		margin-top: 210px;
+	}
+	#footer{
+		margin-left: 62px;
+	}
+	#footer iframe{
+		height: 250px;
+	}
+	#formulario form fieldset input,
+	#formulario form fieldset textarea{
+		width: 210px;
+	}
+	#formulario form fieldset input.btn{
+		margin-left: 330px;
+	}
+	#copy{
+		width: 115.3%;
+		margin-left: -82px;
+		margin-top: 12px;
+		height: 90px;
+		padding-bottom: 20px;
+	}
+}
+@media (max-width: 480px){
+	#topo{
+		padding-top: 20px;
+	}
+	#logo{
+		margin-left: 140px;
+		margin-top: 0;
+	}
+	#contato-topo{
+		width: 55%;
+		margin-right: 75px;
+		margin-top: 0;
+	}
+	#navbar{
+		margin-top: 70px;
+		margin-left: 120px;
+	}
+	#myCarousel{
+		visibility: hidden;
+	}
+	.a-carousel a{
+		visibility: hidden;
+	}
+	#wrapper{
+		margin-top: 0;
+	}
+	footer{
+		height: 940px;
+		width: 480px;
+		margin-left: -20px;
+	}
+	#footer{
+		margin-left: 10px;
+	}
+	#footer iframe{
+		width: 98%;
+	}
+	#footer #onde-estamos,
+	#footer #nossohorario,
+	#footer #telefone{
+		width: 98%;
+	}
+	#footer #telefone .phone{
+		margin-top: 2px;
+	}
+	#footer #contato{
+		margin-left: 0;
+		width: 98%;
+	}
+	#formulario form fieldset input,
+	#formulario form fieldset textarea{
+		margin-left: 190px;
+		width: 430px;
+	}
+	#formulario form fieldset input.btn{
+		margin-left: 520px;
+	}
+	#copy{
+		width: -30px;
+		height: 150px;
+		margin-left: -30px;
+	}
+	#copy address{
+		margin-left: 30px;
+	}
+	#copy #by{
+		margin-left: 200px;
+	}
+}
+@media (max-width: 320px){
+	#contato-topo{
+		width: 85%;
+		margin-right: 0;
+		margin-top: 0;
+	}
+	#navbar{
+		margin-top: 70px;
+		margin-left: 40px;
+	}
+	#logo{
+		margin-left: 60px;
+		margin-top: 20px;
+	}
+	#wrapper{
+		margin-top: 0;
+	}
+	.a-carousel a{
+		margin-top: 180px;
+	}
+	#footer iframe{
+		margin-left: 2px;
+	}
+	#footer #onde-estamos, #footer #contato, #footer #nossohorario, #footer #telefone{
+		width: 64%;
+	}
+	#formulario form fieldset input,
+	#formulario form fieldset textarea{
+		margin-left: 180px;
+		width: 302px;
+	}
+	#formulario form fieldset input.btn{
+		margin-left: 405px;
+	}
+	#nossohorario{
+		margin-top: -10px;
+	}
+	#copy{
+		width: 74%;
+		height: 150px;
+		margin-left: -20px;
+	}
+	#copy address{
+		margin-left: 30px;
+	}
+	#copy #by{
+		margin-left: 110px;
+	}
+}

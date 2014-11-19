@@ -1,4 +1,19 @@
 @charset "utf-8";
+/*Titulos*/
+.titulo-grande{
+	font-size: 26px;
+	color: #606060;
+}
+.titulo-medio{
+	font-size: 20px;
+	color: #606060;
+	padding-top: 10px;
+}
+.titulo-pequeno{
+	font-size: 18px;
+	color: #606060;
+	padding-top: 16px;
+}
 /*Geral*/
 #topo{
 	background-color: #f7f7f7;
@@ -20,13 +35,13 @@
 }
 #contato-topo .contato-p1{
 	font-size: 12px;
-	margin-left: 20px;
+	margin-left: 30px;
 	color: #606060;
 }
 #contato-topo .contato-p2{
 	font-size: 24px;
 	margin-top: -10px;
-	margin-left: -12px;
+	margin-left: -2px;
 	color: #606060;
 }
 #contato-topo img{
@@ -40,7 +55,7 @@ img.temp{
 	left: -20px;
 }
 #navbar{
-	margin-left: 440px;
+	margin-left: 490px;
 	margin-top: -45px;
 }
 b.caret{
@@ -71,12 +86,12 @@ b.caret{
 	border: solid 1px #bab3ab;
 	box-shadow: 1px 1px 2px #888888;
 }
-#wrapper .title{
+#wrapper .titulo-grande{
 	background-color: #ececec;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-#wrapper .title h3{
+#wrapper .titulo-grande h3{
 	margin-left: 30px;
 	color: #606060;
 }
@@ -145,8 +160,11 @@ footer{
 	height: 80px;
 }
 #copy address{
-	margin-left: 220px;
+	margin-left: 140px;
 	padding-top: 30px;
+}
+#by{
+	margin-left: 300px;
 }
 #by h6{
 	padding-left: 5px;
@@ -190,6 +208,9 @@ footer{
 	#copy address{
 		margin-left: 120px;
 	}
+	#by{
+		margin-left: 200px;
+	}
 }
 @media (max-width: 768px){
 	#logo{
@@ -232,6 +253,13 @@ footer{
 		margin-top: 12px;
 		height: 90px;
 		padding-bottom: 20px;
+	}
+	#copy address{
+		margin-left: 100px;
+	}
+	#by{
+		margin-left: 100px;
+		width: 20%;
 	}
 }
 @media (max-width: 480px){
@@ -301,6 +329,7 @@ footer{
 	}
 	#copy #by{
 		margin-left: 200px;
+		width: 30%;
 	}
 }
 @media (max-width: 320px){
@@ -335,14 +364,14 @@ footer{
 		width: 302px;
 	}
 	#formulario form fieldset input.btn{
-		margin-left: 405px;
+		margin-left: 400px;
 	}
 	#nossohorario{
 		margin-top: -10px;
 	}
 	#copy{
 		width: 74%;
-		height: 150px;
+		height: 180px;
 		margin-left: -20px;
 	}
 	#copy address{
@@ -350,5 +379,6 @@ footer{
 	}
 	#copy #by{
 		margin-left: 110px;
+		width: 40%;
 	}
 }

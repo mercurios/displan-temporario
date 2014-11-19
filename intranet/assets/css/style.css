@@ -1,0 +1,274 @@
+/*------------------------------
+- Geral
+-------------------------------*/
+.ls-pagination li {
+	cursor: pointer;
+}
+
+.margin-top-botao {
+	margin-top: 18px;
+}
+
+.tempo-carregamento {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.ls-tag-success {
+	background: #1AB551;
+}
+
+a {
+	outline:none;
+}
+
+.ls-list-title small {
+	margin-top: 5px;
+}
+
+.mb-10 {
+	margin-bottom: 10px !important;
+}
+
+.countNotificacoes {
+	width: 15px;
+	height: 15px;
+	background: red;
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	z-index: 9999999999999999999999999;
+	font: 12px Helvetica;
+	border-radius: 20px;
+	color: #fff;
+	display: none;
+}
+
+/*------------------------------
+- Utilitários
+-------------------------------*/
+.separador {
+    background: url('../images/pontilhado.png') 0 40px;
+    border: 0;
+    height: 5px;
+}
+
+.separador-dois {
+	width: 100%;
+	height: 5px;
+	background: url('http://s.glbimg.com/en/ho/static/globocom2012/img/pontilhado.png?771d4029f20c') 0 0 repeat;
+	margin: 10px 0;
+	float: left;
+}
+
+.separador-vertical {
+	min-height: 600px;
+	width: 5px;
+	background: url('http://s.glbimg.com/en/ho/static/globocom2012/img/pontilhado.png?771d4029f20c') 0 0 repeat;
+	margin: 0 10px;
+	float: left;
+}
+
+.alerta {
+	position: absolute;
+	top: 75px;
+	right: 10px;
+	z-index: 9999999;
+	max-width: 600px;
+}
+
+.ls-dismiss {
+	margin: 0 0 0 10px;
+}
+
+.borda-tabela {
+	border: 1px solid #dfdfde
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+/*------------------------------
+- Icones
+-------------------------------*/
+.ls-menu i {
+	font-size: 20px;
+	margin: 0 0 0 -36px;
+	float: left;
+}
+
+/*------------------------------
+- Background
+-------------------------------*/
+.bg-red { background: red; }
+
+
+/*------------------------------
+- Imagens
+-------------------------------*/
+.image-thumb {
+	padding: 5px;
+	background: #fff;
+	margin: 0 0 10px 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+
+/*------------------------------
+- Login
+-------------------------------*/
+.wraper-login {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -200px;
+}
+
+/*------------------------------
+- Header
+-------------------------------*/
+.header {
+	width: 100%;
+	height: 100px;
+	background: #ffffff;
+	border-top: 5px solid #23456e;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+}
+
+/*------------------------------
+- Email
+-------------------------------*/
+.tabela-email td a.nao-lido {
+	font-weight: bold;
+}
+
+/*------------------------------
+- Chat
+-------------------------------*/
+.usuarios-chat .panel{
+	border-top: 0;
+	border-radius: 0;
+	padding: 0;
+}
+
+.usuarios-chat .panel-heading {
+	width: 100%;
+	background: #23456e;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+	font-family: "locastyle";
+	border-radius: 0;
+}
+
+.usuarios-chat .media-heading {
+	text-transform: uppercase;
+}
+
+.msg-wrap {
+	margin: 0 0 10px 0;
+}
+
+.chat-body {
+	height: 400px;
+	overflow: auto;
+}
+
+.conversation {
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #B3A9A9;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.chat-users {
+	height: 430px;
+	overflow: auto;
+}
+
+.chat-users .admin {
+	color: #23456e;
+}
+
+.chat-user .media-heading {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.chat-user small {
+	color: #d7d7d7;
+}
+
+.chat-user small.online {
+	color: #468847;
+}
+
+.chat-user .separador {
+	width: 100%;
+	background: url('../images/pontilhado.png') 0 40px;
+	border: 0;
+	height: 8px;
+	margin: 10px 0;
+}
+
+.chat-user .separador-users {
+	width: 100%;
+	background: url('../images/pontilhado.png') 0 40px;
+	border: 0;
+	height: 3px;
+	margin: 10px 0;
+}
+
+#box-mensagem .panel-body {
+	height: 500px;
+	overflow: auto;
+}
+
+.box-estatisticas {
+	min-height: 170px;
+}
+
+.box-estatisticas .panel-heading {
+	background: #23456E;
+	color: #fff;
+}
+
+.painel-estatistica .ls-list {
+	display: none;
+}
+
+.preloader img{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 -40px;
+}
+
+.box-estatisticas .ls-list {
+	border-style: none;
+
+}

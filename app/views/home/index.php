@@ -7,6 +7,7 @@
     <title>Displan Seguros</title>
     <meta name="description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />
     <meta name="keywords" content="Displan, Seguros, Preços" />
+    
     <link rel="stylesheet" href="<?= base_url('assets/css/all.css') ?>" />
     <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.ico') ?>" />
 </head>

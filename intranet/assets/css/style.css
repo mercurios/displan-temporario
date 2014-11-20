@@ -1,6 +1,10 @@
 /*------------------------------
 - Geral
 -------------------------------*/
+#rmvColuna {
+	display: none;
+}
+
 .ls-pagination li {
 	cursor: pointer;
 }

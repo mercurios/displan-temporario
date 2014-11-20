@@ -1,7 +1,8 @@
+<?php $sessao = $this->session->all_userdata(); ?>
 <!DOCTYPE html>
 <html class="ls-theme-mercurios">
 <head>
-	<title>Administrador | Corretora cedro</title>
+	<title>Displan saúde - Administração</title>
 
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -20,7 +21,7 @@
 		<div class="ls-notification-topbar">
 			<div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
 				<a href="#" class="ls-ico-user">
-					Administrador
+					<?= $sessao['logged_in']['name']; ?>
 				</a>
 				<nav class="ls-dropdown-nav ls-user-menu">
 					<ul>

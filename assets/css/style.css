@@ -55,7 +55,7 @@ img.temp{
 	left: -20px;
 }
 #navbar{
-	margin-left: 490px;
+	margin-left: 450px;
 	margin-top: -45px;
 }
 b.caret{
@@ -86,18 +86,17 @@ b.caret{
 	border: solid 1px #bab3ab;
 	box-shadow: 1px 1px 2px #888888;
 }
-#wrapper .titulo-grande{
-	background-color: #ececec;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-#wrapper .titulo-grande h3{
-	margin-left: 30px;
+#wrapper .titulo-grande, #wrapper .titulo-unimed{
 	color: #606060;
+	padding: 10px 0 10px 20px;
 }
 #wrapper .content{
-	margin-top: 20px;
+	margin-top: 10px;
 	padding-left: 10px;
+	width: 98%;
+}
+#wrapper .content div{
+	margin-left: 5px;
 }
 #wrapper .content .border-right{
 	padding-right: 20px;
@@ -105,6 +104,108 @@ b.caret{
 }
 #wrapper .content h5{
 	font-weight: lighter;
+	font-size: 16px;
+}
+/*unimed page*/
+#wrapper .title{
+	background-color: #ececec;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#wrapper .titulo-unimed{
+	margin-left: 210px;
+}
+#wrapper .title .img-title{
+	width: 20%;
+	margin-left: 10px;
+}
+#wrapper .content .subtitle{
+	color: white;
+	background-color: #4bb558;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: -20px;
+}
+#wrapper .content .subtitle h2{
+	margin-top: -5px;
+}
+#wrapper .content .subtitle h4{
+	margin-top: -15px;
+}
+#wrapper .content .aside{
+	margin-left: -20px;
+	width: 260px;
+	color: #606060;
+}
+#wrapper .content .bg-faixa-etaria{
+	background-color: #f6f6f6;
+	padding-bottom: 20px;
+	margin-left: -20px;
+	padding-left: 40px;
+}
+#wrapper .content .bg-cred-info{
+	background-color: #ecebeb;
+	padding: 2px 10px;
+	margin-top: 10px;
+}
+.hidden{
+	visibility: hidden;
+	height: 0;
+	margin-bottom: -20px;
+}
+#wrapper .content #tabelas{
+	margin-left: 260px;
+	margin-top: 10px;
+	margin-bottom: -360px;
+}
+#wrapper .content #tabelas .tabela{
+	display: inline;
+}
+#wrapper .content #tabelas .t1{
+	margin-top: 26px;
+}
+#wrapper .content #tabelas .t2{
+	margin-left: 10px;
+	padding: 10px 5px;
+	border: solid 1px #bab3ab;
+	background-color: #ecebeb;
+}
+#wrapper .content #tabelas .tabela ul{
+	list-style: none;
+	display: inline;
+}
+#wrapper .content #tabelas .tabela .ul-1{
+	margin-left: 25px;
+}
+#wrapper .content #tabelas .tabela ul li{
+	width: 80px;
+	text-decoration: underline;
+	padding-right: 0;
+	margin-right: 0;
+	margin-top: 15px;
+	display: inline-block;
+}
+#wrapper .content #tabelas .tabela ul .li-2{
+	margin-left: 10px;
+}
+#wrapper .content #tellus{
+	background-color: #f2620d;
+	padding: 0 20px;
+	height: 40px;
+	margin-left: 260px;
+	margin-top: -40px;
+	width: 72%;
+}
+#wrapper .content #tellus h3{
+	color: white;
+	margin-top: 0;
+	margin-left: 60px;
+	font-size: 26px;
+}
+#wrapper .content #tellus img{
+	float: right;
+	margin-top: -48px;
+	margin-right: 0px;
 }
 /*footer*/
 footer{
@@ -154,7 +255,7 @@ footer{
 }
 #copy{
 	background-color: #26427b;
-	width: 112.5%;
+	width: 113%;
 	margin-left: -130px;
 	color: white;
 	height: 80px;
@@ -211,6 +312,45 @@ footer{
 	#by{
 		margin-left: 200px;
 	}
+	/*Unimed page*/
+	#wrapper .title .img-title{
+		width: 25%;
+	}
+	#wrapper .content .aside{
+		margin-left: -25px;
+	}
+	#wrapper .content .subtitle, #wrapper .content .bg-faixa-etaria{
+		margin-left: -15px;
+	}
+	#wrapper .content #tabelas{
+		margin-left: 250px;
+	}
+	#wrapper .content #tabelas .tabela .ul-1{
+		margin-left: 18px;
+	}
+	#wrapper .content #tabelas .t1{
+		width: 13%;
+	}
+	#wrapper .content #tabelas .t2{
+		margin-left: 0;
+	}
+	#wrapper .content #tabelas li{
+		font-size: 12px;
+	}
+	#wrapper .content #tabelas .tabela ul .li-2{
+		margin-left: 5px;
+	}
+	#wrapper .content #tellus{
+		margin-left: 245px;
+		width: 66%;
+	}
+	#wrapper .content #tellus h3{
+		margin-left: 20px;
+		font-size: 20px;
+	}
+	#wrapper .content #tellus img{
+		margin-top: -48px;
+	}	
 }
 @media (max-width: 768px){
 	#logo{
@@ -261,6 +401,42 @@ footer{
 		margin-left: 100px;
 		width: 20%;
 	}
+	/*Unimed page*/
+	#wrapper .title .img-title{
+		width: 30%;
+		margin-left: 10px;
+	}
+	#wrapper .content #tabelas{
+		margin-bottom: 0;
+		margin-left: -10px;
+		width: 100%
+	}
+	#wrapper .content #tabelas .t1{
+		margin-left: 0;
+		width: 15%;
+	}
+	#wrapper .content #tabelas .t2{
+		width: 16%;
+		margin-left: 2px;
+	}
+	#wrapper .content .aside{
+		width: 100%;
+	}
+	#wrapper .content .bg-cred-info{
+		width: 45%;
+	}
+	#wrapper .content .aside .info-2{
+		float: right;
+		margin-top: -194px;
+	}
+	#wrapper .content #tellus{
+		margin-top: 10px;
+		width: 100%;
+		margin-left: -25px;	
+	}
+	#wrapper .content #tellus h3{
+		font-size: 22px;
+	}
 }
 @media (max-width: 480px){
 	#topo{
@@ -287,6 +463,13 @@ footer{
 	}
 	#wrapper{
 		margin-top: 0;
+	}
+	#wrapper .content div{
+		margin-left: -20px;
+	}
+	#wrapper .content .border-right{
+		border: none;
+		padding: 0;
 	}
 	footer{
 		height: 940px;
@@ -330,6 +513,69 @@ footer{
 	#copy #by{
 		margin-left: 200px;
 		width: 30%;
+	}
+	/*Unimed page*/
+	#wrapper .title{
+		padding-bottom: 10px;
+	}
+	#wrapper .content{
+		margin-left: 15px;
+	}
+	#wrapper .content .subtitle{
+		padding-bottom: 1px;
+	}
+	#wrapper .content #tabelas{
+		margin-left: 0px;
+		margin-top: -25px;
+	}
+	#wrapper .content #tabelas span{
+		visibility: hidden;
+	}
+	#wrapper .content #tabelas .tabela{
+		display: block;
+	}
+	#wrapper .content #tabelas .t1{
+		margin-left: -40px;
+		padding-top: 38px;
+	}
+	#wrapper .content #tabelas .t2{
+		width: 20%;
+		float: left;
+		margin-left: 0;
+		margin-top: -326px;
+	}
+	#wrapper .content #tabelas .parte-2{
+		margin-left: 5px;
+	}
+	#wrapper .content #tabelas .tabela .lado .li-2{
+		margin-left: -10px;
+	}
+	#wrapper .content #tabelas li{
+		font-size: 12px;
+	}
+	#wrapper .content .bg-cred-info{
+		margin-top: 30px;
+		width: 100%;
+		margin-left: -5px;
+	}
+	#wrapper .content .aside .info-2{
+		margin-top: 10px;
+		float: none;
+	}
+	#wrapper .content #tellus{
+		width: 105%;
+		margin-left: -30px;
+	}
+	#wrapper .content #tellus h3{
+		font-size: 16px;
+		margin-left: -10px;
+	}
+	#wrapper .content #tellus img{
+		margin-right: -10px;
+	}
+	.hidden{
+		margin-bottom: -40px;
+		margin-top: -20px;
 	}
 }
 @media (max-width: 320px){
@@ -380,5 +626,37 @@ footer{
 	#copy #by{
 		margin-left: 110px;
 		width: 40%;
+	}
+	/*Unimed page*/
+	#wrapper .title .img-title{
+		width: 70%;
+		margin-left: 40px;
+	}
+	#wrapper .title .titulo-unimed{
+		width: 60%;
+		margin-left: 38px;
+	}
+	#wrapper .content .subtitle{
+		padding-bottom: 5px;
+	}
+	#wrapper .content .bg-faixa-etaria #tabelas{
+		visibility: hidden;
+		height: 0;
+		margin-top: -80px;
+	}
+	#wrapper .content .hidden{
+		visibility: visible;
+		margin-left: -20px;
+		height: auto;
+	}
+	#wrapper .content .hidden h3{
+		font-size: 14px;
+	}
+	#wrapper .content #tellus{
+		height: 100%;
+	}
+	#wrapper .content #tellus img{
+		margin-right: 10px;
+		margin-top: -50px;
 	}
 }

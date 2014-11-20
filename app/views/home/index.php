@@ -82,7 +82,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div id="wrapper" class="span10 offset1">
-                <div class="title"><h3>Lorem Ipsum</h3></div>
+                <div class="title"><h3 class="titulo-grande">Lorem Ipsum</h3></div>
                 <div class="content">
                     <div class="border-right span4">
                         <h5>Planos individuais</h5>
@@ -162,7 +162,7 @@
                 </div>
                 <div id="copy" class="span12">
                     <address class="span6">&copy; COPYRIGHT 2014 DISPLAN. TODOS OS DIREITOS RESERVADOS.</address>
-                    <div id="by" class="span4">
+                    <div id="by" class="span2">
                         <h6>Site garantido pela:</h6>
                         <img src="<?= base_url('assets/img/mercurios.png') ?>" alt="mercurios" title="Mercurios">
                     </div>

@@ -41,6 +41,9 @@ class Operadoras extends CI_Controller {
         $this->load->view('inc/footer');
     }
 
+    /**
+     * Formulário de edição
+     */
     public function edit($id)
     {
         if (empty($id)) {
@@ -54,6 +57,9 @@ class Operadoras extends CI_Controller {
         $this->load->view('inc/footer');
     }
 
+    /**
+     * Salva as informações no banco de dados
+     */
     public function save()
     {
         // Validação
@@ -95,6 +101,9 @@ class Operadoras extends CI_Controller {
         }
     }
 
+    /**
+     * Atualiza as informações no banco
+     */
     public function update($id)
     {
         if (empty($id)) {
@@ -140,6 +149,29 @@ class Operadoras extends CI_Controller {
                 $this->session->set_flashdata('msgError', 'Não foi possível atualizar a operadora, tente novamente!');
                 redirect('operadoras');
             }
+        }
+    }
+
+    /**
+     * Deleta do banco
+     */
+    public function delete($id)
+    {
+        if (empty($id)) {
+            redirect('operadoras');
+        }
+
+        $dados  = $this->operadora->find($id);
+        $imagem = $dados[0]->logo;
+
+        if ($this->operadora->delete($id)) {
+            unlink('../uploads/operadoras/' . $imagem);
+
+            $this->session->set_flashdata('msgSuccess', 'Operadora deletada com sucesso!');
+            redirect('operadoras');
+        } else {
+            $this->session->set_flashdata('msgError', 'Não foi possível deletar a operadora, tente novamente!');
+            redirect('operadoras');
         }
     }
 }

@@ -9,7 +9,7 @@
     <hr>
 
     <table class="ls-table ls-table-striped ls-bg-header" id="tabela-de-precos">
-        
+
         <tr id="titulo-tabelas">
             <td width="100">Idades</td>
             <td><input class="col-md-10" type="text" name="titulos[]" placeholder="1 Vida"></td>

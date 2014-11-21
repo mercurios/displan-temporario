@@ -9,7 +9,7 @@ class Home extends CI_Controller {
         if ($this->session->userdata('logged_in') && $this->session->userdata('logged_in')['logado'] === true) {
             $session_data = $this->session->userdata('logged_in');
         } else {
-            redirect('/', 'refresh');
+            redirect('auth', 'refresh');
         }
     }
 

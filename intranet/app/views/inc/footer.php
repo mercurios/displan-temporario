@@ -32,7 +32,7 @@
 		<nav class="ls-menu">
 			<ul>
 				<li><a href="<?= base_url('home'); ?>" class="ls-ico-home">Página inicial</a></li>
-				<li><a href="<?= base_url(''); ?>" class="ls-ico-globe">Operadoras</a></li>
+				<li><a href="<?= base_url('operadoras'); ?>" class="ls-ico-globe">Operadoras</a></li>
 				<li><a href="<?= base_url(); ?>" class="ls-ico-list">Planos</a></li>
 				<li><a href="<?= base_url(); ?>" class="ls-ico-table-alt">Tabelas individuais</a></li>
 				<li><a href="<?= base_url(); ?>" class="ls-ico-table-alt">Tabelas empresariais</a></li>

@@ -5,7 +5,7 @@ class Auth extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('AuthModel', 'auth');
+        $this->load->model('Auth_model', 'auth');
     }
 
 	public function index()
@@ -18,7 +18,7 @@ class Auth extends CI_Controller {
                 redirect('home', 'refresh');
             }
         }
-        
+
         $this->load->view('auth/index');
 	}
 

@@ -16,6 +16,12 @@ class Operadora_model extends CI_Model
         return $this->db->get($this->tabela)->result();
     }
 
+    public function find($id)
+    {
+        $this->db->where($this->id, $id);
+        return $this->db->get($this->tabela)->result();
+    }
+
     public function save($dados)
     {
         $dados['criado']  = date('Y-m-d H:i:s');

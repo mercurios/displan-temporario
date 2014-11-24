@@ -54,6 +54,9 @@ class Auth extends CI_Controller {
                     $this->session->set_userdata('logged_in', $sessao);
                 }
 
+                $this->load->library('Logs');
+                $this->logs->save($sessao['name'], 'Logou no sistema');
+
                 redirect('home');
             }
 		}
@@ -62,6 +65,10 @@ class Auth extends CI_Controller {
     public function logout()
     {
         $this->session->sess_destroy();
+
+        $this->load->library('Logs');
+        $this->logs->save($sessao['name'], 'Deslogou do sistema');
+
         redirect('auth');
     }
 }

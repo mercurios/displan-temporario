@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Operadoras extends CI_Controller {
+class Operadoras extends CI_Controller
+{
 
     /**
      * Verifica se fez o login
@@ -92,6 +93,9 @@ class Operadoras extends CI_Controller {
             }
 
             if ($this->operadora->save($dados)) {
+                $this->load->library('Logs');
+                $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou uma nova operadora.');
+
                 $this->session->set_flashdata('msgSuccess', 'Operadora cadastrada com sucesso!');
                 redirect('operadoras');
             } else {
@@ -143,6 +147,9 @@ class Operadoras extends CI_Controller {
             }
 
             if ($this->operadora->update($dados, $id)) {
+                $this->load->library('Logs');
+                $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou a operadora. (' .$this->input->post('name'). ')');
+
                 $this->session->set_flashdata('msgSuccess', 'Operadora atualizada com sucesso!');
                 redirect('operadoras');
             } else {
@@ -166,6 +173,9 @@ class Operadoras extends CI_Controller {
 
         if ($this->operadora->delete($id)) {
             unlink('../uploads/operadoras/' . $imagem);
+
+            $this->load->library('Logs');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou uma operadora. (' .$dados[0]->name. ')');
 
             $this->session->set_flashdata('msgSuccess', 'Operadora deletada com sucesso!');
             redirect('operadoras');

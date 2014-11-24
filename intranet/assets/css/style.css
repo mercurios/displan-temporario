@@ -79,7 +79,7 @@ a {
 	top: 75px;
 	right: 10px;
 	z-index: 9999999;
-	max-width: 600px;
+	width: 700px;
 }
 
 .ls-dismiss {

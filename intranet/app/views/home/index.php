@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h1 class="ls-title-intro">Planos</h1>
-
+    
     <h2 class="ls-title-3">
         <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
         <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>

@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row-fluid">
-            <div id="topo" class="span10 offset1">
+            <div id="topo" class="span12">
                 <h1 id="logo" class="span2">Displan</h1>
                 <div id="contato-topo" class="span3">
                     <p class="contato-p1">CENTRAL DE VENDAS</p>
@@ -103,70 +103,73 @@
     <footer>
         <div id="footer" class="container-fluid">
             <div class="row-fluid">
-                <div id="onde-estamos" class="span4">
-                    <h4>
-                    <i class="icon-map-marker icon-white"></i>ONDE ESTAMOS</h4>
-                    <hr />
-                    <p>Av. Lins Petit, 159 - Boa Vista, Recife - PE. <br>
-                    CEP: 50070-230.</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7900.795549812305!2d-34.89384928795777!3d-8.06084580427212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18c4c93b44a5%3A0x2ea83372b3d473a6!2sDisplan+Distribuidora+de+Planos+de+Sa%C3%BAde!5e0!3m2!1spt-BR!2sbr!4v1414603730687" class="span11" title="Mapa" height="300" style="border:0"></iframe>
-                </div>
-                <div id="contato" class="span4">
-                    <h4><i class="icon-envelope icon-white"></i>CONTATO</h4>
-                    <hr />
-                    <!--forms-->
-                    <div id="formulario">
-                        <form class="form-horizontal">
-                            <fieldset>
-                                <legend>Dados da Mensagem</legend>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <label for="inputName">Seu Nome</label>
-                                        <input class="span12" name="nome" type="text" id="inputName" placeholder="Nome" />
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <label for="inputEmail">Seu Email</label>
-                                        <input class="span12" name="email" type="email" id="inputEmail" placeholder="E-mail" />
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <label for="inputTelephone">Seu Telefone</label>
-                                        <input class="span12" name="tel" type="tel" id="inputTelephone" placeholder="Telefone" />
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <label for="inputMessage">Sua Mensagem</label>
-                                        <textarea class="span12" name="message" rows="5" id="inputMessage" placeholder="Mesage"></textarea>
-                                    </div>
-                                </div>
-                                <input type="submit" class="btn btn-info" value="Enviar"/>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <!--end forms-->
-                </div>
-                <div id="nossohorario" class="span3">
-                    <h4><i class="icon-time icon-white"></i>NOSSO HORÁRIO</h4>
-                    <hr />
-                    <p>Segunda à sexta 8:00 às 18:00h.</p>
-                </div>
-                <div id="telefone" class="span3">
-                    <img class="phone" src="<?= base_url('assets/img/phone.png') ?>" alt="phone" />
-                    <h4>TELEFONE</h4>
-                    <hr />
-                    <p>(81) 3082.3033</p>
-                </div>
-                <div id="copy" class="span12">
-                    <address class="span6">&copy; COPYRIGHT 2014 DISPLAN. TODOS OS DIREITOS RESERVADOS.</address>
-                    <div id="by" class="span2">
-                        <h6>Site garantido pela:</h6>
-                        <img src="<?= base_url('assets/img/mercurios.png') ?>" alt="mercurios" title="Mercurios">
+                <div id="rodape" class="span10">
+                    <div class="row-fluid">
+                        <div id="onde-estamos" class="span4">
+                            <h4 class="titulo-rodape"><i class="icon-map-marker icon-white"></i>ONDE ESTAMOS</h4>
+                            <p>Av. Lins Petit, 159 - Boa Vista, Recife - PE. CEP: 50070-230.</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7900.795549812305!2d-34.89384928795777!3d-8.06084580427212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18c4c93b44a5%3A0x2ea83372b3d473a6!2sDisplan+Distribuidora+de+Planos+de+Sa%C3%BAde!5e0!3m2!1spt-BR!2sbr!4v1414603730687" class="span11" title="Mapa" height="300" style="border:0"></iframe>
+                        </div>
+                        <div id="contato" class="span4">
+                            <h4 class="titulo-rodape"><i class="icon-envelope icon-white"></i>CONTATO</h4>
+                            <!--forms-->
+                            <div id="formulario">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <legend>Dados da Mensagem</legend>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <label for="inputName">Seu Nome</label>
+                                                <input class="span12" name="nome" type="text" id="inputName" placeholder="Nome" />
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <label for="inputEmail">Seu E-mail</label>
+                                                <input class="span12" name="email" type="email" id="inputEmail" placeholder="E-mail" />
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <label for="inputTelephone">Seu Telefone</label>
+                                                <input class="span12" name="tel" type="tel" id="inputTelephone" placeholder="Telefone" />
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <label for="inputMessage">Sua Mensagem</label>
+                                                <textarea class="span12" name="message" rows="5" id="inputMessage" placeholder="Mensagem"></textarea>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="btn btn-info" value="Enviar"/>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!--end forms-->
+                        </div>
+                        <div id="nossohorario" class="span3">
+                            <h4 class="titulo-rodape"><i class="icon-time icon-white"></i>NOSSO HORÁRIO</h4>
+                            <p>Segunda à sexta 8:00 às 18:00h.</p>
+                        </div>
+                        <div id="telefone" class="span3">
+                            <img class="phone" src="<?= base_url('assets/img/phone.png') ?>" alt="phone" />
+                            <h4 class="titulo-rodape">TELEFONE</h4>
+                            <p>(81) 3082.3033</p>
+                        </div>
                     </div>
                 </div>
+                
+            </div>
+        </div>
+        <div id="rodape2" class="container-fluid">
+            <div class="span12">
+            <div id="copy" class="row-fluid">
+                <address class="span6">&copy; COPYRIGHT 2014 DISPLAN. TODOS OS DIREITOS RESERVADOS.</address>
+                <div id="by" class="span2">
+                    <h6>Site garantido pela:</h6>
+                    <img src="<?= base_url('assets/img/mercurios.png') ?>" alt="mercurios" title="Mercurios" />
+                </div>
+            </div>
             </div>
         </div>
     </footer>

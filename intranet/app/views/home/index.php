@@ -1,59 +1,83 @@
 <div class="container-fluid">
-    <h1 class="ls-title-intro">Planos</h1>
-    
-    <h2 class="ls-title-3">
-        <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
-        <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>
-    </h2>
+    <h1 class="ls-title-intro">Dashboard</h1>
 
     <hr>
 
-    <table class="ls-table ls-table-striped ls-bg-header" id="tabela-de-precos">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default box-estatisticas">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Estatísticas 1</h3>
+                        </div>
+                        <div class="panel-body">
 
-        <tr id="titulo-tabelas">
-            <td width="100">Idades</td>
-            <td><input class="col-md-10" type="text" name="titulos[]" placeholder="1 Vida"></td>
-        </tr>
-        <tr id="valor0018">
-            <td width="100">00-18</td>
-            <td><input class="col-md-10" type="text" name="idade0018[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor1923">
-            <td width="100">19-23</td>
-            <td><input class="col-md-10" type="text" name="idade1923[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor2428">
-            <td width="100">24-28</td>
-            <td><input class="col-md-10" type="text" name="idade2428[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor2933">
-            <td width="100">29-33</td>
-            <td><input class="col-md-10" type="text" name="idade2933[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor3438">
-            <td width="100">34-38</td>
-            <td><input class="col-md-10" type="text" name="idade3438[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor3943">
-            <td width="100">39-43</td>
-            <td><input class="col-md-10" type="text" name="idade3943[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor4448">
-            <td width="100">44-48</td>
-            <td><input class="col-md-10" type="text" name="idade4448[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor4953">
-            <td width="100">49-53</td>
-            <td><input class="col-md-10" type="text" name="idade4953[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor5458">
-            <td width="100">54-58</td>
-            <td><input class="col-md-10" type="text" name="idade5458[]" placeholder="150,00"></td>
-        </tr>
-        <tr id="valor59">
-            <td width="100">59 ou +</td>
-            <td><input class="col-md-10" type="text" name="idade59[]" placeholder="150,00"></td>
-        </tr>
-    </table>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-12">
+                    <div class="panel panel-default box-estatisticas">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Estatísticas 2</h3>
+                        </div>
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="panel panel-default box-estatisticas">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Estatísticas 3</h3>
+                        </div>
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default box-estatisticas">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Últimas ações do painel</h3>
+                </div>
+                <div class="panel-body">
+                    <?php if (!empty($logs)) : ?>
+                    <ul class="timeline">
+                        <?php foreach ($logs as $l) : ?>
+                        <li>
+                            <div class="timeline-badge warning">
+                                <i class="fa fa-dashboard"></i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title"><?= $l->usuario; ?></h4>
+                                    <p>
+                                        <small class="text-muted">
+                                            <i class="glyphicon glyphicon-time"></i> <?= date('d/m/Y H:i:s', time($l->data)); ?>
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p><?= $l->mensagem; ?></p>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+
+                    <?php else : ?>
+                        <p>
+                            Nenhum log registrado!
+                        </p>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

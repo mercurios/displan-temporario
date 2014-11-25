@@ -15,8 +15,11 @@ class Home extends CI_Controller {
 
     public function index()
     {
+        $this->load->library('Logs');
+        $dados = array('logs' => $this->logs->all());
+
         $this->load->view('inc/header');
-        $this->load->view('home/index');
+        $this->load->view('home/index', $dados);
         $this->load->view('inc/footer');
     }
 }

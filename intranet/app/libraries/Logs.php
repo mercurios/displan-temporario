@@ -11,6 +11,9 @@ class CI_Logs
 
     public function all()
     {
+
+        $this->ci->db->order_by('id', 'desc');
+        $this->ci->db->limit(3);
         return $this->ci->db->get('logs')->result();
     }
 

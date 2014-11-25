@@ -25,11 +25,11 @@
             <tbody>
                 <?php foreach ($resultado as $res) : ?>
                 <tr>
-                    <td><?= $res->name ?></td>
-                    <td><?= $res->name ?></td>
+                    <td><?= $res->pname ?></td>
+                    <td><?= $res->oname ?></td>
                     <td>
-                        <a href="<?= base_url('operadoras/edit/' . $res->id) ?>" class="btn btn-default ls-ico-pencil"></a>
-                        <a href="<?= base_url('operadoras/delete/' . $res->id) ?>" class="btn btn-default ls-ico-close"></a>
+                        <a href="<?= base_url('planos/edit/' . $res->id) ?>" class="btn btn-default ls-ico-pencil"></a>
+                        <a href="<?= base_url('planos/delete/' . $res->id) ?>" class="btn btn-default ls-ico-close"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

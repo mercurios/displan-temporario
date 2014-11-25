@@ -122,7 +122,6 @@ class Operadoras extends CI_Controller
         } else {
 
             $dados = array('name' => $this->input->post('name'));
-            $dados['editado'] = date('Y-m-d H:i:s');
 
             if (!empty($_FILES['imagem']['name'])) {
                 $config['upload_path'] 		= '../uploads/operadoras/';

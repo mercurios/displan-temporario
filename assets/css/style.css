@@ -1,14 +1,12 @@
 @charset "utf-8";
 /*Titulos*/
+h1, h2, h3, h4{
+	margin: 15px 0;
+}
 .titulo-grande{
 	font-size: 26px;
 	color: #606060;
-	margin-top: 400px;
-	background-color: #ececec;
-	padding: 24px 20px;
-	border: solid 1px #bab3ab;
-	border-bottom: none;
-	box-shadow: 1px 1px 2px #888888;
+
 }
 .titulo-medio{
 	font-size: 20px;
@@ -63,7 +61,7 @@
 	left: -20px;
 }
 #navbar{
-	margin-left: 480px;
+	margin-left: 490px;
 	margin-top: -45px;
 }
 b.caret{
@@ -113,44 +111,50 @@ li a.carousel-control{
 	font-size: 16px;
 }
 .title{
-	margin-left: 8.6%;
+	margin: 400px 0 10px 8.6%;
 	width: 83.3%;
+	background-color: #ececec;
+	padding: 10px 0;
+	border: solid 1px #bab3ab;
+	border-bottom: none;
+	box-shadow: 1px 1px 2px #888888;
 }
 /*unimed page*/
-.titulo-unimed{
-	color: #606060;
-	padding: 10px 0 10px 20px;
-	margin-left: 210px;
-}
 .img-title{
 	width: 20%;
-	margin-left: 10px;
+	margin-left: -10px;
+}
+.titulo-unimed{
+	padding: 10px 0;
+}
+#wrapper .unimed-content{
+	margin-left: 8.6%;
+	width: 83.3%;
 }
 #wrapper .content .subtitle{
 	color: white;
 	background-color: #4bb558;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-left: -20px;
+	padding: 0 20px;
+	margin-top: 10px;
 }
 #wrapper .content .subtitle h2{
 	margin-top: -5px;
 }
 #wrapper .content .subtitle h4{
-	margin-top: -15px;
+	margin-top: -5px;
 }
 #wrapper .content .aside{
-	margin-left: -20px;
+	margin-left: -35px;
 	width: 260px;
 	color: #606060;
 }
 #wrapper .content .bg-faixa-etaria{
 	background-color: #f6f6f6;
 	padding-bottom: 20px;
-	margin-left: -20px;
+	margin-left: 0;
 	padding-left: 40px;
 }
-#wrapper .content .bg-cred-info{
+.bg-cred-info{
 	background-color: #ecebeb;
 	padding: 2px 10px;
 	margin-top: 10px;
@@ -160,59 +164,61 @@ li a.carousel-control{
 	height: 0;
 	margin-bottom: -20px;
 }
-#wrapper .content #tabelas{
-	margin-left: 260px;
-	margin-top: 10px;
-	margin-bottom: -360px;
+#tabelas{
+	margin: 10px 0 -680px 200px;
+	width: 90%;
 }
-#wrapper .content #tabelas .tabela{
+div.tabela{
 	display: inline;
+	width: 14%;
 }
-#wrapper .content #tabelas .t1{
+.t1{
 	margin-top: 26px;
 }
-#wrapper .content #tabelas .t2{
+.t2{
 	margin-left: 10px;
 	padding: 10px 5px;
 	border: solid 1px #bab3ab;
 	background-color: #ecebeb;
 }
-#wrapper .content #tabelas .tabela ul{
+.tabela ul{
 	list-style: none;
 	display: inline;
 }
-#wrapper .content #tabelas .tabela .ul-1{
+.ul-1{
 	margin-left: 25px;
 }
-#wrapper .content #tabelas .tabela ul li{
+.tabela ul li{
 	width: 80px;
 	text-decoration: underline;
-	padding-right: 0;
-	margin-right: 0;
 	margin-top: 15px;
 	display: inline-block;
 }
-#wrapper .content #tabelas .tabela ul .li-2{
-	margin-left: 10px;
+.li-1{
+	margin-left: -30px;
 }
-#wrapper .content #tellus{
+.li-2{
+	margin-left: 15px;
+}
+#tellus{
 	background-color: #f2620d;
-	padding: 0 20px;
+	padding: 5px 0 10px 0;
 	height: 40px;
-	margin-left: 260px;
+	width: 78%;
+	margin-left: 220px;
 	margin-top: -40px;
-	width: 72%;
 }
 #wrapper .content #tellus h3{
 	color: white;
-	margin-top: 0;
-	margin-left: 60px;
-	font-size: 26px;
+	margin-top: -2px;
+	margin-left: 30px;
+	font-size: 34px;
+	font-weight: bold;
 }
 #wrapper .content #tellus img{
 	float: right;
-	margin-top: -48px;
-	margin-right: 0px;
+	margin-top: -50px;
+	margin-right: 50px;
 }
 /*footer*/
 footer{
@@ -303,8 +309,8 @@ address{
 	#myCarousel{
 		margin-top: -80px;
 	}
-	.titulo-grande{
-		margin-top: 320px;
+	.titulo-unimed{
+		margin-top: 10px;
 	}
 	.content{
 		margin-left: 85px;
@@ -331,39 +337,39 @@ address{
 		width: 25%;
 	}
 	#wrapper .content .aside{
-		margin-left: -25px;
+		margin-left: -40px;
 	}
-	#wrapper .content .subtitle, #wrapper .content .bg-faixa-etaria{
-		margin-left: -15px;
+	#tabelas{
+		margin-left: 190px;
 	}
-	#wrapper .content #tabelas{
-		margin-left: 250px;
+	.t1{
+		width: 14%;
 	}
-	#wrapper .content #tabelas .tabela .ul-1{
-		margin-left: 18px;
-	}
-	#wrapper .content #tabelas .t1{
-		width: 13%;
-	}
-	#wrapper .content #tabelas .t2{
+	.t2{
 		margin-left: 0;
 	}
-	#wrapper .content #tabelas li{
+	#tabelas li{
 		font-size: 12px;
 	}
-	#wrapper .content #tabelas .tabela ul .li-2{
-		margin-left: 5px;
+	.tabela ul .li-1{
+		margin-left: -50px;
+	}
+	.tabela ul .li-2{
+		margin-left: -5px;
 	}
 	#wrapper .content #tellus{
-		margin-left: 245px;
-		width: 66%;
+		margin: -100px 0 0 220px;
+		width: 70%;
+		padding: 0;
 	}
 	#wrapper .content #tellus h3{
-		margin-left: 20px;
 		font-size: 20px;
+		padding: 10px 5px;
+		margin-left: 35px;
 	}
 	#wrapper .content #tellus img{
-		margin-top: -48px;
+		margin-top: -50px;
+		margin-right: 35px;
 	}	
 }
 @media (max-width: 768px){
@@ -392,14 +398,14 @@ address{
 	li a.carousel-control{
 		margin-top: 140px;
 	}
-	.title{
-		width: auto;
-		margin-left: 0;
+	div.title{
+		width: 100%;
+		margin-left: 0 !important;
+		margin-bottom: 0;
 	}
 	#wrapper .content{
 		width: auto;
 		margin-left: 0;
-		margin-top: -20px;
 	}
 	.content div{
 		margin-left: 180px;
@@ -441,17 +447,21 @@ address{
 	.img-title{
 		width: 30%;
 		margin-left: 10px;
+		float: left;
 	}
-	#wrapper .content #tabelas{
+	.subtitle{
+		margin-top: 0;
+	}
+	#tabelas{
 		margin-bottom: 0;
 		margin-left: -10px;
 		width: 100%
 	}
-	#wrapper .content #tabelas .t1{
+	.t1{
 		margin-left: 0;
 		width: 15%;
 	}
-	#wrapper .content #tabelas .t2{
+	.t2{
 		width: 16%;
 		margin-left: 2px;
 	}

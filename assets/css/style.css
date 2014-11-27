@@ -62,23 +62,20 @@ h1, h2, h3, h4{
 	left: -20px;
 }
 #navbar{
-	margin-left: 490px;
+	margin-left: 390px;
 	margin-top: -45px;
 }
-b.caret{
+span.caret{
 	color: black;
 }
-#navbar a.btn{
-	background: none;
+#navbar a.dropdown-toggle{
 	border: none;
 	box-shadow: none;
 	font-size: 18px;
 	color: #3c4250;
 	font-family: Arial, serif;
 }
-#navbar a.btn:hover{
-	text-decoration: underline;
-}
+/*Slider*/
 #myCarousel{
 	position: absolute;
 	margin-top: -200px;
@@ -299,13 +296,13 @@ address{
 		height: 180px;
 	}
 	#navbar{
-		margin-left: 45px;
-		margin-top: 65px;
-		width: 75%;
+		margin-left: 140px;
+		margin-top: -55px;
+		width: 88%;
 	}
 	#contato-topo{
 		width: 35%;
-		margin-right: -20px;
+		margin-right: -50px;
 	}
 	#myCarousel{
 		margin-top: -80px;
@@ -381,7 +378,8 @@ address{
 @media (max-width: 768px){
 	#topo{
 		margin-left: 0px;
-		height: 210px
+		margin-top: 50px;
+		height: 260px
 	}
 	#logo{
 		margin-top: 60px;
@@ -390,13 +388,14 @@ address{
 	}
 	#contato-topo{
 		width: 40%;
-		margin-top: 10px;
+		margin-top: 120px;
 	}
 	#navbar{
-		margin-left: 210px;
-		margin-top: 0;
-		padding-top: 90px;
-		width: 35%;
+		margin-left: 10px;
+		width: 99%;
+	}
+	ul.navbar-nav{
+		margin-top: 20px;
 	}
 	#myCarousel{
 		margin-top: 0;
@@ -499,23 +498,38 @@ address{
 		font-size: 22px;
 	}
 }
+/**** Menu Responsivo - 480px . 320px ****/
+button.navbar-toggle{
+	background-color: #f7f7f7;
+	border-color: #ddd;
+	float: none;
+}
+span.icon-bar{
+	background-color: #888; 
+}
+div.navbar-header{
+	margin-left: -10px;
+}
 @media (max-width: 480px){
 	#topo{
+		margin-top: 0;
 		padding-top: 20px;
-		height: 340px;
+		height: auto;
 	}
 	#logo{
 		margin-left: 120px;
-		margin-top: 50px;
+		margin-top: 10px;
 	}
 	#contato-topo{
-		width: 65%;
-		margin-right: -35px;
-		margin-top: 0;
+		display: none;
+		visibility: hidden;
 	}
-	#navbar{
-		margin-top: 110px;
-		margin-left: 100px;
+	div.navbar-header{
+		margin-top: 200px;
+	}
+	.navbar-collapse{
+		border: 2px solid #ddd;
+		border-bottom: none;
 	}
 	#myCarousel{
 		visibility: hidden;
@@ -648,21 +662,12 @@ address{
 	}
 }
 @media (max-width: 320px){
-	#topo{
-		height: 390px;
-	}
-	#contato-topo{
-		width: 108%;
-		margin-right: -25px;
-		margin-top: 50px;
-	}
 	#logo{
 		margin-left: 50px;
-		margin-top: 110px;
+		margin-top: 20px;
 	}
 	#navbar{
-		margin-top: 160px;
-		margin-left: 20px;
+		margin-top: -30px;
 	}
 	.content{
 		margin-top: -10px;

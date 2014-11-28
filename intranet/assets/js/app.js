@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    var quantidade = $("#titulo-tabelas td").length;
+
+    if (quantidade <= 3) {
+        $("#rmvColuna").fadeIn();
+    }
+
     // Adicionar e remover colunas das tabelas
     $("#addColuna").on('click', function() {
         $("#rmvColuna").fadeIn();
@@ -49,6 +55,33 @@ $(document).ready(function() {
             $("#valor4953 td:last").fadeOut(500, function(){ this.remove() });
             $("#valor5458 td:last").fadeOut(500, function(){ this.remove() });
             $("#valor59 td:last").fadeOut(500, function(){ this.remove() });
+        }
+    });
+
+    // Combo de operadoras e planos
+    $("#operadorasCombo").on("change", function() {
+        $("#planosCombo").hide();
+        $(".comboLoad").fadeIn();
+
+        var operadora = $(this).val();
+
+        if (operadora.length) {
+            $.getJSON(url + 'planos/findplanos/' + operadora, function(data){
+
+                var options = '<option value="">-- Selecione um plano --</option>';
+
+                for (var i = 0; i < data.length; i++) {
+                    options += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+                }
+
+                $(".comboLoad").hide();
+                $("#planosCombo").html(options).fadeIn();
+
+            });
+        } else {
+            var options = '<option value="">-- Sem planos cadastrados --</option>';
+            $(".comboLoad").hide();
+            $("#planosCombo").html(options).fadeIn();
         }
     });
 });

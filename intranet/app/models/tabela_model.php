@@ -1,13 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Plano_model extends CI_Model
+class Tabela_model extends CI_Model
 {
-    private $tabela     = 'planos';
+    private $tabela     = 'tabelas';
     private $id         = 'id';
-    private $name       = 'name';
     private $operadora  = 'operadora_id';
-    private $credenciados = 'credenciados';
-    private $info       = 'info';
+    private $plano      = 'plano_id';
 
     public function __construct()
     {
@@ -16,19 +14,6 @@ class Plano_model extends CI_Model
 
     public function all()
     {
-        $query = $this->db
-            ->select('p.id, p.name as pname, o.name as oname, p.credenciados, p.info')
-            ->from($this->tabela . ' as p')
-            ->join('operadoras as o', $this->operadora . ' = o.id')
-            ->get()
-            ->result();
-
-        return $query;
-    }
-
-    public function find_operadora($id)
-    {
-        $this->db->where($this->operadora, $id);
         return $this->db->get($this->tabela)->result();
     }
 

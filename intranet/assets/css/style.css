@@ -1,6 +1,12 @@
 /*------------------------------
 - Geral
 -------------------------------*/
+.comboLoad {
+	margin: 7px 0 0 0;
+	letter-spacing: 2px;
+	display: none;
+}
+
 #rmvColuna {
 	display: none;
 }

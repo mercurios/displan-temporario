@@ -117,7 +117,7 @@ class Planos extends CI_Controller
             redirect('planos');
         }
 
-        $dados  = $this->planos->find($id);
+        $dados = $this->planos->find($id);
 
         if ($this->planos->delete($id)) {
 
@@ -129,6 +129,15 @@ class Planos extends CI_Controller
         } else {
             $this->session->set_flashdata('msgError', 'Não foi possível deletar o plano, tente novamente!');
             redirect('planos');
+        }
+    }
+
+    public function findplanos($id = null)
+    {
+        if (empty($id)) {
+            echo json_encode(array());
+        } else {
+            echo json_encode($this->planos->find_operadora($id));
         }
     }
 }

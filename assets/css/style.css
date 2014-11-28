@@ -117,6 +117,13 @@ li a.carousel-control{
 	border-bottom: none;
 	box-shadow: 1px 1px 2px #888888;
 }
+.operadoras ul li{
+	list-style: none;
+	margin-top: 20px;
+}
+.operadoras ul li h5{
+	padding-top: 10px;
+}
 /*unimed page*/
 .img-title{
 	width: 20%;
@@ -252,12 +259,9 @@ fieldset input, fieldset textarea{
 	float:right;
 	margin-top: 10px;
 }
-#footer img.phone{
-	width: 14px;
-	height: 14px;
-	float: left;
-	margin: 30px 4px 0 0;
-	
+#telefone h5{
+	font-weight: bold;
+	font-size: 1.2em;
 }
 #copy{
 	background: #26427b;
@@ -283,13 +287,8 @@ address{
 	border-bottom:2px solid #fff;
 	margin: 20px 0;
 	padding: 7px 0;
-	
 }
-
 /*responsividade*/
-@media (min-width: @screen-lg-min) {
-
-}
 @media (max-width: 1024px){
 	#topo{
 		margin-left: 8%;
@@ -307,15 +306,16 @@ address{
 	#myCarousel{
 		margin-top: -80px;
 	}
-	.titulo-unimed{
-		margin-top: 10px;
-	}
 	.content{
 		margin-left: 85px;
 	}
 	.title{
 		margin-top: 40%;
 		width: 83.3% !important;
+	}
+	img.operadora-img{
+		width: 50%;
+		margin-left: -20px;
 	}
 	#footer{
 		margin-left: 72px;
@@ -335,6 +335,9 @@ address{
 		width: 18%;
 	}
 	/*Unimed page*/
+	.titulo-unimed{
+		margin-top: 10px;
+	}
 	.img-title{
 		width: 25%;
 	}
@@ -414,6 +417,13 @@ address{
 	}
 	.inside{
 		margin-left: 180px;
+	}
+	.operadoras{
+		margin-left: 50px;
+		margin-top: 10px;
+	}
+	.operadoras ul li h5{
+		margin-left: 35px;
 	}
 	.border-right{
 		border: none;
@@ -549,6 +559,9 @@ div.navbar-header{
 	.content .inside{
 		margin-left: -10px;
 	}
+	.operadoras ul li h5{
+		margin-left: 80px;
+	}
 	.content div img{
 		width: 100%;
 	}
@@ -677,6 +690,9 @@ div.navbar-header{
 	}
 	.content .inside{
 		margin-left: -20px;
+	}
+	.operadoras ul li h5{
+		margin-left: 10px;
 	}
 	.inside img{
 		width: 105%;

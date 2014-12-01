@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h1 class="ls-title-intro">Tabelas individuais</h1>
     <h2 class="ls-title-3 ">
-        <a href="<?= base_url('tabelas/newindividual') ?>" class="pull-right ls-btn-default ls-ico-plus">Adicionar tabela</a>
+        <a href="<?= base_url('tabelas/add/individual') ?>" class="pull-right ls-btn-default ls-ico-plus">Adicionar tabela</a>
     </h2>
 
     <hr>
@@ -26,12 +26,12 @@
         <tbody>
             <?php foreach ($tabelas as $t) : ?>
             <tr>
-                <td><?= $t->operadora_id; ?></td>
-                <td><?= $t->plano_id; ?></td>
+                <td><?= $t->operadora; ?></td>
+                <td><?= $t->plano; ?></td>
                 <td><?= $t->acomodacao; ?></td>
                 <td>
-                    <a href="<?= base_url('tabelas/editindividual/' . $t->id) ?>" class="btn btn-default ls-ico-pencil"></a>
-                    <a href="<?= base_url('tabelas/delete/' . $t->id) ?>" class="btn btn-default ls-ico-close"></a>
+                    <a href="<?= base_url('tabelas/edit/individual/' . $t->id) ?>" class="btn btn-default ls-ico-pencil"></a>
+                    <a href="<?= base_url('tabelas/delete/individual/' . $t->id) ?>" class="btn btn-default ls-ico-close"></a>
                 </td>
             </tr>
             <?php endforeach; ?>

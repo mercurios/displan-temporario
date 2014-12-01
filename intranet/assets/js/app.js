@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var quantidade = $("#titulo-tabelas td").length;
 
-    if (quantidade <= 3) {
+    if (quantidade >= 3) {
         $("#rmvColuna").fadeIn();
     }
 

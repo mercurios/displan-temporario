@@ -17,65 +17,84 @@ class Tabelas extends CI_Controller
         $this->load->model('Tabela_model', 'tabelas');
     }
 
-    public function index()
+    public function listar($tipo)
     {
-        $this->individuais();
+        switch($tipo) {
+            case 'individuais':
+                $dados = array(
+                    'tabelas' => $this->tabelas->all_individual()
+                );
+
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/tab_individuais', $dados);
+                $this->load->view('inc/footer');
+            break;
+
+            case 'empresariais':
+                echo 'Tabelas empresariais';
+            break;
+
+            case 'especiais':
+                echo 'tabelas especiais';
+            breack;
+        }
     }
 
-    public function individuais()
+    public function add($tipo)
     {
-        $dados = array(
-            'tabelas' => $this->tabelas->all()
-        );
+        switch($tipo) {
+            case 'individual':
+                $dados = array(
+                    'operadoras' => $this->operadoras->all()
+                );
 
-        $this->load->view('inc/header');
-        $this->load->view('tabelas/tab_individuais', $dados);
-        $this->load->view('inc/footer');
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/add_individual', $dados);
+                $this->load->view('inc/footer');
+            break;
+
+            case 'empresarial':
+                echo 'Tabelas empresariais';
+            break;
+
+            case 'especial':
+                echo 'tabelas especiais';
+            breack;
+        }
     }
 
-    public function newindividual()
+    public function edit($tipo, $id)
     {
-        $dados = array(
-            'operadoras' => $this->operadoras->all()
-        );
+        switch($tipo) {
+            case 'individual':
+                $tabelas    = $this->tabelas->find_individual($id);
+                $operadoras = $this->operadoras->all();
+                $planos     = $this->planos->find_operadora($tabelas[0]->operadora_id);
 
-        $this->load->view('inc/header');
-        $this->load->view('tabelas/add_individual', $dados);
-        $this->load->view('inc/footer');
+                $dados = array(
+                    'tabelas'       => $tabelas,
+                    'operadoras'    => $operadoras,
+                    'planos'        => $planos
+                );
+
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/edt_individual', $dados);
+                $this->load->view('inc/footer');
+            break;
+
+            case 'empresarial':
+                echo 'Tabelas empresariais';
+            break;
+
+            case 'especial':
+                echo 'tabelas especiais';
+            breack;
+        }
     }
 
-    public function editindividual($id)
-    {
-        $tabelas    = $this->tabelas->all();
-        $operadoras = $this->operadoras->all();
-        $planos     = $this->planos->find_operadora($tabelas[0]->operadora_id);
-
-        $dados = array(
-            'tabelas'       => $tabelas,
-            'operadoras'    => $operadoras,
-            'planos'        => $planos
-        );
-
-        $this->load->view('inc/header');
-        $this->load->view('tabelas/edt_individual', $dados);
-        $this->load->view('inc/footer');
-    }
-
-    public function empresariais()
-    {
-        $this->load->view('inc/header');
-        $this->load->view('tabelas/tab_empresariais');
-        $this->load->view('inc/footer');
-    }
-
-    public function especiais()
-    {
-        $this->load->view('inc/header');
-        $this->load->view('tabelas/tab_especiais');
-        $this->load->view('inc/footer');
-    }
-
-    // CRUD
+    /**
+     * CRUD DAS TABELAS
+     */
     public function saveindividual()
     {
         $operadora  = $this->input->post('operadora');
@@ -110,15 +129,15 @@ class Tabelas extends CI_Controller
             'idade59'       => serialize($idade59)
         );
 
-        if ($this->tabelas->save($dados)) {
+        if ($this->tabelas->save_individual($dados)) {
             $this->load->library('Logs');
             $this->logs->save($this->session->userdata('logged_in')['name'], 'Adicionou uma nova tabela');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
-            redirect('tabelas/individuais');
+            redirect('tabelas/listar/individuais');
         } else {
             $this->session->set_flashdata('msgError', 'Não foi possível adicionar a tabela, tente novamente!');
-            redirect('tabelas/individuais');
+            redirect('tabelas/listar/individuais');
         }
     }
 
@@ -156,15 +175,38 @@ class Tabelas extends CI_Controller
             'idade59'       => serialize($idade59)
         );
 
-        if ($this->tabelas->update($dados, $id)) {
+        if ($this->tabelas->update_individual($dados, $id)) {
             $this->load->library('Logs');
             $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou uma nova tabela');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
-            redirect('tabelas/individuais');
+            redirect('tabelas/listar/individuais');
         } else {
             $this->session->set_flashdata('msgError', 'Não foi possível atualizar a tabela, tente novamente!');
-            redirect('tabelas/individuais');
+            redirect('tabelas/listar/individuais');
+        }
+    }
+
+    public function delete($tipo, $id)
+    {
+        switch($tipo) {
+            case 'individual':
+                if ($this->tabelas->delete_individual($id)) {
+                    $this->session->set_flashdata('msgSuccess', 'Tabela deletada com sucesso!');
+                    redirect('tabelas/listar/individuais');
+                } else {
+                    $this->session->set_flashdata('msgError', 'Não foi possível deletar a tabela, tente novamente!');
+                    redirect('tabelas/listar/individuais');
+                }
+            break;
+
+            case 'empresarial':
+                echo 'Tabelas empresariais';
+            break;
+
+            case 'especiais':
+                echo 'tabelas especiais';
+            breack;
         }
     }
 }

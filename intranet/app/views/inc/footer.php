@@ -34,7 +34,7 @@
 				<li><a href="<?= base_url('home'); ?>" class="ls-ico-home">Página inicial</a></li>
 				<li><a href="<?= base_url('operadoras'); ?>" class="ls-ico-globe">Operadoras</a></li>
 				<li><a href="<?= base_url('planos'); ?>" class="ls-ico-list">Planos</a></li>
-				<li><a href="<?= base_url('tabelas/individuais'); ?>" class="ls-ico-table-alt">Tabelas individuais</a></li>
+				<li><a href="<?= base_url('tabelas/listar/individuais'); ?>" class="ls-ico-table-alt">Tabelas individuais</a></li>
 				<li><a href="<?= base_url('tabelas/empresariais'); ?>" class="ls-ico-table-alt">Tabelas empresariais</a></li>
 				<li><a href="<?= base_url('tabelas/especiais'); ?>" class="ls-ico-table-alt">Tabelas especiais</a></li>
 			</ul>

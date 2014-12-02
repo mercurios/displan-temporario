@@ -1,12 +1,5 @@
 <div class="container-fluid">
-    <h1 class="ls-title-intro">Adicionar tabela individual</h1>
-
-    <h2 class="ls-title-3">
-        <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
-        <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>
-    </h2>
-
-    <hr>
+    <h1 class="ls-title-intro">Editar tabela empresarial</h1>
 
     <?php foreach ($tabelas as $t) :
 
@@ -22,7 +15,7 @@
     $idade5458  = unserialize($t->idade5458);
     $idade59    = unserialize($t->idade59);
     ?>
-    <form method="post" action="<?= base_url('tabelas/updateindividual/' . $t->id) ?>">
+    <form method="post" action="<?= base_url('tabelas/updateempresarial/' . $t->id) ?>">
 
         <fieldset class="row">
             <div class="col-md-6">
@@ -50,13 +43,45 @@
                 </label>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <label class="ls-label">
                     <b class="ls-label-text">Acomodação *</b>
                     <input type="text" name="acomodacao" placeholder="Acomodação" title="Informe uma acomodação" value="<?= $t->acomodacao ?>" required>
                 </label>
             </div>
+
+            <div class="col-md-3">
+                <label class="ls-label">
+                    <b class="ls-label-text">Idade mínima</b>
+                    <input type="text" name="idade_min" placeholder="1" value="<?= $t->idade_min ?>">
+                </label>
+            </div>
+
+            <div class="col-md-3">
+                <label class="ls-label">
+                    <b class="ls-label-text">Idate máxima</b>
+                    <input type="text" name="idade_max" placeholder="99" value="<?= $t->idade_max ?>">
+                </label>
+            </div>
+
+            <div class="col-md-12">
+                <label class="ls-label">
+                    <b class="ls-label-text">Categoria *</b>
+                    <select name="categoria" class="form-control" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="pme" <?= ($t->categoria == 'pme') ? 'selected' : '' ?>>PME</option>
+                        <option value="pmg" <?= ($t->categoria == 'pmg') ? 'selected' : '' ?>>PMG</option>
+                    </select>
+                </label>
+            </div>
         </fieldset>
+
+        <h2 class="ls-title-3">
+            <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
+            <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>
+        </h2>
+
+        <hr>
 
         <table class="ls-table ls-table-striped ls-bg-header" id="tabela-de-precos">
             <tr id="titulo-tabelas">

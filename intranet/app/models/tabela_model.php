@@ -47,6 +47,46 @@ class Tabela_model extends CI_Model
         return true;
     }
 
+    public function all_empresarial()
+    {
+        $this->db->select('t.id, t.acomodacao, t.categoria, o.name as operadora, p.name as plano');
+        $this->db->from('tabelas_empresariais as t');
+        $this->db->join('operadoras as o', 't.operadora_id = o.id');
+        $this->db->join('planos as p', 't.plano_id = p.id');
+        return $this->db->get()->result();
+    }
+
+    public function find_empresarial($id)
+    {
+        $this->db->where('id', $id);
+        return $this->db->get('tabelas_empresariais')->result();
+    }
+
+    public function save_empresarial($dados)
+    {
+        $dados['criado']  = date('Y-m-d H:i:s');
+        $dados['editado'] = date('Y-m-d H:i:s');
+
+        $this->db->insert('tabelas_empresariais', $dados);
+        return $this->db->insert_id();
+    }
+
+    public function update_empresarial($dados, $id)
+    {
+        $dados['editado'] = date('Y-m-d H:i:s');
+
+        $this->db->where('id', $id);
+        $this->db->update('tabelas_empresariais', $dados);
+        return true;
+    }
+
+    public function delete_empresarial($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('tabelas_empresariais');
+        return true;
+    }
+
 
 
 

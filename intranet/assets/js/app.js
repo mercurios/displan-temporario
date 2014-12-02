@@ -7,7 +7,10 @@ $(document).ready(function() {
     }
 
     // Adicionar e remover colunas das tabelas
-    $("#addColuna").on('click', function() {
+    $("#addColuna").on('click', function(e) {
+
+        e.preventDefault();
+
         $("#rmvColuna").fadeIn();
 
         var titulo      = '<td><input class="col-md-10" type="text" name="titulos[]" placeholder="1 Vida"></td>';
@@ -35,7 +38,9 @@ $(document).ready(function() {
         $("#valor59").append(idade59).children(':last').hide().fadeIn(500);
     });
 
-    $("#rmvColuna").on('click', function() {
+    $("#rmvColuna").on('click', function(e) {
+
+        e.preventDefault();
 
         var quantidade = $("#titulo-tabelas td").length;
 

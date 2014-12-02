@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h1 class="ls-title-intro">Adicionar tabela individual</h1>
 
-    <form method="post" action="<?= base_url('tabelas/saveindividual') ?>">
+    <form method="post" action="<?= base_url('tabelas/saveempresarial') ?>">
 
         <fieldset class="row">
             <div class="col-md-6">
@@ -33,10 +33,35 @@
                 </label>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <label class="ls-label">
                     <b class="ls-label-text">Acomodação *</b>
                     <input type="text" name="acomodacao" placeholder="Apartamento" title="Informe uma acomodação" required>
+                </label>
+            </div>
+
+            <div class="col-md-3">
+                <label class="ls-label">
+                    <b class="ls-label-text">Idade mínima</b>
+                    <input type="text" name="idade_min" placeholder="1">
+                </label>
+            </div>
+
+            <div class="col-md-3">
+                <label class="ls-label">
+                    <b class="ls-label-text">Idate máxima</b>
+                    <input type="text" name="idade_max" placeholder="99">
+                </label>
+            </div>
+
+            <div class="col-md-12">
+                <label class="ls-label">
+                    <b class="ls-label-text">Categoria *</b>
+                    <select name="categoria" class="form-control" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="pme">PME</option>
+                        <option value="pmg">PMG</option>
+                    </select>
                 </label>
             </div>
         </fieldset>

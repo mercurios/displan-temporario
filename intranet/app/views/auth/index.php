@@ -34,7 +34,7 @@
 
 		<form method="post" action="<?= base_url('auth/logar') ?>">
 			<div class="ui piled feed segment">
-				<img src="http://www.corretoracedro.com.br/admin/assets/images/logo-login.png">
+				<img src="http://placehold.it/365x150/f4f4f4/23456E&text=Displan%20Sa%C3%BAde">
 				<div class="ui form segment">
 					<div class="field">
 						<label>Email</label>

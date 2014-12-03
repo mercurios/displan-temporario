@@ -41,8 +41,14 @@ class Tabelas extends CI_Controller
             break;
 
             case 'especiais':
-                echo 'tabelas especiais';
-            breack;
+                $dados = array(
+                    'tabelas' => $this->tabelas->all_especial()
+                );
+
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/tab_especiais', $dados);
+                $this->load->view('inc/footer');
+            break;
         }
     }
 
@@ -70,8 +76,14 @@ class Tabelas extends CI_Controller
             break;
 
             case 'especial':
-                echo 'tabelas especiais';
-            breack;
+                $dados = array(
+                    'operadoras' => $this->operadoras->all()
+                );
+
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/add_especial', $dados);
+                $this->load->view('inc/footer');
+            break;
         }
     }
 
@@ -114,8 +126,20 @@ class Tabelas extends CI_Controller
             break;
 
             case 'especial':
-                echo 'tabelas especiais';
-            breack;
+                $tabelas    = $this->tabelas->find_especial($id);
+                $operadoras = $this->operadoras->all();
+                $planos     = $this->planos->find_operadora($tabelas[0]->operadora_id);
+
+                $dados = array(
+                    'tabelas'       => $tabelas,
+                    'operadoras'    => $operadoras,
+                    'planos'        => $planos
+                );
+
+                $this->load->view('inc/header');
+                $this->load->view('tabelas/edt_especial', $dados);
+                $this->load->view('inc/footer');
+            break;
         }
     }
 
@@ -158,7 +182,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->save_individual($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Adicionou uma nova tabela');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Adicionou uma tabela individual.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
             redirect('tabelas/listar/individuais');
@@ -204,7 +228,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->update_individual($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou uma nova tabela');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou uma tabela individual.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
             redirect('tabelas/listar/individuais');
@@ -238,8 +262,8 @@ class Tabelas extends CI_Controller
             'operadora_id'  => $operadora,
             'plano_id'      => $plano,
             'acomodacao'    => $acomodacao,
-            'idade_min'     => $idadeMin,
-            'idade_max'     => $idadeMax,
+            'vida_min'     => $idadeMin,
+            'vida_max'     => $idadeMax,
             'categoria'     => $categoria,
             'titulos'       => serialize($titulos),
             'idade0018'     => serialize($idade0018),
@@ -290,8 +314,8 @@ class Tabelas extends CI_Controller
             'operadora_id'  => $operadora,
             'plano_id'      => $plano,
             'acomodacao'    => $acomodacao,
-            'idade_min'     => $idadeMin,
-            'idade_max'     => $idadeMax,
+            'vida_min'      => $idadeMin,
+            'vida_max'      => $idadeMax,
             'categoria'     => $categoria,
             'titulos'       => serialize($titulos),
             'idade0018'     => serialize($idade0018),
@@ -317,6 +341,107 @@ class Tabelas extends CI_Controller
             redirect('tabelas/listar/empresariais');
         }
     }
+
+    /**
+     * ESPECIAIS
+     */
+    public function saveespecial()
+    {
+        $operadora  = $this->input->post('operadora');
+        $plano      = $this->input->post('plano');
+        $acomodacao = $this->input->post('acomodacao');
+        $categorias = $this->input->post('categorias');
+        $titulos    = $this->input->post('titulos');
+        $idade0018  = $this->input->post('idade0018');
+        $idade1923  = $this->input->post('idade1923');
+        $idade2428  = $this->input->post('idade2428');
+        $idade2933  = $this->input->post('idade2933');
+        $idade3438  = $this->input->post('idade3438');
+        $idade3943  = $this->input->post('idade3943');
+        $idade4448  = $this->input->post('idade4448');
+        $idade4953  = $this->input->post('idade4953');
+        $idade5458  = $this->input->post('idade5458');
+        $idade59    = $this->input->post('idade59');
+
+        $dados = array(
+            'operadora_id'  => $operadora,
+            'plano_id'      => $plano,
+            'acomodacao'    => $acomodacao,
+            'categorias'    => serialize($categorias),
+            'titulos'       => serialize($titulos),
+            'idade0018'     => serialize($idade0018),
+            'idade1923'     => serialize($idade1923),
+            'idade2428'     => serialize($idade2428),
+            'idade2933'     => serialize($idade2933),
+            'idade3438'     => serialize($idade3438),
+            'idade3943'     => serialize($idade3943),
+            'idade4448'     => serialize($idade4448),
+            'idade4953'     => serialize($idade4953),
+            'idade5458'     => serialize($idade5458),
+            'idade59'       => serialize($idade59)
+        );
+
+        if ($this->tabelas->save_especial($dados)) {
+            $this->load->library('Logs');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Adicionou uma tabela especial.');
+
+            $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
+            redirect('tabelas/listar/especiais');
+        } else {
+            $this->session->set_flashdata('msgError', 'Não foi possível adicionar a tabela, tente novamente!');
+            redirect('tabelas/listar/especiais');
+        }
+    }
+
+    public function updateespecial($id)
+    {
+        $operadora  = $this->input->post('operadora');
+        $plano      = $this->input->post('plano');
+        $acomodacao = $this->input->post('acomodacao');
+        $categorias = $this->input->post('categorias');
+        $titulos    = $this->input->post('titulos');
+        $idade0018  = $this->input->post('idade0018');
+        $idade1923  = $this->input->post('idade1923');
+        $idade2428  = $this->input->post('idade2428');
+        $idade2933  = $this->input->post('idade2933');
+        $idade3438  = $this->input->post('idade3438');
+        $idade3943  = $this->input->post('idade3943');
+        $idade4448  = $this->input->post('idade4448');
+        $idade4953  = $this->input->post('idade4953');
+        $idade5458  = $this->input->post('idade5458');
+        $idade59    = $this->input->post('idade59');
+
+        $dados = array(
+            'operadora_id'  => $operadora,
+            'plano_id'      => $plano,
+            'acomodacao'    => $acomodacao,
+            'categorias'    => serialize($categorias),
+            'titulos'       => serialize($titulos),
+            'idade0018'     => serialize($idade0018),
+            'idade1923'     => serialize($idade1923),
+            'idade2428'     => serialize($idade2428),
+            'idade2933'     => serialize($idade2933),
+            'idade3438'     => serialize($idade3438),
+            'idade3943'     => serialize($idade3943),
+            'idade4448'     => serialize($idade4448),
+            'idade4953'     => serialize($idade4953),
+            'idade5458'     => serialize($idade5458),
+            'idade59'       => serialize($idade59)
+        );
+
+        if ($this->tabelas->update_especial($dados, $id)) {
+            $this->load->library('Logs');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou uma tabela especial.');
+
+            $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
+            redirect('tabelas/listar/especiais');
+        } else {
+            $this->session->set_flashdata('msgError', 'Não foi possível atualizar a tabela, tente novamente!');
+            redirect('tabelas/listar/especiais');
+        }
+    }
+
+
 
     public function delete($tipo, $id)
     {
@@ -347,9 +472,18 @@ class Tabelas extends CI_Controller
                 }
             break;
 
-            case 'especiais':
-                echo 'tabelas especiais';
-            breack;
+            case 'especial':
+                if ($this->tabelas->delete_especial($id)) {
+                    $this->load->library('Logs');
+                    $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou uma tabela especial');
+
+                    $this->session->set_flashdata('msgSuccess', 'Tabela deletada com sucesso!');
+                    redirect('tabelas/listar/especiais');
+                } else {
+                    $this->session->set_flashdata('msgError', 'Não foi possível deletar a tabela, tente novamente!');
+                    redirect('tabelas/listar/especiais');
+                }
+            break;
         }
     }
 }

@@ -94,7 +94,7 @@ class Operadoras extends CI_Controller
 
             if ($this->operadora->save($dados)) {
                 $this->load->library('Logs');
-                $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou uma nova operadora.');
+                $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou a operadora (' . $this->input->post('name') . ')');
 
                 $this->session->set_flashdata('msgSuccess', 'Operadora cadastrada com sucesso!');
                 redirect('operadoras');
@@ -174,7 +174,7 @@ class Operadoras extends CI_Controller
             unlink('../uploads/operadoras/' . $imagem);
 
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou uma operadora. (' .$dados[0]->name. ')');
+            $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou a operadora (' .$dados[0]->name. ')');
 
             $this->session->set_flashdata('msgSuccess', 'Operadora deletada com sucesso!');
             redirect('operadoras');

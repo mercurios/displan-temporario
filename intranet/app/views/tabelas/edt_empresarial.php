@@ -53,14 +53,14 @@
             <div class="col-md-3">
                 <label class="ls-label">
                     <b class="ls-label-text">Idade mínima</b>
-                    <input type="text" name="idade_min" placeholder="1" value="<?= $t->idade_min ?>">
+                    <input type="text" name="idade_min" placeholder="1" value="<?= $t->vida_min ?>">
                 </label>
             </div>
 
             <div class="col-md-3">
                 <label class="ls-label">
                     <b class="ls-label-text">Idate máxima</b>
-                    <input type="text" name="idade_max" placeholder="99" value="<?= $t->idade_max ?>">
+                    <input type="text" name="idade_max" placeholder="99" value="<?= $t->vida_max ?>">
                 </label>
             </div>
 

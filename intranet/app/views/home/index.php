@@ -48,28 +48,29 @@
                 </div>
                 <div class="panel-body">
                     <?php if (!empty($logs)) : ?>
-                    <ul class="timeline">
-                        <?php foreach ($logs as $l) : ?>
-                        <li>
-                            <div class="timeline-badge warning">
-                                <i class="fa fa-dashboard"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title"><?= $l->usuario; ?></h4>
-                                    <p>
-                                        <small class="text-muted">
-                                            <i class="glyphicon glyphicon-time"></i> <?= date('d/m/Y H:i:s', time($l->data)); ?>
-                                        </small>
-                                    </p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p><?= $l->mensagem; ?></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
+                        <ul class="timeline">
+                            <?php foreach ($logs as $l) : ?>
+                                <li>
+                                    <div class="timeline-badge warning">
+                                        <i class="fa fa-dashboard"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title"><?= $l->usuario; ?></h4>
+                                            <p>
+                                                <small class="text-muted">
+                                                    <i class="glyphicon glyphicon-time"></i>
+                                                    <?= $this->datas->get_timeDifference($l->data, date('Y-m-d H:i:s')); ?> atrás
+                                                </small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p><?= $l->mensagem; ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
 
                     <?php else : ?>
                         <p>

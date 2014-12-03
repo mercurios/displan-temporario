@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="ls-title-intro">Editar tabela individual</h1>
+    <h1 class="ls-title-intro">Editar tabela especial</h1>
 
     <h2 class="ls-title-3">
         <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
@@ -22,7 +22,7 @@
     $idade5458  = unserialize($t->idade5458);
     $idade59    = unserialize($t->idade59);
     ?>
-    <form method="post" action="<?= base_url('tabelas/updateindividual/' . $t->id) ?>">
+    <form method="post" action="<?= base_url('tabelas/updateespecial/' . $t->id) ?>">
 
         <fieldset class="row">
             <div class="col-md-6">
@@ -54,6 +54,27 @@
                 <label class="ls-label">
                     <b class="ls-label-text">Acomodação *</b>
                     <input type="text" name="acomodacao" placeholder="Acomodação" title="Informe uma acomodação" value="<?= $t->acomodacao ?>" required>
+                </label>
+            </div>
+
+            <div class="col-md-12">
+                <?php $categorias = unserialize($t->categorias); ?>
+                <b class="ls-label-text">Categorias</b>
+                <p></p>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="categorias[]" <?= (in_array('advogados', $categorias)) ? 'checked' : '' ?> value="advogados"> Advogados
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="categorias[]" <?= (in_array('arquitetos', $categorias)) ? 'checked' : '' ?> value="arquitetos"> Arquitetos
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="categorias[]" <?= (in_array('fpublico', $categorias)) ? 'checked' : '' ?> value="fpublico"> Funcionários público
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="categorias[]" <?= (in_array('medicos', $categorias)) ? 'checked' : '' ?> value="medicos"> Médicos
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="categorias[]" <?= (in_array('fisioterapeutas', $categorias)) ? 'checked' : '' ?> value="fisioterapeutas"> Fisioterapeutas
                 </label>
             </div>
         </fieldset>

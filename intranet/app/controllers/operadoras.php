@@ -70,7 +70,10 @@ class Operadoras extends CI_Controller
             $this->add();
         } else {
 
-            $dados = array('name' => $this->input->post('name'));
+            $dados = array(
+                'name' => $this->input->post('name'),
+                'slug' => generate_uri($this->input->post('name'))
+            );
 
             if (!empty($_FILES['imagem']['name'])) {
                 $config['upload_path'] 		= '../uploads/operadoras/';
@@ -121,7 +124,10 @@ class Operadoras extends CI_Controller
             $this->add();
         } else {
 
-            $dados = array('name' => $this->input->post('name'));
+            $dados = array(
+                'name' => $this->input->post('name'),
+                'slug' => generate_uri($this->input->post('name'))
+            );
 
             if (!empty($_FILES['imagem']['name'])) {
                 $config['upload_path'] 		= '../uploads/operadoras/';

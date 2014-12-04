@@ -33,6 +33,8 @@ h1, h2, h3, h4{
 	height: 142px;
 	text-indent: -99999px;
 	margin-top: 30px;
+	position: relative;
+	z-index: 999999999999999;
 }
 #contato-topo{
 	margin-top: 15px;
@@ -158,7 +160,7 @@ li a.carousel-control{
 	color: #606060;
 }
 .content .bg-faixa-etaria{
-	background-color: #f6f6f6;
+	background: #f6f6f6;
 	padding-bottom: 20px;
 	padding-left: 40px;
 	margin-left: 0;
@@ -176,10 +178,12 @@ li a.carousel-control{
 	height: 0;
 	margin-bottom: -20px;
 }
-#tabelas{
-	margin: 10px 0 -680px 200px;
+
+.tabelas {
+	margin: 10px 0 20px 0;
 	width: 83%;
 }
+
 div.tabela{
 	display: inline;
 	width: 15.3%;
@@ -217,8 +221,6 @@ div.tabela{
 	padding-top: 5px;
 	height: 40px;
 	width: 78%;
-	margin-left: 220px;
-	margin-top: -80px;
 }
 #tellus h3{
 	color: white;
@@ -277,7 +279,7 @@ fieldset input, fieldset textarea{
 	height: 80px;
 }
 address{
-	padding: 30px 0 0 20px;	
+	padding: 30px 0 0 20px;
 	margin-left: -20px;
 }
 #by{
@@ -352,9 +354,6 @@ address{
 		margin-left: -40px;
 		width: 35%;
 	}
-	#tabelas{
-		margin-left: 190px;
-	}
 	.t1{
 		width: 14%;
 	}
@@ -371,7 +370,6 @@ address{
 		margin-left: -5px;
 	}
 	#tellus{
-		margin: -100px 0 0 220px;
 		width: 70%;
 		padding: 0;
 	}
@@ -383,7 +381,7 @@ address{
 	#tellus img{
 		margin-top: -50px;
 		margin-right: 35px;
-	}	
+	}
 }
 @media (max-width: 768px){
 	#topo{
@@ -508,7 +506,7 @@ address{
 	}
 	#tellus{
 		margin-top: 10px;
-		margin-left: -25px;	
+		margin-left: -25px;
 		width: 104%;
 	}
 	#tellus h3{
@@ -527,7 +525,7 @@ button.navbar-toggle{
 	float: none;
 }
 span.icon-bar{
-	background-color: #888; 
+	background-color: #888;
 }
 div.navbar-header{
 	margin-left: -10px;
@@ -635,9 +633,9 @@ div.navbar-header{
 		margin-top: 0;
 		margin-left: -10px;
 		padding-left: 0;
-	}							
+	}
 	.content .bg-faixa-etaria h5{
-		width: 
+		width:
 	}
 	#tabelas{
 		margin-left: 0px;
@@ -788,4 +786,3 @@ div.navbar-header{
 		margin-top: -40px;
 	}
 }
-

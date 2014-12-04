@@ -41,6 +41,9 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
+// Rotas individuais
+$route['planos-individuais/(:any)'] = 'tabelas/individuais/$1';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

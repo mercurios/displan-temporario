@@ -1,13 +1,6 @@
 <div class="container-fluid">
     <h1 class="ls-title-intro">Editar tabela individual</h1>
 
-    <h2 class="ls-title-3">
-        <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
-        <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>
-    </h2>
-
-    <hr>
-
     <?php foreach ($tabelas as $t) :
 
     $titulos    = unserialize($t->titulos);
@@ -57,6 +50,13 @@
                 </label>
             </div>
         </fieldset>
+
+        <h2 class="ls-title-3">
+            <button id="addColuna" class="ls-btn-default ls-ico-plus">Adicionar coluna</button>
+            <button id="rmvColuna" class="ls-btn-danger ls-ico-plus">Remover coluna</button>
+        </h2>
+
+        <hr>
 
         <table class="ls-table ls-table-striped ls-bg-header" id="tabela-de-precos">
             <tr id="titulo-tabelas">

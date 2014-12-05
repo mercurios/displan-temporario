@@ -21,7 +21,7 @@
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">
                     <h1>Displan</h1>
                 </a>
-
+                
                 <div id="contato-topo" class="col-md-3">
                     <p class="contato-p1">CENTRAL DE VENDAS</p>
                     <p class="contato-p2">(81) 3222.0506</p>

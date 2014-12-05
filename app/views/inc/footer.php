@@ -10,7 +10,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7900.795549812305!2d-34.89384928795777!3d-8.06084580427212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18c4c93b44a5%3A0x2ea83372b3d473a6!2sDisplan+Distribuidora+de+Planos+de+Sa%C3%BAde!5e0!3m2!1spt-BR!2sbr!4v1414603730687" class="span11" title="Mapa" height="300" style="border:0"></iframe>
                 </div>
 
-                <div id="contato" class="col-md-4">
+                <div id="contato" class="col-md-3">
                     <h4 class="borda-h4"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTATO</h4>
 
                     <!--forms-->

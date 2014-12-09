@@ -15,6 +15,7 @@ class Tabelas extends CI_Controller
         $this->load->model('Operadora_model', 'operadoras');
         $this->load->model('Plano_model', 'planos');
         $this->load->model('Tabela_model', 'tabelas');
+        $this->load->model('Categoria_model', 'categorias');
     }
 
     public function listar($tipo)
@@ -77,7 +78,8 @@ class Tabelas extends CI_Controller
 
             case 'especial':
                 $dados = array(
-                    'operadoras' => $this->operadoras->all()
+                    'operadoras' => $this->operadoras->all(),
+                    'categorias' => $this->categorias->all()
                 );
 
                 $this->load->view('inc/header');

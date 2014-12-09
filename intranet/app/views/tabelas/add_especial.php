@@ -43,21 +43,19 @@
             <div class="col-md-12">
                 <b class="ls-label-text">Categorias</b>
                 <p></p>
+
+                <?php if (empty($categorias)) : ?>
+                    <p>
+                        Não existem categorias cadastradas, você precisa cadastrar uma antes de continuar. <a href="#">CLIQUE AQUI</a>
+                    </p>
+                <?php else : foreach($categorias as $c) : ?>
+
                 <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" id="advogados" value="advogados"> Advogados
+                    <input type="checkbox" name="categorias[]" id="<?= $c->slug ?>" value="<?= $c->slug ?>"> <?= $c->name ?>
                 </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" id="arquitetos" value="arquitetos"> Arquitetos
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" id="fpublico" value="fpublico"> Funcionários público
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" id="medicos" value="medicos"> Médicos
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" id="fisioterapeutas" value="fisioterapeutas"> Fisioterapeutas
-                </label>
+
+                <?php endforeach; endif; ?>
+
             </div>
         </fieldset>
         <br>

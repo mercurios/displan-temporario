@@ -99,8 +99,8 @@ li a.carousel-control{
 	margin-top: -100px;
 }
 .bloco{
-	margin-left: 1.3% !important;
-	width: 98.8% !important;
+	margin-left: 1.7% !important;
+	width: 98.7% !important;
 }
 .content{
 	background-color: white;
@@ -329,11 +329,15 @@ address{
 	#myCarousel{
 		margin-top: -80px;
 	}
-	.content{
-		margin-left: 85px;
-	}
 	.title{
-		margin-top: 40%;
+		margin-left: 75px;
+		width: 83.3% !important;
+	}
+	.title h1{
+		width: 70%;
+	}
+	.content{
+		margin-left: 75px;
 		width: 83.3% !important;
 	}
 	img.operadora-img{
@@ -341,7 +345,10 @@ address{
 		margin-left: -20px;
 	}
 	#footer{
-		margin-left: 72px;
+		padding-left: 20px;
+	}
+	#onde-estamos{
+		margin-left: 7.5%;
 	}
 	iframe{
 		width: 100%;
@@ -434,14 +441,20 @@ address{
 	li a.carousel-control{
 		margin-top: 140px;
 	}
+	#wrapper{
+		width: 120%;
+	}
 	.title{
 		margin-left: 0;
 		margin-bottom: 0;
-		width: 100% !important;
 		padding-bottom: 15px;
 	}
 	.title, .content{
 		margin-left: 0 !important ;
+	}
+	.bloco{
+		margin-left: 0 !important;
+		width: 100% !important;
 	}
 	.inside{
 		margin-left: 180px;
@@ -457,13 +470,16 @@ address{
 		border: none;
 		padding: 0;
 	}
-	#footer{
-		margin-left: -10px;
+	#footer .row-fluid{
+		margin-left: -5px;
 	}
 	#footer iframe{
 		height: 250px;
 		width: 96%;
 		margin: 20px;
+	}
+	#onde-estamos{
+		margin-left: 0;
 	}
 	#formulario form fieldset input,
 	#formulario form fieldset textarea{
@@ -476,7 +492,6 @@ address{
 	}
 	#copy{
 		width: 100%;
-		margin-top: 12px;
 		padding-bottom: 20px;
 	}
 	#copy address{
@@ -543,12 +558,13 @@ address{
 		width: 98%;
 	}
 	#tellus h3{
-		font-size: 22px;
+		font-size: 1.8em;
+		padding-top: 5px;
 		margin-left: 80px;
 	}
 	#tellus img{
 		margin-right: 70px;
-		margin-top: -52px;
+		margin-top: -40px;
 	}
 }
 /**** Menu Responsivo - 480px . 320px ****/
@@ -591,7 +607,7 @@ div.navbar-header{
 		visibility: hidden;
 	}
 	#wrapper{
-		margin-top: 0;
+		margin-top: -210px;
 	}
 	.title{
 		margin-top: 0;
@@ -612,9 +628,6 @@ div.navbar-header{
 		height: 940px;
 		width: 480px;
 		margin-left: -20px;
-	}
-	#footer{
-		margin-left: 10px;
 	}
 	#footer iframe{
 		width: 98%;
@@ -655,6 +668,9 @@ div.navbar-header{
 		margin-left: -5px;
 		margin-top: 8px;
 	}
+	h1.titulo-unimed{
+		margin-left: 150px;
+	}
 	div.unimed-content{
 		padding: 0 0 0 10px;
 	}
@@ -667,9 +683,6 @@ div.navbar-header{
 		margin-left: -10px;
 		padding-left: 0;
 	}
-	.content .bg-faixa-etaria h5{
-		width:
-	}
 	#tabelas{
 		margin-left: 0px;
 		margin-top: -5px;
@@ -680,6 +693,7 @@ div.navbar-header{
 	}
 	div.tabela{
 		display: block;
+		margin-left: 0;
 	}
 	.t1{
 		margin-left: -40px;
@@ -690,29 +704,28 @@ div.navbar-header{
 		margin-left: 0;
 	}
 	.ul-1{
-		margin-left: 15px;
+		margin-left: 5px;
 	}
 	.li-2{
 		margin-left: -22px;
 	}
-	.bg-cred-info{
-		width: 168%;
-	}
 	.aside .info-2{
-		margin-top: -251px;
+		margin-top: -231px;
 		margin-left: 208px;
 	}
 	#tellus{
 		margin-left: 15px;
-		width: 96%;
+		margin-top: 30px;
+		width: 94%;
 	}
 	#tellus h3{
 		margin: 0 0 0 5px;
+		padding-top: 10px;
 		font-size: 1.2em;
 	}
 	#tellus img{
 		width: 10%;
-		margin-top: -38px;
+		margin-top: -28px;
 		margin-right: 15px;
 	}
 	.hidden{
@@ -728,10 +741,16 @@ div.navbar-header{
 	#navbar{
 		margin-top: -30px;
 	}
+	#wrapper{
+		margin-top: -130px;
+	}
 	.content{
 		margin-top: -10px;
 	}
 	.title{
+		width: 100%;
+	}
+	.title h1{
 		width: 100%;
 	}
 	.content .inside{
@@ -780,8 +799,8 @@ div.navbar-header{
 		margin-left: 35px;
 		margin-bottom: 10px;
 	}
-	.titulo-unimed{
-		margin-left: 30px;
+	h1.titulo-unimed{
+		margin-left: 15px;
 	}
 	.subtitle{
 		padding-bottom: 5px;
@@ -798,24 +817,29 @@ div.navbar-header{
 		font-size: 1.3em;
 	}
 	.content .aside{
-		margin-top: 0;
+		margin-top: 100px;
 	}
 	.bg-cred-info{
-		margin-top: 100px;
-		width: 400%;
+		width: 100%;
 	}
 	.aside .info-2{
 		margin: 10px 0 0 0;
 	}
+	.content .bg-faixa-etaria{
+		padding-bottom: 20px;
+	}
 	#tellus{
-		width: 94%;
-		padding-bottom: 50px;
+		margin-left: 12px;
+		margin-top: 230px;
+		width: 91%;
+		height: 50px;
 	}
 	#tellus h3{
-		font-size: 1em;
+		padding-top: 5px;
+		font-size: 1.3em;
 	}
 	#tellus img{
-		margin-right: 5px;
-		margin-top: -40px;
+		margin-top: -20px;
+		margin-right: 85px;
 	}
 }

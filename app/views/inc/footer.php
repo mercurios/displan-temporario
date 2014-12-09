@@ -15,7 +15,7 @@
 
                     <!--forms-->
                     <div id="formulario" class="container-fluid">
-                        <form class="form-horizontal row-fluid">
+                        <form class="form-horizontal row-fluid" method="post" action="<?= base_url('contatos/sendmail') ?>">
                             <fieldset>
                                 <legend>Dados da Mensagem</legend>
                                 <div class="control-group">
@@ -33,7 +33,7 @@
                                 <div class="control-group">
                                     <div class="controls">
                                         <label for="inputTelephone">Seu Telefone</label>
-                                        <input class="col-md-12" name="tel" type="tel" id="inputTelephone" placeholder="Telefone" />
+                                        <input class="col-md-12" name="telefone" type="tel" id="inputTelephone" placeholder="Telefone" />
                                     </div>
                                 </div>
                                 <div class="control-group">

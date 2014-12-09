@@ -7,12 +7,14 @@ class Home extends CI_Controller {
         parent::__construct();
 
         $this->load->model('Operadora_model', 'operadoras');
+        $this->load->model('Categoria_model', 'categorias');
     }
 
     public function index()
     {
         $dados = array(
-            'operadoras' => $this->operadoras->all()
+            'operadoras' => $this->operadoras->all(),
+            'categorias' => $this->categorias->all()
         );
 
         $this->load->view('inc/header', $dados);

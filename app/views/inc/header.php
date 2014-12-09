@@ -21,7 +21,7 @@
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">
                     <h1>Displan</h1>
                 </a>
-                
+
                 <div id="contato-topo" class="col-md-3">
                     <p class="contato-p1">CENTRAL DE VENDAS</p>
                     <p class="contato-p2">(81) 3222.0506</p>
@@ -60,8 +60,8 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planos para Profissionais <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <?php foreach ($operadoras as $o) : ?>
-                                        <li><a href="<?= base_url('planos-especiais/' . $o->slug) ?>"><?= $o->name ?></a></li>
+                                    <?php foreach ($categorias as $c) : ?>
+                                        <li><a href="<?= base_url('planos-especiais/' . $c->slug) ?>"><?= $c->name ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </li>

@@ -43,6 +43,8 @@ $route['404_override'] = '';
 
 // Rotas individuais
 $route['planos-individuais/(:any)'] = 'tabelas/individuais/$1';
+$route['planos-empresariais/(:any)'] = 'tabelas/empresariais/$1';
+$route['planos-especiais/(:any)'] = 'tabelas/especiais/$1';
 
 
 /* End of file routes.php */

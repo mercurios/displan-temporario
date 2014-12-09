@@ -16,28 +16,16 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tabelas_individuais`
+-- Table structure for table `categorias`
 --
 
-DROP TABLE IF EXISTS `tabelas_individuais`;
+DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tabelas_individuais` (
+CREATE TABLE `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `operadora_id` int(11) DEFAULT NULL,
-  `plano_id` int(11) DEFAULT NULL,
-  `acomodacao` varchar(45) DEFAULT NULL,
-  `titulos` text,
-  `idade0018` text,
-  `idade1923` text,
-  `idade2428` text,
-  `idade2933` text,
-  `idade3438` text,
-  `idade3943` text,
-  `idade4448` text,
-  `idade4953` text,
-  `idade5458` text,
-  `idade59` text,
+  `name` varchar(45) DEFAULT NULL,
+  `slug` varchar(45) DEFAULT NULL,
   `criado` datetime DEFAULT NULL,
   `editado` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -45,12 +33,12 @@ CREATE TABLE `tabelas_individuais` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tabelas_individuais`
+-- Dumping data for table `categorias`
 --
 
-LOCK TABLES `tabelas_individuais` WRITE;
-/*!40000 ALTER TABLE `tabelas_individuais` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tabelas_individuais` ENABLE KEYS */;
+LOCK TABLES `categorias` WRITE;
+/*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -62,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-09 12:30:51
+-- Dump completed on 2014-12-09 12:30:40

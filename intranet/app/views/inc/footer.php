@@ -36,7 +36,15 @@
 				<li><a href="<?= base_url('planos'); ?>" class="ls-ico-list">Planos</a></li>
 				<li><a href="<?= base_url('tabelas/listar/individuais'); ?>" class="ls-ico-table-alt">Tabelas individuais</a></li>
 				<li><a href="<?= base_url('tabelas/listar/empresariais'); ?>" class="ls-ico-table-alt">Tabelas empresariais</a></li>
-				<li><a href="<?= base_url('tabelas/listar/especiais'); ?>" class="ls-ico-table-alt">Tabelas especiais</a></li>
+				<li class="ls-submenu" aria-expanded="false" aria-hidden="true">
+					<a href="#" class="ls-ico-table-alt" role="menuitem">Tabelas especiais</a>
+					<ul role="menu">
+						<li><a class="ls-submenu-item" href="<?= base_url('categorias') ?>" role="menuitem">Categorias</a></li>
+						<li><a class="ls-submenu-item" href="<?= base_url('tabelas/listar/especiais') ?>" role="menuitem">Tabelas</a></li>
+					</ul>
+				</li>
+
+				<li><a href="<?= base_url('users/'); ?>" class="ls-ico-user">Administradores</a></li>
 			</ul>
 		</nav>
 	</aside>

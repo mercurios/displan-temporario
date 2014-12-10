@@ -6,7 +6,9 @@ class Categorias extends CI_Controller {
     {
         parent::__construct();
 
-        if ($this->session->userdata('logged_in') && $this->session->userdata('logged_in')['logado'] === true) {
+        $userData = $this->session->userdata('logged_in');
+
+        if ($userData && $userData['logado'] === true) {
             $session_data = $this->session->userdata('logged_in');
         } else {
             redirect('auth', 'refresh');
@@ -40,7 +42,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->save($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou a categoria (' . $this->input->post('name') . ')');
+            $this->logs->save($userData['name'], 'Cadastrou a categoria (' . $this->input->post('name') . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria cadastrada com sucesso!');
             redirect('categorias');
@@ -76,7 +78,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->update($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou a categoria (' . $this->input->post('name') . ')');
+            $this->logs->save($userData['name'], 'Atualizou a categoria (' . $this->input->post('name') . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria atualizada com sucesso!');
             redirect('categorias');
@@ -96,7 +98,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->delete($id)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou a categoria (' . $resultado[0]->name . ')');
+            $this->logs->save($userData['name'], 'Deletou a categoria (' . $resultado[0]->name . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria deletada com sucesso!');
             redirect('categorias');

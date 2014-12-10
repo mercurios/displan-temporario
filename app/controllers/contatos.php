@@ -65,13 +65,3 @@ class Contatos extends CI_Controller {
         $this->load->view('inc/footer');
     }
 }
-
-mysqldump -p --user=root displan_temporario adm_sessions > adm_sessions.sql;
-mysqldump -p --user=root displan_temporario categorias > categorias.sql;
-mysqldump -p --user=root displan_temporario logs > logs.sql;
-mysqldump -p --user=root displan_temporario operadoras > operadoras.sql;
-mysqldump -p --user=root displan_temporario planos > planos.sql;
-mysqldump -p --user=root displan_temporario tabelas_empresariais > tabelas_empresariais.sql;
-mysqldump -p --user=root displan_temporario tabelas_especiais > tabelas_especiais.sql;
-mysqldump -p --user=root displan_temporario tabelas_individuais > tabelas_individuais.sql;
-mysqldump -p --user=root displan_temporario users > users.sql;

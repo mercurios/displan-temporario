@@ -6,7 +6,9 @@ class Users extends CI_Controller {
     {
         parent::__construct();
 
-        if ($this->session->userdata('logged_in') && $this->session->userdata('logged_in')['logado'] === true) {
+        $userData = $this->session->userdata('logged_in');
+
+        if ($userData && $userData['logado'] === true) {
             $session_data = $this->session->userdata('logged_in');
         } else {
             redirect('auth', 'refresh');
@@ -54,7 +56,7 @@ class Users extends CI_Controller {
 
         if ($this->users->save($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou um administrador (' . $this->input->post('name') .')');
+            $this->logs->save($userData['name'], 'Cadastrou um administrador (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Administrador cadastrado com sucesso!');
             redirect('users');
@@ -75,7 +77,7 @@ class Users extends CI_Controller {
 
         if ($this->users->update($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou um administrador (' . $this->input->post('name') .')');
+            $this->logs->save($userData['name'], 'Atualizou um administrador (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Administrador atualizado com sucesso!');
             redirect('users');
@@ -95,14 +97,14 @@ class Users extends CI_Controller {
         } else {
 
             $user = $this->users->find($id);
-            $usuario_logado = $this->session->userdata('logged_in')['name'];
+            $usuario_logado = $userData['name'];
 
             if ($user[0]->name === $usuario_logado) {
 
                 // Deleta, destroi a sessao e redireciona
                 if ($this->users->delete($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($this->session->userdata('logged_in')['name'], 'Se auto deletou o.O');
+                    $this->logs->save($userData['name'], 'Se auto deletou o.O');
 
                     $this->session->sess_destroy();
                     redirect('auth');
@@ -113,7 +115,7 @@ class Users extends CI_Controller {
             } else {
                 if ($this->users->delete($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou um administrador (' . $user[0]->name .')');
+                    $this->logs->save($userData['name'], 'Deletou um administrador (' . $user[0]->name .')');
 
                     $this->session->set_flashdata('msgSuccess', 'Administrador deletado com sucesso!');
                     redirect('users');

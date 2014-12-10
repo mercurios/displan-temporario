@@ -11,7 +11,9 @@ class Operadoras extends CI_Controller
     {
         parent::__construct();
 
-        if ($this->session->userdata('logged_in') && $this->session->userdata('logged_in')['logado'] === true) {
+        $userData = $this->session->userdata('logged_in');
+
+        if ($userData && $userData['logado'] === true) {
             $session_data = $this->session->userdata('logged_in');
         } else {
             redirect('auth', 'refresh');
@@ -97,7 +99,7 @@ class Operadoras extends CI_Controller
 
             if ($this->operadora->save($dados)) {
                 $this->load->library('Logs');
-                $this->logs->save($this->session->userdata('logged_in')['name'], 'Cadastrou a operadora (' . $this->input->post('name') . ')');
+                $this->logs->save($userData['name'], 'Cadastrou a operadora (' . $this->input->post('name') . ')');
 
                 $this->session->set_flashdata('msgSuccess', 'Operadora cadastrada com sucesso!');
                 redirect('operadoras');
@@ -153,7 +155,7 @@ class Operadoras extends CI_Controller
 
             if ($this->operadora->update($dados, $id)) {
                 $this->load->library('Logs');
-                $this->logs->save($this->session->userdata('logged_in')['name'], 'Atualizou a operadora. (' .$this->input->post('name'). ')');
+                $this->logs->save($userData['name'], 'Atualizou a operadora. (' .$this->input->post('name'). ')');
 
                 $this->session->set_flashdata('msgSuccess', 'Operadora atualizada com sucesso!');
                 redirect('operadoras');
@@ -180,7 +182,7 @@ class Operadoras extends CI_Controller
             unlink('../uploads/operadoras/' . $imagem);
 
             $this->load->library('Logs');
-            $this->logs->save($this->session->userdata('logged_in')['name'], 'Deletou a operadora (' .$dados[0]->name. ')');
+            $this->logs->save($userData['name'], 'Deletou a operadora (' .$dados[0]->name. ')');
 
             $this->session->set_flashdata('msgSuccess', 'Operadora deletada com sucesso!');
             redirect('operadoras');

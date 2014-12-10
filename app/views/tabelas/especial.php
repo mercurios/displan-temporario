@@ -21,13 +21,15 @@
                             <ul class="ul-1">
                                 <li></li>
                                 <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
-                                <li>00 - 18 <span>anos</span></li>
+                                <li>19 - 23 <span>anos</span></li>
+                                <li>24 - 28 <span>anos</span></li>
+                                <li>29 - 33 <span>anos</span></li>
+                                <li>34 - 38 <span>anos</span></li>
+                                <li>39 - 43 <span>anos</span></li>
+                                <li>44 - 48 <span>anos</span></li>
+                                <li>49 - 53 <span>anos</span></li>
+                                <li>54 - 58 <span>anos</span></li>
+                                <li>59 ou mais</li>
                             </ul>
                         </div>
                         <div class="parte-2">
@@ -51,7 +53,7 @@
                             ?>
                                 <div class="tabela col-md-2 t2">
                                     <ul class="lado ul-1">
-                                        <li class="li-1">1 vida</li>
+                                        <li class="li-1"><?= $titulos[$i] ?></li>
                                         <li class="li-2"><span>R$</span> <?= $idade0018[$i] ?></li>
                                         <li class="li-2"><span>R$</span> <?= $idade1923[$i] ?></li>
                                         <li class="li-2"><span>R$</span> <?= $idade2428[$i] ?></li>

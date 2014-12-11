@@ -11,13 +11,7 @@ class Operadoras extends CI_Controller
     {
         parent::__construct();
 
-        $userData = $this->session->userdata('logged_in');
-
-        if ($userData && $userData['logado'] === true) {
-            $session_data = $this->session->userdata('logged_in');
-        } else {
-            redirect('auth', 'refresh');
-        }
+        checkAuth();
 
         $this->load->model('Operadora_model', 'operadora');
     }
@@ -74,7 +68,8 @@ class Operadoras extends CI_Controller
 
             $dados = array(
                 'name' => $this->input->post('name'),
-                'slug' => generate_uri($this->input->post('name'))
+                'slug' => generate_uri($this->input->post('name')),
+                'categoria' => serialize($this->input->post('categorias'))
             );
 
             if (!empty($_FILES['imagem']['name'])) {
@@ -128,7 +123,8 @@ class Operadoras extends CI_Controller
 
             $dados = array(
                 'name' => $this->input->post('name'),
-                'slug' => generate_uri($this->input->post('name'))
+                'slug' => generate_uri($this->input->post('name')),
+                'categoria' => serialize($this->input->post('categorias'))
             );
 
             if (!empty($_FILES['imagem']['name'])) {

@@ -1,5 +1,6 @@
 <div id="wrapper" class="container-fluid">
 
+    <?php if (!empty($tabela)) : ?>
     <?php foreach ($tabelas as $t) : ?>
     <div class="bloco-plano row-fluid">
         <div class="row-fluid">
@@ -88,4 +89,6 @@
         </div>
     </div>
     <?php endforeach; ?>
+
+    <?php endif ?>
 </div>

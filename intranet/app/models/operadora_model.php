@@ -5,12 +5,20 @@ class Operadora_model extends CI_Model
     private $tabela     = 'operadoras';
     private $id         = 'id';
     private $name       = 'name';
+    private $logo       = 'logo';
+    private $categoria  = 'categoria';
+    private $slug       = 'slug';
+    private $criado     = 'criado';
+    private $editado    = 'editado';
 
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Retorna todas as operadoras cadastradas.
+     */
     public function all()
     {
         $this->db->order_by($this->name, "asc");
@@ -35,7 +43,7 @@ class Operadora_model extends CI_Model
     public function update($dados, $id)
     {
         $dados['editado'] = date('Y-m-d H:i:s');
-        
+
         $this->db->where($this->id, $id);
         $this->db->update($this->tabela, $dados);
         return true;

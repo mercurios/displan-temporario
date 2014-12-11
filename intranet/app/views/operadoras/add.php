@@ -19,6 +19,24 @@
                 </div>
 
                 <div class="col-md-12">
+                    <b class="ls-label-text">Essa operadora tem planos:</b>
+                    <p></p>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="categorias[]" id="Individuais" value="individuais"> Individuais
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="categorias[]" id="Empresariais" value="empresariais"> Empresariais
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="categorias[]" id="Especiais" value="especiais"> Especiais
+                    </label>
+                </div>
+
+                <div class="col-md-12">
+                    <br>
                     <input type="submit" class="btn btn-default" value="Salvar" />
                 </div>
             </fieldset>

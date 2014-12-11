@@ -2,11 +2,12 @@
 
 class Operadora_model extends CI_Model
 {
-    private $table  = 'operadoras';
-    private $id     = 'id';
-    private $logo   = 'logo';
-    private $name   = 'name';
-    private $slug   = 'slug';
+    private $table      = 'operadoras';
+    private $id         = 'id';
+    private $logo       = 'logo';
+    private $name       = 'name';
+    private $slug       = 'slug';
+    private $categoria  = 'categoria';
 
     public function __construct()
     {

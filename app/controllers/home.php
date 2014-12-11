@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 
         $this->load->model('Operadora_model', 'operadoras');
         $this->load->model('Categoria_model', 'categorias');
+        $this->load->model('Tabelas_individual', 'tbind');
     }
 
     public function index()

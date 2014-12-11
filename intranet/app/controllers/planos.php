@@ -10,13 +10,7 @@ class Planos extends CI_Controller
     {
         parent::__construct();
 
-        $userData = $this->session->userdata('logged_in');
-
-        if ($userData && $userData['logado'] === true) {
-            $session_data = $this->session->userdata('logged_in');
-        } else {
-            redirect('auth', 'refresh');
-        }
+        checkAuth();
 
         $this->load->model('Operadora_model', 'operadoras');
         $this->load->model('Plano_model', 'planos');

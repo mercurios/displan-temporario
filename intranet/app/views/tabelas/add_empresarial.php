@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="ls-title-intro">Adicionar tabela individual</h1>
+    <h1 class="ls-title-intro">Adicionar tabela empresarial</h1>
 
     <form method="post" action="<?= base_url('tabelas/saveempresarial') ?>">
 

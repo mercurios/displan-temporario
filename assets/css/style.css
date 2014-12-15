@@ -38,7 +38,6 @@ h1, h2, h3, h4{
 	width: 154px;
 	height: 142px;
 	text-indent: -99999px;
-	margin-top: 30px;
 	z-index: 2;
 }
 #contato-topo{
@@ -143,8 +142,10 @@ li a.carousel-control{
 }
 /*unimed page*/
 .img-title{
-	width: 20%;
+	max-height: 120px;
+	width: auto;
 	margin-left: -10px;
+	float: left;
 }
 .titulo-unimed{
 	padding: 10px 0;
@@ -195,14 +196,12 @@ div.tabela{
 	list-style: none;
 	display: inline;
 }
-.ul-1{
-	margin-left: 15px;
-}
 .tabela ul li{
 	width: 80px;
 	text-decoration: underline;
 	margin-top: 15px;
 	display: inline-block;
+	text-align: center;
 }
 .li-1{
 	margin-left: -30px;
@@ -398,7 +397,7 @@ address{
 		margin-left: -50px;
 	}
 	.li-2{
-		margin-left: -5px;
+		margin-left: -10px;
 	}
 	#tellus{
 		width: 66.2%;
@@ -505,11 +504,7 @@ address{
 		width: 25%;
 	}
 	/*Unimed page*/
-	.img-title{
-		width: 30%;
-		margin-left: 10px;
-		float: left;
-	}
+	
 	.unimed-content{
 		width: 100%;
 		padding-top: 1px;
@@ -540,21 +535,22 @@ address{
 		margin-left: -40px;
 	}
 	.li-2{
-		margin-left: 10px;
+		margin-left: 2px;
 	}
 	.content .aside{
 		width: 100%;
 		float: none !important;
-		margin-top: 320px;
 		margin-left: 12px;
 		padding-right: 25px;
+		display: inline-block;
 	}
 	.bg-cred-info{
-		width: 49%;
+		width: 48.6%;
+		float: left;
 	}
 	.info-2{
-		float: right;
-		margin-top: -171px;
+		position: absolute;
+		margin-left: 340px;
 	}
 	#tellus{
 		margin-top: 10px;
@@ -700,7 +696,6 @@ div.navbar-header{
 	}
 	.t1{
 		margin-left: -40px;
-		padding-top: 38px;
 	}
 	.t2{
 		width: 20%;
@@ -709,12 +704,17 @@ div.navbar-header{
 	.ul-1{
 		margin-left: 5px;
 	}
+	.li-1{
+		margin-left: -62px;
+	}
 	.li-2{
 		margin-left: -22px;
 	}
+	.content .aside{
+		margin-left: 5px;
+	}
 	.aside .info-2{
-		margin-top: -231px;
-		margin-left: 208px;
+		margin-left: 215px;
 	}
 	#tellus{
 		margin-left: 15px;
@@ -820,12 +820,14 @@ div.navbar-header{
 		font-size: 1.3em;
 	}
 	.content .aside{
+		margin-left: 12px;
 		margin-top: 100px;
 	}
 	.bg-cred-info{
 		width: 100%;
 	}
 	.aside .info-2{
+		position: inherit;
 		margin: 10px 0 0 0;
 	}
 	.content .bg-faixa-etaria{
@@ -833,7 +835,6 @@ div.navbar-header{
 	}
 	#tellus{
 		margin-left: 12px;
-		margin-top: 230px;
 		width: 91%;
 		height: 50px;
 	}

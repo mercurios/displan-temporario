@@ -12,8 +12,8 @@
         <div class="row-fluid">
             <div class="content unimed-content col-md-10">
                 <div class="subtitle col-md-12">
-                    <h3><?= $t->plano ?></h3>
-                    <h4>Acomodação <?= $t->acomodacao ?></h4>
+                    <h3>Plano: <?= $t->plano ?></h3>
+                    <h4>Acomodação: <?= $t->acomodacao ?></h4>
                 </div>
                 <div class="bg-faixa-etaria col-md-12">
                     <div class="hidden col-md-12"><h3>Vire a tela para ter acesso à tabela de preços.</h3></div>
@@ -76,11 +76,11 @@
                             <?= $t->credenciados; ?>
                         </div>
                         <div class="bg-cred-info info-2">
-                            <h5>Informações adicionadas</h5>
+                            <h5>Informações adicionais</h5>
                             <?= $t->info; ?>
                         </div>
                     </div>
-                    <div id="tellus" class="col-md-12">
+                    <div id="tellus" class="col-md-9">
                         <h3>GOSTOU? LIGUE AGORA (81) 3222.0506</h3>
                         <img src="<?= base_url('assets/img/tellus.png'); ?>" alt="Tell us" title="Tell us">
                     </div>

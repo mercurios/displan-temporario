@@ -277,10 +277,12 @@ fieldset input, fieldset textarea{
 	color: black;
 }
 
-#formulario form input.btn{
+#formulario form button.btn{
 	float:right;
 	margin-top: 10px;
 }
+.modal-success{padding-left: 120px; color: green;}
+.modal-fail{padding-left: 180px; color: red;}
 #telefone h5{
 	font-weight: bold;
 	font-size: 1.2em;
@@ -487,7 +489,7 @@ address{
 		width: 96%;
 		margin-left: 15px;
 	}
-	#formulario form fieldset input.btn{
+	#formulario form fieldset button.btn{
 		width: 20%;
 		margin-right: 25px;
 	}
@@ -650,7 +652,7 @@ div.navbar-header{
 	#formulario form fieldset textarea{
 		margin-left: 8px;
 	}
-	#formulario form fieldset input.btn{
+	#formulario form fieldset button.btn{
 		margin-right: 10px;
 	}
 	#copy{
@@ -777,7 +779,7 @@ div.navbar-header{
 		margin-left: 0;
 		width: 100%;
 	}
-	#formulario form fieldset input.btn{
+	#formulario form fieldset button.btn{
 		width: 30%;
 	}
 	#nossohorario{

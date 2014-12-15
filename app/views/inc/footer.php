@@ -42,7 +42,38 @@
                                         <textarea class="col-md-12" name="message" rows="5" id="inputMessage" placeholder="Mensagem"></textarea>
                                     </div>
                                 </div>
-                                <input type="submit" class="btn btn-info" value="Enviar"/>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                                  Enviar
+                                </button>
+
+                                <!--Modals Sucesso e Falha-->
+
+                                
+                                <!-- Modal de Sucesso-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+                                        <h4 class="modal-title modal-success" id="myModalLabel">Sua mensagem foi enviada com sucesso!</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Modal de Falha-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+                                        <h4 class="modal-title modal-fail" id="myModalLabel">Falha ao enviar a mensagem!</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
                             </fieldset>
                         </form>
                     </div>

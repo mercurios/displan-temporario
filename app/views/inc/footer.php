@@ -1,7 +1,7 @@
     <footer>
         <div id="footer" class="container-fluid">
             <div class="row-fluid">
-                <div id="onde-estamos" class="col-md-4">
+                <div id="onde-estamos" class="col-md-4 offset1">
                     <h4 class="borda-h4">
                         <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> ONDE ESTAMOS
                     </h4>

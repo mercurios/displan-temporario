@@ -58,24 +58,23 @@
             </div>
 
             <div class="col-md-12">
-                <?php $categorias = unserialize($t->categorias); ?>
                 <b class="ls-label-text">Categorias</b>
                 <p></p>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" <?= (in_array('advogados', $categorias)) ? 'checked' : '' ?> value="advogados"> Advogados
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" <?= (in_array('arquitetos', $categorias)) ? 'checked' : '' ?> value="arquitetos"> Arquitetos
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" <?= (in_array('fpublico', $categorias)) ? 'checked' : '' ?> value="fpublico"> Funcionários público
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" <?= (in_array('medicos', $categorias)) ? 'checked' : '' ?> value="medicos"> Médicos
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="categorias[]" <?= (in_array('fisioterapeutas', $categorias)) ? 'checked' : '' ?> value="fisioterapeutas"> Fisioterapeutas
-                </label>
+                <?php
+                $tab_categorias = unserialize($t->categorias);
+
+                if (empty($categorias)) : ?>
+                    <p>
+                        Não existem categorias cadastradas, você precisa cadastrar uma antes de continuar. <a href="#">CLIQUE AQUI</a>
+                    </p>
+                <?php else : foreach($categorias as $c) : ?>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox"  <?= (in_array($c->slug, $tab_categorias)) ? 'checked' : '' ?> name="categorias[]" id="<?= $c->slug ?>" value="<?= $c->slug ?>"> <?= $c->name ?>
+                    </label>
+
+                <?php endforeach; endif; ?>
+
             </div>
         </fieldset>
 

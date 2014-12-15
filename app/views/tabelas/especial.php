@@ -1,6 +1,6 @@
 <div id="wrapper" class="container-fluid">
 
-    <?php if (!empty($tabela)) : ?>
+    <?php if (!empty($tabelas)) : ?>
     <?php foreach ($tabelas as $t) : ?>
     <div class="bloco-plano row-fluid">
         <div class="row-fluid">
@@ -90,5 +90,7 @@
     </div>
     <?php endforeach; ?>
 
-    <?php endif ?>
+    <?php else: ?>
+        <p>Nenhuma tabela cadastrada nessa categoria...</p>
+    <?php endif; ?>
 </div>

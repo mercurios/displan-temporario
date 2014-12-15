@@ -131,7 +131,8 @@ class Tabelas extends CI_Controller
                 $dados = array(
                     'tabelas'       => $tabelas,
                     'operadoras'    => $operadoras,
-                    'planos'        => $planos
+                    'planos'        => $planos,
+                    'categorias'    => $this->categorias->all()
                 );
 
                 $this->load->view('inc/header');

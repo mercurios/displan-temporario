@@ -14,6 +14,7 @@ class Categoria_model extends CI_Model
 
     public function all()
     {
+        $this->db->order_by('name', 'asc');
         return $this->db->get($this->table)->result();
     }
 

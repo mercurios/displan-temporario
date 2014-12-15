@@ -51,7 +51,7 @@
                             ?>
                             <div class="tabela col-md-2 t2">
                                 <ul class="lado ul-1">
-                                    <li class="li-1">1 vida</li>
+                                    <li class="li-1"><?= $titulos[$i] ?></li>
                                     <li class="li-2"><span>R$</span> <?= $idade0018[$i] ?></li>
                                     <li class="li-2"><span>R$</span> <?= $idade1923[$i] ?></li>
                                     <li class="li-2"><span>R$</span> <?= $idade2428[$i] ?></li>

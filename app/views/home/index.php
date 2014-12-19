@@ -1,15 +1,12 @@
     <div id="wrapper" class="container-fluid">
         <div class="bloco row-fluid">
-            <div class="row-fluid">
-                <div class="title col-md-12 offset1">
+                <div class="title col-md-10">
                     <h1 class="titulo-grande">Escolha aqui seu plano de saúde:</h1>
                 </div>
-            </div>
-            <div class="row-fluid">
-                <div class="content col-md-12 offset1">
+                <div class="content col-md-10">
                     <div class="border-right inside col-md-4">
                         <h5 class="titulo-medio">Planos individuais</h5>
-                        <img class="" src="<?= base_url('assets/img/individuais.jpg'); ?>" alt="individuais" title="Planos Individuais">
+                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/individuais.jpg'); ?>" alt="individuais" title="Planos Individuais">
                         <div class="operadoras">
                             <ul class="col-md-12">
                                 <?php foreach ($operadoras as $o) : ?>
@@ -25,7 +22,7 @@
                     </div>
                     <div class="border-right inside col-md-4">
                         <h5 class="titulo-medio">Planos empresriais</h5>
-                        <img class="col-md-11" src="<?= base_url('assets/img/empresas.png'); ?>" alt="empresas" title="Planos Individuais">
+                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/empresas.png'); ?>" alt="empresas" title="Planos Individuais">
                         <div class="operadoras">
                             <ul class="col-md-12">
                                 <?php foreach ($operadoras as $o) : ?>
@@ -41,7 +38,7 @@
                     </div>
                     <div class="inside col-md-4">
                         <h5 class="titulo-medio">Planos para profissionais</h5>
-                        <img class="col-md-11" src="<?= base_url('assets/img/profissionais.png'); ?>" alt="profissionais" title="Planos Individuais">
+                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/profissionais.png'); ?>" alt="profissionais" title="Planos Individuais">
                         <div class="operadoras">
                             <ul class="col-md-12">
                                 <?php foreach ($operadoras as $o) : ?>
@@ -56,6 +53,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>

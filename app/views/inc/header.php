@@ -15,7 +15,9 @@
 </head>
 <body>
     <div class="container-fluid">
-        <img class="temp" src="<?= base_url('assets/img/temp.png'); ?>" alt="temporario">
+
+    <!--Faixa TMP<img class="temp" src="<?= base_url('assets/img/temp.png'); ?>" alt="temporario">-->
+    
         <div class="row-fluid">
             <div id="topo" class="col-md-10 offset1">
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">

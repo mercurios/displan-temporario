@@ -1,24 +1,5 @@
 @charset "utf-8";
-/*Titulos*/
-h1, h2, h3, h4{
-	margin: 15px 0;
-}
-.titulo-grande{
-	font-size: 2.2em;
-	color: #606060;
-	margin-left: 10px;
-	margin-top: 10px;
-}
-.titulo-medio{
-	font-size: 1.6em !important;
-	color: #606060;
-	padding-top: 10px;
-}
-.titulo-pequeno{
-	font-size: 1.4em;
-	color: #606060;
-	padding-top: 16px;
-}
+
 /*Geral*/
 #topo{
 	background-color: #f7f7f7;
@@ -99,8 +80,10 @@ li a.carousel-control{
 	-moz-width: 30%;
 }
 .bloco{
-	margin-left: 1.7% !important;
-	width: 98.7% !important;
+	margin-left: 0.3% !important;
+}
+.bloco-plano{
+	margin-left: 0.3% !important;
 }
 .content{
 	background-color: white;
@@ -132,9 +115,16 @@ li a.carousel-control{
 .operadoras ul li{
 	list-style: none;
 	margin-top: 20px;
+	margin-bottom: 40px;
 }
 .operadoras ul li a{
 	text-decoration: none;
+}
+.operadora-img{
+	float: left;
+	margin-right: 5px;
+	height: 50px;
+	width: auto;
 }
 .operadoras ul li a h5{
 	padding-top: 10px;
@@ -342,10 +332,6 @@ address{
 		margin-left: 75px;
 		width: 83.3% !important;
 	}
-	img.operadora-img{
-		width: 50%;
-		margin-left: -20px;
-	}
 	#footer{
 		padding-left: 20px;
 	}
@@ -418,7 +404,6 @@ address{
 @media (max-width: 768px){
 	#topo{
 		margin-left: 0px;
-		margin-top: 50px;
 		height: 260px
 	}
 	#logo{
@@ -429,6 +414,7 @@ address{
 	#contato-topo{
 		width: 40%;
 		margin-top: 120px;
+		margin-right: -40px;
 	}
 	#navbar{
 		margin-left: 10px;
@@ -444,7 +430,7 @@ address{
 		margin-top: 140px;
 	}
 	#wrapper{
-		width: 120%;
+		width: 100%;
 	}
 	.title{
 		margin-left: 0;
@@ -452,21 +438,24 @@ address{
 		padding-bottom: 15px;
 	}
 	.title, .content{
-		margin-left: 0 !important ;
+		margin-left: 0 !important;
+		width: auto !important;
 	}
 	.bloco{
 		margin-left: 0 !important;
 		width: 100% !important;
 	}
 	.inside{
-		margin-left: 180px;
+		padding-left: 180px !important;
+		padding-bottom: 10px !important;
+		border-bottom: 1px solid lightgray !important;
 	}
 	.operadoras{
 		margin-left: 50px;
 		margin-top: 10px;
 	}
 	.operadoras ul li a h5{
-		margin-left: 35px;
+		margin-left: 8px;
 	}
 	.border-right{
 		border: none;
@@ -615,13 +604,13 @@ div.navbar-header{
 		margin-top: -10px;
 	}
 	.content .inside{
-		margin-left: -10px;
+		padding-left: 20px !important;
+	}
+	.operadoras{
+		margin-left: 0;
 	}
 	.operadoras ul li a h5{
 		margin-left: 80px;
-	}
-	.content div a img{
-		width: 100%;
 	}
 	footer{
 		height: 940px;
@@ -757,13 +746,22 @@ div.navbar-header{
 		width: 100%;
 	}
 	.content .inside{
-		margin-left: -20px;
+		margin-left: -5px;
+	}
+	.content .inside{
+		padding-left: 10px !important;
+	}
+	.operadoras ul{
+		margin-left: -10px;
 	}
 	.operadoras ul li a h5{
-		margin-left: 10px;
+		margin-left: 20px;
 	}
 	.inside img{
 		width: 105%;
+	}
+	.operadora-img{
+		width: auto !important;
 	}
 	.a-carousel a{
 		margin-top: 180px;
@@ -846,4 +844,27 @@ div.navbar-header{
 		margin-top: -20px;
 		margin-right: 85px;
 	}
+}
+/*Titulos*/
+h1, h2, h3, h4{
+	margin: 15px 0;
+}
+.titulo-grande{
+	font-size: 2.2em;
+	color: #606060;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.titulo-medio{
+	font-size: 1.6em !important;
+	color: #606060;
+	padding-top: 10px;
+}
+.titulo-pequeno{
+	font-size: 1.4em;
+	color: #606060;
+	padding-top: 16px;
+}
+.no-padding{
+	padding: 0 !important;
 }

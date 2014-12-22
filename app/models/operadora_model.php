@@ -16,12 +16,14 @@ class Operadora_model extends CI_Model
 
     public function all()
     {
+        $this->db->order_by('name', 'asc');
         return $this->db->get($this->table)->result();
     }
 
     public function find($slug)
     {
         $this->db->where($this->slug, $slug);
+        $this->db->order_by('name', 'asc');
         return $this->db->get($this->table)->result();
     }
 }

@@ -12,7 +12,7 @@
                                 <?php foreach ($operadoras as $o) : ?>
                                     <li>
                                         <a href="<?= base_url('planos-individuais/' . $o->slug) ?>">
-                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img col-md-5'); ?>
+                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img'); ?>
                                             <h5><?= $o->name ?></h5>
                                         </a>
                                     </li>
@@ -28,7 +28,7 @@
                                 <?php foreach ($operadoras as $o) : ?>
                                     <li>
                                         <a href="<?= base_url('planos-empresariais/' . $o->slug) ?>">
-                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img col-md-5'); ?>
+                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img'); ?>
                                             <h5><?= $o->name ?></h5>
                                         </a>
                                     </li>
@@ -44,7 +44,7 @@
                                 <?php foreach ($operadoras as $o) : ?>
                                     <li>
                                         <a href="<?= base_url('planos-especiais/' . $o->slug) ?>">
-                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img col-md-5'); ?>
+                                            <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img'); ?>
                                             <h5><?= $o->name ?></h5>
                                         </a>
                                     </li>

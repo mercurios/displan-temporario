@@ -73,6 +73,9 @@ li a.carousel-control{
 	border-radius: 50%;
 	border: 2px solid white;
 }
+.breadcrumb{
+	margin-left: 8.3% !important;
+}
 #wrapper{
 	float: left;
 	position: relative;
@@ -112,6 +115,9 @@ li a.carousel-control{
 	border-bottom: none;
 	box-shadow: 1px 1px 2px #888888;
 }
+.inside{
+	padding: 0 0 0 15px !important;
+}
 .operadoras ul li{
 	list-style: none;
 	margin-top: 20px;
@@ -127,10 +133,65 @@ li a.carousel-control{
 	width: auto;
 }
 .operadoras ul li a h5{
-	padding-top: 10px;
+	padding-top: 15px;
 	color: black;
 }
-/*unimed page*/
+
+
+/******* Div Expansível *******/
+.full {
+    width: 97%;
+    float:left;
+}
+.lista {
+	width: 100%;
+    float: left;
+    height: 235px;
+    line-height: 1.35429;
+    overflow: hidden;
+}
+ 
+.listaAberta {
+    float: left;
+    height: auto;
+    line-height: 1.35429;
+    overflow: hidden;
+}
+ 
+.btnAbrir {
+	background-color: #777777;
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    z-index: 99999;
+    color: white;
+	padding-top: 2px;
+}
+.btnAbrir:before {
+	content: "Ver Mais";
+}
+ 
+.btnFechar {
+	background-color: #777777;
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    z-index: 99999;
+    color: white;
+	padding-top: 2px;
+}
+.btnFechar:before {
+	content: "Ver Menos";
+}
+.btnAbrir:hover, .btnFechar:hover{
+	background-color: #444444;
+}
+
+/*tabela pages*/
 .img-title{
 	max-height: 120px;
 	width: auto;
@@ -321,6 +382,9 @@ address{
 	#myCarousel{
 		margin-top: -80px;
 	}
+	.breadcrumb{
+		margin-left: 7.7% !important;
+	}
 	.title{
 		margin-left: 75px;
 		width: 83.3% !important;
@@ -352,7 +416,7 @@ address{
 		margin: 10px -100px 0 0;
 		width: 18%;
 	}
-	/*Unimed page*/
+	/*tabela pages*/
 	.titulo-unimed{
 		margin-top: 10px;
 	}
@@ -429,6 +493,9 @@ address{
 	li a.carousel-control{
 		margin-top: 140px;
 	}
+	.breadcrumb{
+		margin-left: 0 !important;
+	}
 	#wrapper{
 		width: 100%;
 	}
@@ -492,7 +559,7 @@ address{
 		margin-right: 260px;
 		width: 25%;
 	}
-	/*Unimed page*/
+	/*Tabela pages*/
 	
 	.unimed-content{
 		width: 100%;
@@ -650,7 +717,7 @@ div.navbar-header{
 		margin-right: 140px;
 		width: 35%;
 	}
-	/*Unimed page*/
+	/*Tabela pages*/
 	.img-title{
 		width: 40%;
 		margin-left: -5px;
@@ -794,7 +861,7 @@ div.navbar-header{
 		width: 55%;
 		margin-right: 60px;
 	}
-	/*Unimed page*/
+	/*Tabela pages*/
 	.img-title{
 		width: 70%;
 		margin-left: 35px;

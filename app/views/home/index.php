@@ -1,13 +1,16 @@
     <div id="wrapper" class="container-fluid">
         <div class="bloco row-fluid">
-                <div class="title col-md-10">
-                    <h1 class="titulo-grande">Escolha aqui seu plano de saúde:</h1>
-                </div>
+                    <div class="title blue-title col-md-10 check-pattern">
+                        <img src="<?= base_url('assets/img/icon-home.png'); ?>" alt="Check" class=" offset1" />
+                        <h1 class="titulo-grande">ESCOLHA AQUI SEU PLANO DE SAÚDE!</h1>
+                        <h3 class="titulo-grande">ESCOLHA ABAIXO QUAL TIPO DE PLANO VOCÊ PROCURA.</h3>
+                    </div>
                 <div class="content col-md-10">
                     <div class="border-right inside col-md-4">
                         <h2 class="titulo-medio">Planos individuais</h2>
-                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/individuais.jpg'); ?>" alt="individuais" title="Planos Individuais">
+                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/individuais.jpg'); ?>" alt="individuais" title="Planos Individuais">
                         <div class="operadoras">
+                            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat est, facilisis sed velit a, varius malesuada nisl. Maecenas ac est ac tellus porttitor congue. Mauris est ex, faucibus vitae aliquet sed, ornare quis enim.</p>
                             <ul class="col-md-12">
                                 <?php
                                 foreach ($operadoras as $o) :
@@ -26,8 +29,9 @@
                     </div>
                     <div class="border-right inside col-md-4">
                         <h2 class="titulo-medio">Planos empresriais</h2>
-                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/empresas.png'); ?>" alt="empresas" title="Planos Individuais">
+                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/empresas.png'); ?>" alt="empresas" title="Planos Individuais">
                         <div class="operadoras full">
+                            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat est, facilisis sed velit a, varius malesuada nisl. Maecenas ac est ac tellus porttitor congue. Mauris est ex, faucibus vitae aliquet sed, ornare quis enim.</p>
                             <div class="lista mini" estado="fechado">
                                 <ul class="col-md-12">
                                     <?php
@@ -49,8 +53,9 @@
                     </div>
                     <div class="inside col-md-4">
                         <h2 class="titulo-medio">Planos para profissionais</h2>
-                        <img class="col-md-11 no-padding" src="<?= base_url('assets/img/profissionais.png'); ?>" alt="profissionais" title="Planos Individuais">
+                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/profissionais.png'); ?>" alt="profissionais" title="Planos Individuais">
                         <div class="operadoras full">
+                            <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat est, facilisis sed velit a, varius malesuada nisl. Maecenas ac est ac tellus porttitor congue. Mauris est ex, faucibus vitae aliquet sed, ornare quis enim.</p>
                             <div class="lista mini" estado="fechado">
                                 <ul class="col-md-12">
                                     <?php foreach ($categorias as $c) : ?>

@@ -73,8 +73,22 @@ li a.carousel-control{
 	border-radius: 50%;
 	border: 2px solid white;
 }
+/***** Breadcrumbs *****/
 .breadcrumb{
-	margin-left: 8.3% !important;
+	background: none !important;
+	margin: 22em 0 -80% 8.3% !important;
+}
+.breadcrumb li{
+	color: white !important;
+	font-size: 1.4em;
+}
+.breadcrumb li.active a{
+	font-size: 2.6em;
+	color: white !important;
+	font-weight: bold;
+}
+.breadcrumb li a{
+	color: white
 }
 #wrapper{
 	float: left;
@@ -88,19 +102,6 @@ li a.carousel-control{
 .bloco-plano{
 	margin-left: 0.3% !important;
 }
-.content{
-	background-color: white;
-	margin-top: -10px;
-	margin-left: 8.3%;
-	padding-bottom: 10px;
-	border: solid 1px #bab3ab;
-	border-top: none;
-	box-shadow: 1px 1px 2px #888888;
-}
-.border-right{
-	padding-right: 20px;
-	border-right: 1px solid #ececec;
-}
 .content h5{
 	font-weight: lighter;
 	font-size: 16px;
@@ -110,13 +111,34 @@ li a.carousel-control{
 	margin-left: 8.3%;
 	width: 83.3%;
 	background-color: #ececec;
-	padding: 10px 0;
+	padding: 18px 0;
 	border: solid 1px #bab3ab;
 	border-bottom: none;
 	box-shadow: 1px 1px 2px #888888;
 }
+.content{
+	background-color: white;
+	margin-top: -9px;
+	margin-left: 8.3%;
+	padding: 0 !important;
+}
+.inside:first-child{
+	margin-left: 0px !important;
+}
 .inside{
-	padding: 0 0 0 15px !important;
+	padding: 0 0 10px 0 !important;
+	background: #f1f2f2;
+	margin: 20px 0 0 15px;
+	width: 32.423% !important;
+}
+.inside:first-child{
+	margin-left: 0px !important;
+}
+.inside h2{
+	margin-left: 10px;
+}
+.operadoras p{
+	margin-top: 10px;
 }
 .operadoras ul li{
 	list-style: none;
@@ -140,7 +162,7 @@ li a.carousel-control{
 
 /******* Div Expansível *******/
 .full {
-    width: 97%;
+    width: 100%;
     float:left;
 }
 .lista {
@@ -383,7 +405,7 @@ address{
 		margin-top: -80px;
 	}
 	.breadcrumb{
-		margin-left: 7.7% !important;
+		margin: 19em 0 -80% 7.7% !important;
 	}
 	.title{
 		margin-left: 75px;
@@ -395,6 +417,9 @@ address{
 	.content{
 		margin-left: 75px;
 		width: 83.3% !important;
+	}
+	.inside{
+		width: 32.1% !important;
 	}
 	#footer{
 		padding-left: 20px;
@@ -493,8 +518,12 @@ address{
 	li a.carousel-control{
 		margin-top: 140px;
 	}
+	
 	.breadcrumb{
-		margin-left: 0 !important;
+		margin: 15em 0 -38% 2% !important;
+	}
+	.breadcrumb li.active a{
+		font-size: 2em;
 	}
 	#wrapper{
 		width: 100%;
@@ -511,11 +540,6 @@ address{
 	.bloco{
 		margin-left: 0 !important;
 		width: 100% !important;
-	}
-	.inside{
-		padding-left: 180px !important;
-		padding-bottom: 10px !important;
-		border-bottom: 1px solid lightgray !important;
 	}
 	.operadoras{
 		margin-left: 50px;
@@ -661,6 +685,19 @@ div.navbar-header{
 	.a-carousel a{
 		visibility: hidden;
 	}
+	.breadcrumb{
+		background: #ececec !important;
+		margin-bottom: 10px !important;
+	}
+	.breadcrumb li{
+		padding: 8px 0;
+	}
+	.breadcrumb li, .breadcrumb li a, .breadcrumb li.active a{
+		color: #606060 !important;
+	}
+	.breadcrumb li, .breadcrumb li a{
+		font-size: 1.1em;
+	}
 	#wrapper{
 		margin-top: -210px;
 	}
@@ -803,6 +840,9 @@ div.navbar-header{
 	#wrapper{
 		margin-top: -130px;
 	}
+	.breadcrumb li.active a{
+		font-size: 1.8em;
+	}
 	.content{
 		margin-top: -10px;
 	}
@@ -934,4 +974,30 @@ h1, h2, h3, h4{
 }
 .no-padding{
 	padding: 0 !important;
+}
+.blue-title{
+	background: #2f5094;
+	border: none !important;
+}
+.blue-title img{
+	float: left;
+	margin: 1.8% 10px 0 0;
+}
+.blue-title h1{
+	font-size: 2.8em;
+	font-weight: bold;
+}
+.blue-title h2{
+	font-size: 2em;
+	font-weight: bold;
+}
+.blue-title h3{
+	font-weight: bold;
+	font-size: 1.6em;
+}
+.blue-title h1,.blue-title h2,.blue-title h3{
+	color: white !important;
+}
+.check-pattern{
+	background: url(../img/pattern.png);
 }

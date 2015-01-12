@@ -1,5 +1,5 @@
 <div id="wrapper" class="container-fluid">
-<div class="bloco-plano row-fluid">
+    <div class="bloco-plano row-fluid">
         <div class="title col-md-10">
             <?= $this->images->thumb('operadoras/' . $operadora[0]->logo, 280, 100, '', 'img-title col-md-3'); ?>
             <h3 class="titulo-unimed titulo-grande col-md-3"><?= $operadora[0]->name ?></h3>
@@ -62,37 +62,37 @@
                                     </ul>
                                 </div>
                             <?php } ?>
-                            </div>
-                        </div><!--end tabelas-->
+                        </div>
+                    </div><!--end tabelas-->
 
-                        <div class="aside col-md-3">
-                            <div class="bg-cred-info">
-                                <h5>Quantidade de vidas</h5>
-                                <p>De: <?= $t->vida_min; ?> à <?= $t->vida_max; ?> vidas</p>
-                            </div>
-
-                            <div class="bg-cred-info">
-                                <h5>Categoria</h5>
-                                <p><?= strtoupper($t->categoria)  ?></p>
-                            </div>
-
-                            <div class="bg-cred-info">
-                                <h5>Credenciados</h5>
-                                <?= $t->credenciados; ?>
-                            </div>
-                            <div class="bg-cred-info info-2">
-                                <h5>Informações adicionais</h5>
-                                <?= $t->info; ?>
-                            </div>
+                    <div class="aside col-md-3">
+                        <div class="bg-cred-info">
+                            <h5>Quantidade de vidas</h5>
+                            <p>De: <?= $t->vida_min; ?> à <?= $t->vida_max; ?> vidas</p>
                         </div>
 
-                        <div id="tellus" class="col-md-9">
-                            <h3>GOSTOU? LIGUE AGORA (81) 3222.0506</h3>
-                            <img src="<?= base_url('assets/img/tellus.png'); ?>" alt="Tell us" title="Tell us">
+                        <div class="bg-cred-info">
+                            <h5>Categoria</h5>
+                            <p><?= strtoupper($t->categoria)  ?></p>
                         </div>
-                    </div><!--end bg tabelas-->
-                <?php endforeach; ?>
 
-            </div><!--end content-->
-        </div><!--end bloco 1-->
-    </div>
+                        <div class="bg-cred-info">
+                            <h5>Credenciados</h5>
+                            <?= $t->credenciados; ?>
+                        </div>
+                        <div class="bg-cred-info info-2">
+                            <h5>Informações adicionais</h5>
+                            <?= $t->info; ?>
+                        </div>
+                    </div>
+
+                    <div id="tellus" class="col-md-9">
+                        <h3>GOSTOU? LIGUE AGORA (81) 3222.0506</h3>
+                        <img src="<?= base_url('assets/img/tellus.png'); ?>" alt="Tell us" title="Tell us">
+                    </div>
+                </div><!--end bg tabelas-->
+            <?php endforeach; ?>
+
+        </div><!--end content-->
+    </div><!--end bloco 1-->
+</div>

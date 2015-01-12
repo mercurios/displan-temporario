@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Slider
     $('.carousel').carousel({
-		interval: 800
+		interval: 5000
     })
 	var $f = jQuery.noConflict();
 

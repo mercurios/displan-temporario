@@ -76,10 +76,14 @@
                             <p><?= strtoupper($t->categoria)  ?></p>
                         </div>
 
-                        <div class="bg-cred-info">
-                            <h5>Credenciados</h5>
-                            <?= $t->credenciados; ?>
+                        <div class="bg-cred-info full">
+                            <div class="lista mini" estado="fechado">
+                                <h5>Credenciados</h5>
+                                <?= $t->credenciados; ?>
+                            </div>
+                            <div class="btnAbrir" id="btnAbrir2"></div>
                         </div>
+
                         <div class="bg-cred-info info-2">
                             <h5>Informações adicionais</h5>
                             <?= $t->info; ?>

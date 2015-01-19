@@ -161,21 +161,34 @@ li a.carousel-control{
 
 
 /******* Div Expansível *******/
+.operadoras .lista{
+	height: 0;
+}
+.operadoras .lista.listaAberta{
+	height: 100%;
+}
+.bg-cred-info .lista{
+	height: 200px;
+}
+.bg-cred-info .lista.listaAberta{
+	height: 100%;
+}
+/************ Locais que Utilizam *************/
 .full {
     width: 100%;
     float:left;
 }
+
 .lista {
 	width: 100%;
     float: left;
-    height: 235px;
     line-height: 1.35429;
     overflow: hidden;
 }
  
 .listaAberta {
     float: left;
-    height: auto;
+    height: 100%;
     line-height: 1.35429;
     overflow: hidden;
 }
@@ -297,9 +310,16 @@ div.tabela{
 	background-color: #ecebeb;
 	padding: 2px 10px;
 	margin-top: 10px;
+	float: left;
+	width: 100%;
 }
 .bg-cred-info h5{
 	font-weight: bolder;
+}
+.info-2{
+	float: left;
+	margin-top: 10px;
+	width: 100%;
 }
 #tellus{
 	background-color: #f2620d;
@@ -412,7 +432,7 @@ address{
 		width: 83.3% !important;
 	}
 	.title h1{
-		width: 70%;
+		width: 100%;
 	}
 	.content{
 		margin-left: 75px;
@@ -542,11 +562,21 @@ address{
 		width: 100% !important;
 	}
 	.operadoras{
-		margin-left: 50px;
 		margin-top: 10px;
 	}
 	.operadoras ul li a h5{
 		margin-left: 8px;
+	}
+	.inside{
+		width: 32.14% !important;
+		float: left;
+		margin: 20px 0 0 1.75%;
+	}
+	.inside img{
+		width: 100%;
+	}
+	.operadoras ul li a img{
+		width: auto;
 	}
 	.border-right{
 		border: none;
@@ -621,7 +651,6 @@ address{
 		width: 100%;
 		float: none !important;
 		margin-left: 12px;
-		padding-right: 25px;
 		display: inline-block;
 	}
 	.bg-cred-info{
@@ -629,8 +658,7 @@ address{
 		float: left;
 	}
 	.info-2{
-		position: absolute;
-		margin-left: 340px;
+		margin-left: 10px;
 	}
 	#tellus{
 		margin-top: 10px;
@@ -704,17 +732,22 @@ div.navbar-header{
 	.title{
 		margin-top: 0;
 	}
+	.blue-title h1{
+		font-size: 2.2em !important;
+		width: 100%;
+	}
+	.blue-title h3{
+		font-size: 1.4em;
+	}
 	.content{
 		margin-top: -10px;
 	}
-	.content .inside{
-		padding-left: 20px !important;
+	.inside{
+		width: 100% !important;
+		margin: 20px 0 0 0.2%;
 	}
 	.operadoras{
 		margin-left: 0;
-	}
-	.operadoras ul li a h5{
-		margin-left: 80px;
 	}
 	footer{
 		height: 940px;
@@ -768,11 +801,10 @@ div.navbar-header{
 	}
 	div.subtitle{
 		padding: 5px;
-		margin: 5px 0 0 -10px;
+		margin: 5px 0 0 0;
 	}
 	.content .bg-faixa-etaria{
 		margin-top: 0;
-		margin-left: -10px;
 		padding-left: 0;
 	}
 	#tabelas{
@@ -806,8 +838,8 @@ div.navbar-header{
 	.content .aside{
 		margin-left: 5px;
 	}
-	.aside .info-2{
-		margin-left: 215px;
+	.info-2{
+		margin-left: 10px;
 	}
 	#tellus{
 		margin-left: 15px;
@@ -852,20 +884,11 @@ div.navbar-header{
 	.title h1{
 		width: 100%;
 	}
-	.content .inside{
-		margin-left: -5px;
-	}
-	.content .inside{
-		padding-left: 10px !important;
-	}
 	.operadoras ul{
 		margin-left: -10px;
 	}
 	.operadoras ul li a h5{
 		margin-left: 20px;
-	}
-	.inside img{
-		width: 105%;
 	}
 	.operadora-img{
 		width: auto !important;
@@ -924,8 +947,7 @@ div.navbar-header{
 	.hidden h3{
 		font-size: 1.3em;
 	}
-	.content .aside{
-		margin-left: 12px;
+	.aside{
 		margin-top: 100px;
 	}
 	.bg-cred-info{
@@ -955,6 +977,9 @@ div.navbar-header{
 /*Titulos*/
 h1, h2, h3, h4{
 	margin: 15px 0;
+}
+p{
+	font-size: 1.16em;
 }
 .titulo-grande{
 	font-size: 2.2em;

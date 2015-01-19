@@ -9,6 +9,20 @@
     <meta name="description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />
     <meta name="keywords" content="Displan, Seguros, Preços" />
 
+    <!--TAGS do FACEBOOK-->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="http://www.displansaude.com" />
+    <meta property="og:title" content="Displan Saúde" />
+    <meta property="og:site_name" content="Displan Saúde" />
+    <meta property="og:description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />
+    <meta property="og:type" content="website" />
+    <!--FACE THUMBNAIL-->
+    <meta property="og:image" content="www.displansaude.com/assets/img/logo.png" />
+    <meta property="og:image:type" content="www.displansaude.com/assets/img/logo.png" />
+    <meta property="og:image:width" content="140" />
+    <meta property="og:image:height" content="85" />
+    <!--END FACE TAGS-->
+
     <!-- Style -->
     <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.ico'); ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/all.css'); ?>" />

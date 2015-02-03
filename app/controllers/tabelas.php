@@ -23,6 +23,12 @@ class Tabelas extends CI_Controller {
             'tabelas'    => $this->tab_individual->find($planos[0]->id),
             'categorias' => $this->categorias->all()
         );
+        
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos individuais', 'url' => 'planos-individuais/'.$operadora, 'class' => ''),
+            array('title' => $dados['operadora'][0]->name, 'url' => 'planos-individuais/'.$operadora, 'class' => 'active'),
+        );
 
         $this->load->view('inc/header', $dados);
         $this->load->view('tabelas/index', $dados);
@@ -40,6 +46,12 @@ class Tabelas extends CI_Controller {
             'categorias' => $this->categorias->all()
         );
 
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos empresariais', 'url' => 'planos-empresariais/'.$operadora, 'class' => ''),
+            array('title' => $dados['operadora'][0]->name, 'url' => 'planos-empresariais/'.$operadora, 'class' => 'active'),
+        );
+
         $this->load->view('inc/header', $dados);
         $this->load->view('tabelas/empresarial', $dados);
         $this->load->view('inc/footer');
@@ -51,7 +63,8 @@ class Tabelas extends CI_Controller {
 
         $dados = array(
             'operadoras' => $this->operadoras->all(),
-            'categorias' => $this->categorias->all()
+            'categorias' => $this->categorias->all(),
+            'categoria'  => $this->categorias->find($slug)
         );
 
         foreach ($resultado as $r) {
@@ -61,6 +74,12 @@ class Tabelas extends CI_Controller {
                 $dados['tabelas'][] = $r;
             }
         }
+
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos para profissionais', 'url' => 'planos-especiais/'.$slug, 'class' => ''),
+            array('title' => $dados['categoria'][0]->name, 'url' => 'planos-especiais/'.$slug, 'class' => 'active'),
+        );
 
         $this->load->view('inc/header', $dados);
         $this->load->view('tabelas/especial', $dados);

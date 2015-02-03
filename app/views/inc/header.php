@@ -95,13 +95,21 @@
             </div><!--end topo-->
         </div><!--end row-->
     </div>
-    <!--        BREADCRUMBS
+
+    <?php if(!empty($this->uri->segment(1))) : ?>
+    
+    <!-- BREADCRUMBS -->
     <ol class="breadcrumb col-md-10 offset1">
-        <li>Você está em: <a href="#">Página Inicial</a></li>
-        <li><a href="index.html">Planos X</a></li>
-        <li class="active"><a href="#">Página Atual</a></li>
+        <li>Você está em:</li>
+        <?php foreach ($breadcrumb as $b) : ?>
+            <li class="<?= (empty($b['class'])) ? '' : 'active' ?>">
+                <a href="<?= base_url($b['url']) ?>"><?= $b['title'] ?></a>
+            </li>
+        <?php endforeach; ?>        
     </ol>
-    -->
+
+    <?php endif; ?>
+
     <!--carrossel-->
     <div id="myCarousel" class="carousel slide row-fluid">
         <div class="carousel-inner">

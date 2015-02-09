@@ -101,6 +101,7 @@ li a.carousel-control{
 }
 .bloco-plano{
 	margin-left: 0.3% !important;
+	margin-top: -22em;
 }
 .content h5{
 	font-weight: lighter;
@@ -323,9 +324,9 @@ div.tabela{
 }
 #tellus{
 	background-color: #f2620d;
-	padding-top: 5px;
+	padding-top: 10px;
 	margin-left: 15px;
-	height: 40px;
+	height: 50px;
 	width: 72.3%;
 
 }
@@ -1025,4 +1026,15 @@ p{
 }
 .check-pattern{
 	background: url(../img/pattern.png);
+}
+.margin-less{
+	margin-top: 0 !important;
+}
+.darken div img{
+	-webkit-filter: grayscale(50%);
+	-webkit-filter: brightness(25%);
+	opacity: 0.5;
+}
+.hidden{
+	visibility: hidden;
 }

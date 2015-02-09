@@ -96,38 +96,3 @@
         </div><!--end row-->
     </div>
 
-    <?php if(!empty($this->uri->segment(1))) : ?>
-    
-    <!-- BREADCRUMBS -->
-    <ol class="breadcrumb col-md-10 offset1">
-        <li>Você está em:</li>
-        <?php foreach ($breadcrumb as $b) : ?>
-            <li class="<?= (empty($b['class'])) ? '' : 'active' ?>">
-                <a href="<?= base_url($b['url']) ?>"><?= $b['title'] ?></a>
-            </li>
-        <?php endforeach; ?>        
-    </ol>
-
-    <?php endif; ?>
-
-    <!--carrossel-->
-    <div id="myCarousel" class="carousel slide row-fluid">
-        <div class="carousel-inner">
-            <div class="active item">
-                <img class="span12 banner" src="<?= base_url('assets/img/banner.jpg'); ?>" alt="imagem do bannner 1" />
-            </div>
-            <div class="item">
-                <img class="span12 banner" src="<?= base_url('assets/img/banner2.jpg'); ?>" alt="imagem do banner 2" />
-            </div>
-            <div class="item">
-                <img class="span12 banner" src="<?= base_url('assets/img/banner3.jpg'); ?>" alt="imagem do banner 3" />
-            </div>
-        </div>
-    </div>
-    <div class="a-carousel col-md-12">
-        <ul class="carousel-ul">
-            <li title="Clique para o anterior"><a class="carousel-control left" href="#myCarousel" data-slide="prev" title="Anterior">&lsaquo;</a></li>
-            <li title="Clique para o próximo"><a class="carousel-control right" href="#myCarousel" data-slide="next" title="Próximo">&rsaquo;</a></li>
-        </ul>
-    </div>
-    <!--end carrossel-->

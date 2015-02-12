@@ -6,6 +6,7 @@
 	border: solid 1px #bab3ab;
 	border-top: none;
 	margin-top: auto;
+	z-index: 2;
 }
 .temp{
 	position: absolute;
@@ -77,6 +78,7 @@ li a.carousel-control{
 .breadcrumb{
 	background: none !important;
 	margin: 22em 0 -80% 8.3% !important;
+	z-index: 2;
 }
 .breadcrumb li{
 	color: white !important;
@@ -101,7 +103,7 @@ li a.carousel-control{
 }
 .bloco-plano{
 	margin-left: 0.3% !important;
-	margin-top: -22em;
+	margin-top: -53em;
 }
 .content h5{
 	font-weight: lighter;
@@ -1028,12 +1030,21 @@ p{
 	background: url(../img/pattern.png);
 }
 .margin-less{
-	margin-top: 0 !important;
+	margin-top: 200px !important;
 }
-.darken div img{
-	-webkit-filter: grayscale(50%);
-	-webkit-filter: brightness(25%);
-	opacity: 0.5;
+.static-banner{
+	margin-top: -200px;
+	width: 100%;
+	height: auto;
+	opacity: 0.2;
+}
+.darken{
+	background: black;
+	width: 100%;
+	height: 635px;
+	top: -635px;
+	position: relative;
+	z-index: -1;
 }
 .hidden{
 	visibility: hidden;

@@ -56,7 +56,7 @@
                                     <div class="modal-content">
                                       <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-                                        <h4 class="modal-title modal-success" id="myModalLabel">Sua mensagem foi enviada com sucesso!</h4>
+                                        <h4 class="modal-title modal-success">Sua mensagem foi enviada com sucesso!</h4>
                                       </div>
                                     </div>
                                   </div>
@@ -68,7 +68,7 @@
                                     <div class="modal-content">
                                       <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-                                        <h4 class="modal-title modal-fail" id="myModalLabel">Falha ao enviar a mensagem!</h4>
+                                        <h4 class="modal-title modal-fail">Falha ao enviar a mensagem!</h4>
                                       </div>
                                     </div>
                                   </div>
@@ -106,8 +106,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="<?= base_url('assets/js/jquery-1.11.1.min.js'); ?>"></script>
-    <script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
-    <script src="<?= base_url('assets/js/script.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/jquery-1.11.1.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/js/script.js'); ?>"></script>
 </body>
 </html>

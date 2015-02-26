@@ -15,10 +15,10 @@
 <?php endif; ?>
 
 <!--banner-->
-
-<img class="static-banner" src="<?= base_url('assets/img/banner.jpg'); ?>" alt="imagem do bannner 1" />
-<div class="darken"></div>
-
+<div>
+    <img class="static-banner" src="<?= base_url('assets/img/banner.jpg'); ?>" alt="imagem do bannner 1" />
+    <div class="darken"></div>
+</div>
 <!--end banner-->
 <div id="wrapper" class="container-fluid">
 

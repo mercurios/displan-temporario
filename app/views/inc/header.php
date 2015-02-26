@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
 
     <!-- Style -->
     <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.ico'); ?>" />
-    <link rel="stylesheet" href="<?= base_url('assets/css/all.css'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/all.css'); ?>" />
 </head>
 <body>
     <div class="container-fluid">
@@ -41,7 +41,7 @@
                 <div id="contato-topo" class="col-md-3">
                     <p class="contato-p1">CENTRAL DE VENDAS</p>
                     <p class="contato-p2">(81) 3222.0506</p>
-                    <img src="<?= base_url('assets/img/support.png'); ?>" alt="Support">
+                    <img src="<?= base_url('assets/img/support.png'); ?>" alt="Suporte" />
                 </div>
                 <!--nav-->
                 <div id="navbar" class="col-md-8 nav nav-bar-nav">

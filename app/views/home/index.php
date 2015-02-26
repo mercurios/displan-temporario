@@ -42,19 +42,19 @@
                                     ?>
                                         <li>
                                             <a href="<?= base_url('planos-individuais/' . $o->slug) ?>">
-                                                <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img'); ?>
+                                                <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, $o->name, 'operadora-img', $o->slug); ?>
                                                 <h5><?= $o->name ?></h5>
                                             </a>
                                         </li>
                                     <?php endif; endforeach; ?>
                                 </ul>
                             </div>
-                            <div class="btnAbrir" id="btnAbrir"></div>
+                            <div class="btnAbrir"></div>
                         </div>
                     </div>
                     <div class="border-right inside col-md-4">
                         <h2 class="titulo-medio">Planos empresriais</h2>
-                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/empresas.png'); ?>" alt="empresas" title="Planos Individuais">
+                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/empresas.jpg'); ?>" alt="empresas" title="Planos Empresariais">
                         <div class="operadoras full">
                             <p class="col-md-12">Faça seus funcionários trabalharem melhor. Veja qual é o plano de saúde que melhor se enquadra ao perfil de sua empresa.</p>
                             <div class="lista mini" estado="fechado">
@@ -66,19 +66,19 @@
                                     ?>
                                         <li>
                                             <a href="<?= base_url('planos-empresariais/' . $o->slug) ?>">
-                                                <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, '', 'operadora-img'); ?>
+                                                <?= $this->images->thumb('operadoras/' . $o->logo, 130, 50, $o->name, 'operadora-img', 'empresariais-' . $o->id . '-' . $o->slug); ?>
                                                 <h5><?= $o->name ?></h5>
                                             </a>
                                         </li>
                                     <?php endif; endforeach; ?>
                                 </ul>
                             </div>
-                            <div class="btnAbrir" id="btnAbrir"></div>
+                            <div class="btnAbrir"></div>
                         </div>
                     </div>
                     <div class="inside col-md-4">
                         <h2 class="titulo-medio">Planos para profissionais</h2>
-                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/profissionais.png'); ?>" alt="profissionais" title="Planos Individuais">
+                        <img class="col-md-12 no-padding" src="<?= base_url('assets/img/profissionais.jpg'); ?>" alt="profissionais" title="Planos Profissionais">
                         <div class="operadoras full">
                             <p class="col-md-12">Temos planos com condições especiais para várias categorias de profissionais. Veja todas as opções abaixo e escolha a sua.</p>
                             <div class="lista mini" estado="fechado">
@@ -92,7 +92,7 @@
                                     <?php endforeach; ?>
                                 </ul>
                             </div>
-                            <div class="btnAbrir" id="btnAbrir2"></div>
+                            <div class="btnAbrir"></div>
                         </div>
                     </div>
                 </div>

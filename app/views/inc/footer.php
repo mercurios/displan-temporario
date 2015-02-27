@@ -39,7 +39,7 @@
                                 <div class="control-group">
                                     <div class="controls">
                                         <label for="inputMessage">Sua Mensagem</label>
-                                        <textarea class="col-md-12" name="message" rows="5" id="inputMessage" placeholder="Mensagem"></textarea>
+                                        <textarea class="col-md-12" name="message" rows="5" cols="10" id="inputMessage" placeholder="Mensagem"></textarea>
                                     </div>
                                 </div>
                                 <!-- Button trigger modal -->

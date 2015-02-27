@@ -22,7 +22,7 @@
 <div id="wrapper" class="container-fluid">
     <div class="bloco-plano row-fluid">
         <div class="title col-md-10">
-            <?= $this->images->thumb('operadoras/' . $operadora[0]->logo, 280, 100, '', 'img-title col-md-3'); ?>
+            <?= $this->images->thumb('operadoras/' . $operadora[0]->logo, 280, 100, 'operadora', 'img-title col-md-3', 'operadora'); ?>
             <h3 class="titulo-unimed titulo-grande col-md-3"><?= $operadora[0]->name ?></h3>
         </div>
         <div class="content unimed-content col-md-10">
@@ -92,7 +92,7 @@
                             <h5>Credenciados</h5>
                             <?= $t->credenciados; ?>
                         </div>
-                        <div class="btnAbrir" id="btnAbrir2"></div>
+                        <div class="btnAbrir"></div>
                     </div>
                     <div class="bg-cred-info info-2">
                         <h5>Informações adicionais</h5>

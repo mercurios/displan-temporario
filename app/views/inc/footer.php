@@ -107,7 +107,10 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="<?= base_url('assets/js/jquery-1.11.1.min.js'); ?>"></script>
+    <noscript>Seu navegador não suporta aplicações JavaScript!</noscript>
     <script type="text/javascript" src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <noscript>Seu navegador não suporta aplicações JavaScript!</noscript>
     <script type="text/javascript" src="<?= base_url('assets/js/script.js'); ?>"></script>
+    <noscript>Seu navegador não suporta aplicações JavaScript!</noscript>
 </body>
 </html>

@@ -88,7 +88,7 @@
 
                 <div class="aside col-md-3">
                     <div class="bg-cred-info full">
-                        <div class="lista mini" estado="fechado">
+                        <div class="lista mini" data-estado="fechado">
                             <h5>Credenciados</h5>
                             <?= $t->credenciados; ?>
                         </div>

@@ -33,7 +33,7 @@
                         <img class="col-md-12 no-padding" src="<?= base_url('assets/img/individuais.jpg'); ?>" alt="individuais" title="Planos Individuais">
                         <div class="operadoras full">
                             <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                            <div class="lista mini" estado="fechado">
+                            <div class="lista mini" data-estado="fechado">
                                 <ul class="col-md-12">
                                     <?php
                                     foreach ($operadoras as $o) :
@@ -57,7 +57,7 @@
                         <img class="col-md-12 no-padding" src="<?= base_url('assets/img/empresas.jpg'); ?>" alt="empresas" title="Planos Empresariais">
                         <div class="operadoras full">
                             <p class="col-md-12">Faça seus funcionários trabalharem melhor. Veja qual é o plano de saúde que melhor se enquadra ao perfil de sua empresa.</p>
-                            <div class="lista mini" estado="fechado">
+                            <div class="lista mini" data-estado="fechado">
                                 <ul class="col-md-12">
                                     <?php
                                     foreach ($operadoras as $o) :
@@ -81,7 +81,7 @@
                         <img class="col-md-12 no-padding" src="<?= base_url('assets/img/profissionais.jpg'); ?>" alt="profissionais" title="Planos Profissionais">
                         <div class="operadoras full">
                             <p class="col-md-12">Temos planos com condições especiais para várias categorias de profissionais. Veja todas as opções abaixo e escolha a sua.</p>
-                            <div class="lista mini" estado="fechado">
+                            <div class="lista mini" data-estado="fechado">
                                 <ul class="col-md-12">
                                     <?php foreach ($categorias as $c) : ?>
                                         <li>

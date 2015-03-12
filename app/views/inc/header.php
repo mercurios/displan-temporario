@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<!DOCTYPE html>
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
+    <meta content="text/html" charset="utf-8" http-equiv="content-type" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Displan Seguros</title>
     <meta name="description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />

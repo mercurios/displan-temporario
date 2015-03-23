@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" etag="<?= base_url('assets/css/fonts/glyphicons-halflings-regular.woff'); ?>" />
+    <meta http-equiv="Cache-control" content="private" max-age="30:00 minutes" etag="http://maps.google.com/maps/api/js?sensor=false&language=en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -24,8 +26,10 @@
     <!--END FACE TAGS-->
 
     <!-- Style -->
-    <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.ico'); ?>" />
-    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/all.css'); ?>" />
+    <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.png'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css'); ?>" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/bootstrap-responsive.min.css'); ?>" />
 </head>
 <body>
     <div class="container-fluid">
@@ -37,7 +41,7 @@
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">
                     <h1>Displan</h1>
                 </a>
-
+                <img src="<?= base_url('assets/img/logo.png'); ?>" id="logo-print" alt="Logo">
                 <div id="contato-topo" class="col-md-3">
                     <p class="contato-p1">CENTRAL DE VENDAS</p>
                     <p class="contato-p2">(81) 3222.0506</p>

@@ -21,4 +21,31 @@ $(document).ready(function() {
             }
         })
 	});
+
+    // Mapa
+    function initialize() {
+
+        var myLatlng = new google.maps.LatLng(-8.060682,-34.894562);
+
+        var mapOptions = {
+            zoom: 15,
+            center: myLatlng
+        }
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Displan Saúde'
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        infowindow.setContent('<b style="color: black;">Displan Saúde</b>');
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
 });

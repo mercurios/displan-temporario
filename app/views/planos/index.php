@@ -129,12 +129,15 @@
                 <h3 class="titulo-grande">ESCOLHA ABAIXO A OPERADORA DE SUA PREFERÊNCIA.</h3>
             </div>
             <div class="content col-md-10">
+                <div class="plano-text col-md-10">
+                    <p class="explain">Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
+                </div>
                 <div class="plano-box border-right col-md-3">
                     <h2 class="titulo-medio">Amil Ferusbil</h2>
                     <img class="col-md-12 no-padding" src="../../../assets/img/unilife-grande.jpg" alt="individuais" title="Planos Individuais">
                     <div class="operadoras">
                         <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                        <a href="#" class="btn btn-primary">Ver mais</a>
+                        <a href="#" class="btn-more">Ver mais</a>
                     </div>
                 </div>
                 <div class="plano-box border-right col-md-3">
@@ -142,15 +145,15 @@
                     <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
                     <div class="operadoras">
                         <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                        <a href="#" class="btn btn-primary">Ver mais</a>
+                        <a href="#" class="btn-more">Ver mais</a>
                     </div>
-                </div>
+                </div> 
                 <div class="plano-box border-right col-md-3">
                     <h2 class="titulo-medio">Amil Ferusbil</h2>
                     <img class="col-md-12 no-padding" src="../../../assets/img/unilife-grande.jpg" alt="individuais" title="Planos Individuais">
                     <div class="operadoras">
                         <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                        <a href="#" class="btn btn-primary">Ver mais</a>
+                        <a href="#" class="btn-more">Ver mais</a>
                     </div>
                 </div>
                 <div class="plano-box border-right col-md-3">
@@ -158,15 +161,39 @@
                     <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
                     <div class="operadoras">
                         <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                        <a href="#" class="btn btn-primary">Ver mais</a>
+                        <a href="#" class="btn-more">Ver mais</a>
                     </div>
                 </div>
                 <div class="plano-box border-right col-md-3">
                     <h2 class="titulo-medio">Amil Ferusbil</h2>
-                    <img class="col-md-12 no-padding" src="../../../assets/img/unilife-grande.jpg" alt="individuais" title="Planos Individuais">
+                    <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
                     <div class="operadoras">
                         <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
-                        <a href="#" class="btn btn-primary">Ver mais</a>
+                        <a href="#" class="btn-more">Ver mais</a>
+                    </div>
+                </div>
+                <div class="plano-box border-right col-md-3">
+                    <h2 class="titulo-medio">Amil Ferusbil</h2>
+                    <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
+                    <div class="operadoras">
+                        <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
+                        <a href="#" class="btn-more">Ver mais</a>
+                    </div>
+                </div>
+                <div class="plano-box border-right col-md-3">
+                    <h2 class="titulo-medio">Amil Ferusbil</h2>
+                    <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
+                    <div class="operadoras">
+                        <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
+                        <a href="#" class="btn-more">Ver mais</a>
+                    </div>
+                </div>
+                <div class="plano-box border-right col-md-3">
+                    <h2 class="titulo-medio">Amil Ferusbil</h2>
+                    <img class="col-md-12 no-padding" src="../../../assets/img/sulamerica-grande.jpg" alt="individuais" title="Planos Individuais">
+                    <div class="operadoras">
+                        <p class="col-md-12">Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
+                        <a href="#" class="btn-more">Ver mais</a>
                     </div>
                 </div>
             </div>

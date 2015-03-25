@@ -93,6 +93,14 @@ p{
 	color: #606060;
 	padding-top: 16px;
 }
+.plano-text{
+	display: inline-block;
+	float: none !important;
+	padding: 15px 0 0 0;
+}
+.explain{
+	text-align: left;
+}
 .no-padding{
 	padding: 0 !important;
 }
@@ -138,6 +146,22 @@ p{
 }
 .hidden{
 	visibility: hidden;
+}
+.btn-more{
+	background-color: #777777;
+	float: left;
+	height: 25px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	border-radius: 0 !important;
+	border: none !important;
+	padding: 2px !important;
+}
+.btn-more:hover{
+	background-color: #444444;
+	color: white;
+	text-decoration: none;
 }
 
 /*Slider*/
@@ -189,10 +213,6 @@ li a.carousel-control{
 	margin-left: 0.3% !important;
 	margin-top: 8em;
 }
-.content h5{
-	font-weight: lighter;
-	font-size: 16px;
-}
 .title{
 	margin-bottom: 10px;
 	margin-left: 8.3%;
@@ -207,14 +227,21 @@ li a.carousel-control{
 	background-color: white;
 	margin-top: -9px;
 	margin-left: 8.3%;
-	padding: 0 !important;
+	padding: 0 0 15px 0 !important;
+	text-align: center;
+}
+.content h5{
+	font-weight: lighter;
+	font-size: 16px;
 }
 .plano-box{
 	background: #f1f2f2;
-	margin: 20px 0 0 5px;
+	margin: 15px 7px 0 7px;
 	text-align: center;
+	display: inline-block !important;
+	float: none !important;
 	padding: 0 0 10px 0 !important;
-	width: 24.45% !important;
+	width: 18% !important;
 }
 .plano-box h2{
 	padding-left: 10px;
@@ -299,7 +326,7 @@ li a.carousel-control{
 
 .btnAbrir {
     color: white;
-    height: 30px;
+    height: 25px;
     width: 100%;
     text-align: center;
     float: left;

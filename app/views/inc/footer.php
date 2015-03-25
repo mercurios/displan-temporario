@@ -88,7 +88,7 @@
 
                 <div id="telefone" class="col-md-3">
                     <h4 class="borda-h4"><span class="glyphicon glyphicon-earphone"></span> TELEFONE</h4>
-                    <h5>(81) 3082.3033</h5>
+                    <h5>(81) 3222.0506</h5>
                 </div>
             </div>
         </div>

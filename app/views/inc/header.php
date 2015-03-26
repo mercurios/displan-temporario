@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Displan Seguros</title>
-    <meta name="description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />
-    <meta name="keywords" content="Displan, Seguros, Preços" />
+    <title><?= $metaTags['title'] ?></title>
+    <meta name="description" content="<?= $metaTags['description'] ?>" />
+    <meta name="keywords" content="<?= $metaTags['keywords'] ?>" />
 
     <!--TAGS do FACEBOOK-->
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="http://www.displansaude.com" />
-    <meta property="og:title" content="Displan Saúde" />
+    <meta property="og:title" content="<?= $metaTags['title'] ?>" />
     <meta property="og:site_name" content="Displan Saúde" />
-    <meta property="og:description" content="Displan Seguros. Planos diferenciados para empresas, profissionais e individuais." />
+    <meta property="og:description" content="<?= $metaTags['description'] ?>" />
     <meta property="og:type" content="website" />
     <!--FACE THUMBNAIL-->
     <meta property="og:image" content="www.displansaude.com/assets/img/logo.png" />
@@ -34,7 +34,7 @@
     <div class="container-fluid">
 
     <!--Faixa TMP<img class="temp" src="<?= base_url('assets/img/temp.png'); ?>" alt="temporario">-->
-    
+
         <div class="row-fluid">
             <div id="topo" class="col-md-10 offset1">
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">

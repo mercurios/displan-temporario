@@ -23,11 +23,17 @@ class Tabelas extends CI_Controller {
             'tabelas'    => $this->tab_individual->find($planos[0]->id),
             'categorias' => $this->categorias->all()
         );
-        
+
         $dados['breadcrumb'] = array(
             array('title' => 'Home', 'url' => '/', 'class' => ''),
             array('title' => 'Planos individuais', 'url' => 'planos-individuais/'.$operadora, 'class' => ''),
             array('title' => $dados['operadora'][0]->name, 'url' => 'planos-individuais/'.$operadora, 'class' => 'active'),
+        );
+
+        $dados['metaTags'] = array(
+            "title"         => "Displan Saúde - Planos Individuais - " . $planos[0]->name,
+            "description"   => "Displan Seguros. Planos diferenciados para empresas, profissionais e individuais.",
+            "keywords"      => "Displan, Seguros, Preços"
         );
 
         $this->load->view('inc/header', $dados);
@@ -50,6 +56,12 @@ class Tabelas extends CI_Controller {
             array('title' => 'Home', 'url' => '/', 'class' => ''),
             array('title' => 'Planos empresariais', 'url' => 'planos-empresariais/'.$operadora, 'class' => ''),
             array('title' => $dados['operadora'][0]->name, 'url' => 'planos-empresariais/'.$operadora, 'class' => 'active'),
+        );
+
+        $dados['metaTags'] = array(
+            "title"         => "Displan Saúde - Planos Empresariais - " . $planos[0]->name,
+            "description"   => "Displan Seguros. Planos diferenciados para empresas, profissionais e individuais.",
+            "keywords"      => "Displan, Seguros, Preços"
         );
 
         $this->load->view('inc/header', $dados);
@@ -79,6 +91,12 @@ class Tabelas extends CI_Controller {
             array('title' => 'Home', 'url' => '/', 'class' => ''),
             array('title' => 'Planos para profissionais', 'url' => 'planos-especiais/'.$slug, 'class' => ''),
             array('title' => $dados['categoria'][0]->name, 'url' => 'planos-especiais/'.$slug, 'class' => 'active'),
+        );
+
+        $dados['metaTags'] = array(
+            "title"         => "Displan Saúde - Planos para Profissionais  - " . $dados['categoria'][0]->name,
+            "description"   => "Displan Seguros. Planos diferenciados para empresas, profissionais e individuais.",
+            "keywords"      => "Displan, Seguros, Preços"
         );
 
         $this->load->view('inc/header', $dados);

@@ -47,7 +47,6 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-1">
                                   Enviar
                                 </button>
-
                                 <!--Modals Sucesso e Falha-->
 
                                 
@@ -89,6 +88,11 @@
                 <div id="telefone" class="col-md-3">
                     <h4 class="borda-h4"><span class="glyphicon glyphicon-earphone"></span> TELEFONE</h4>
                     <h5>(81) 3222.0506</h5>
+                </div>
+
+                <div id="social" class="col-md-3">
+                    <h4 class="borda-h4"><span class="glyphicon glyphicon-thumbs-up"></span> Social</h4>
+                    <img src="<?= base_url('assets/img/x.png'); ?>" alt="Facebook">
                 </div>
             </div>
         </div>

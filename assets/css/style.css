@@ -264,6 +264,7 @@ li a.carousel-control{
 	background: #f1f2f2;
 	margin: 20px 0 0 15px;
 	width: 32.423% !important;
+	text-align: left;
 }
 .inside:first-child{
 	margin-left: 0px !important;
@@ -381,6 +382,7 @@ li a.carousel-control{
 	background-color: #4bb558;
 	padding: 0 20px;
 	margin-top: 10px;
+	text-align: left;
 }
 .subtitle h3{
 	margin-top: 10px;
@@ -435,6 +437,7 @@ div.tabela{
 	margin-left: -5px;
 	color: #606060;
 	float: right !important;
+	text-align: left;
 }
 .content .bg-faixa-etaria{
 	background: #f6f6f6;
@@ -746,7 +749,7 @@ address{
 	#onde-estamos{
 		margin-left: 0;
 	}
-	#nossohorario, #telefone{
+	#nossohorario, #telefone, #social{
 		width: 50%;
 		float: left;
 	}
@@ -934,9 +937,8 @@ div.navbar-header{
 		width: 98%;
 		margin-left: 0;
 	}
-	#onde-estamos,
-	#nossohorario,
-	#telefone{
+	#onde-estamos, #nossohorario,
+	#telefone, #contato, #social{
 		width: 98%;
 	}
 	#telefone .phone{
@@ -944,7 +946,6 @@ div.navbar-header{
 	}
 	#contato{
 		margin-left: 0;
-		width: 98%;
 	}
 	#formulario form fieldset input,
 	#formulario form fieldset textarea{

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Cache-control" etag="<?= base_url('assets/css/fonts/glyphicons-halflings-regular.woff'); ?>" />
-    <meta http-equiv="Cache-control" content="private" max-age="30:00 minutes" etag="http://maps.google.com/maps/api/js?sensor=false&language=en" />
+    <meta http-equiv="Cache-control" content="max-age=2592000, public" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +25,7 @@
     <!--END FACE TAGS-->
 
     <!-- Style -->
-    <link rel="shortcut icon" href="<?= base_url('assets/img/favicon.png'); ?>" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/img/favicon.png'); ?>" />
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>" />
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css'); ?>" />
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/bootstrap-responsive.min.css'); ?>" />

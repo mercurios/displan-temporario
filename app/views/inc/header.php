@@ -12,7 +12,7 @@
 
     <!--TAGS do FACEBOOK-->
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="http://www.displansaude.com" />
+    <meta property="og:url" content="<?= base_url(uri_string()); ?>" />
     <meta property="og:title" content="<?= $metaTags['title'] ?>" />
     <meta property="og:site_name" content="Displan Saúde" />
     <meta property="og:description" content="<?= $metaTags['description'] ?>" />

@@ -59,7 +59,7 @@ class Tabelas extends CI_Controller {
         );
 
         $dados['metaTags'] = array(
-            "title"         => "Displan Saúde - Planos Empresariais - " . $planos[0]->name,
+            "title"         => "Displan Saúde - Planos de saúde para empresas - " . $planos[0]->name,
             "description"   => "Displan Seguros. Planos diferenciados para empresas, profissionais e individuais.",
             "keywords"      => "Displan, Seguros, Preços"
         );

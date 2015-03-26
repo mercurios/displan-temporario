@@ -1,4 +1,7 @@
 <?php
+
+ob_start("ob_gzhandler");
+
 date_default_timezone_set("America/Recife");
 /*
  *---------------------------------------------------------------

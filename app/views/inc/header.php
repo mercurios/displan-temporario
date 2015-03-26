@@ -39,7 +39,7 @@
         <div class="row-fluid">
             <div id="topo" class="col-md-10 offset1">
                 <a href="<?= base_url(); ?>" title="Displan" id="logo" class="col-md-2">
-                    <h1>Displan</h1>
+                    <img src="<?= base_url('assets/img/logo.png'); ?>" alt="Displan Logo">
                 </a>
                 <img src="<?= base_url('assets/img/logo.png'); ?>" id="logo-print" alt="Logo">
                 <div id="contato-topo" class="col-md-3">

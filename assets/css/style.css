@@ -246,6 +246,10 @@ li a.carousel-control{
 .plano-box h2{
 	padding-left: 10px;
 }
+.plano-box img{
+	width: 100%;
+	height: auto;
+}
 .plano-box p, .plano-box h2{
 	text-align: left;
 }
@@ -704,6 +708,12 @@ address{
 		margin-left: 0 !important;
 		width: 100% !important;
 	}
+	.bloco-plano{
+		margin-top: -14em;
+	}
+	.plano-box{
+		width: 31% !important;
+	}
 	.operadoras{
 		margin-top: 10px;
 	}
@@ -892,7 +902,7 @@ div.navbar-header{
 		margin-top: 7.5em;
 	}
 	.title{
-		margin-top: 0;
+		margin-top: 10px;
 	}
 	.blue-title h1{
 		font-size: 2.2em !important;
@@ -910,6 +920,9 @@ div.navbar-header{
 	}
 	.operadoras{
 		margin-left: 0;
+	}
+	.plano-box{
+		width: 46.23% !important;
 	}
 	footer{
 		height: 940px;
@@ -1052,8 +1065,11 @@ div.navbar-header{
 	.breadcrumb li.active a{
 		font-size: 1.8em;
 	}
+	.a-carousel a{
+		margin-top: 180px;
+	}
 	.content{
-		margin-top: -10px;
+		margin-top: 0;
 	}
 	.title{
 		width: 100%;
@@ -1070,8 +1086,9 @@ div.navbar-header{
 	.operadora-img{
 		width: auto !important;
 	}
-	.a-carousel a{
-		margin-top: 180px;
+	.plano-box{
+		width: 100% !important;
+		margin-left: 0;
 	}
 	footer{
 		width: 115%;

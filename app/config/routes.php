@@ -42,9 +42,16 @@ $route['default_controller'] = "home";
 $route['404_override'] = '';
 
 // Rotas individuais
-$route['planos-individuais/(:any)'] = 'tabelas/individuais/$1';
-$route['planos-empresariais/(:any)'] = 'tabelas/empresariais/$1';
-$route['planos-especiais/(:any)'] = 'tabelas/especiais/$1';
+$route['planos-individuais']            = 'planos/individuais';
+$route['planos-individuais/(:any)']     = 'tabelas/individuais/$1';
+
+// Rotas empresariais
+$route['planos-empresariais']           = 'planos/empresariais';
+$route['planos-empresariais/(:any)']    = 'tabelas/empresariais/$1';
+
+// Rotas de categoria
+$route['planos-especiais']              = 'planos/especiais';
+$route['planos-especiais/(:any)']       = 'tabelas/especiais/$1';
 
 
 /* End of file routes.php */

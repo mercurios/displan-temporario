@@ -26,7 +26,7 @@ class Tabelas extends CI_Controller {
 
         $dados['breadcrumb'] = array(
             array('title' => 'Home', 'url' => '/', 'class' => ''),
-            array('title' => 'Planos individuais', 'url' => 'planos-individuais/'.$operadora, 'class' => ''),
+            array('title' => 'Planos individuais', 'url' => 'planos-individuais/', 'class' => ''),
             array('title' => $dados['operadora'][0]->name, 'url' => 'planos-individuais/'.$operadora, 'class' => 'active'),
         );
 
@@ -54,7 +54,7 @@ class Tabelas extends CI_Controller {
 
         $dados['breadcrumb'] = array(
             array('title' => 'Home', 'url' => '/', 'class' => ''),
-            array('title' => 'Planos empresariais', 'url' => 'planos-empresariais/'.$operadora, 'class' => ''),
+            array('title' => 'Planos empresariais', 'url' => 'planos-empresariais/', 'class' => ''),
             array('title' => $dados['operadora'][0]->name, 'url' => 'planos-empresariais/'.$operadora, 'class' => 'active'),
         );
 
@@ -89,7 +89,7 @@ class Tabelas extends CI_Controller {
 
         $dados['breadcrumb'] = array(
             array('title' => 'Home', 'url' => '/', 'class' => ''),
-            array('title' => 'Planos para profissionais', 'url' => 'planos-especiais/'.$slug, 'class' => ''),
+            array('title' => 'Planos para profissionais', 'url' => 'planos-especiais/', 'class' => ''),
             array('title' => $dados['categoria'][0]->name, 'url' => 'planos-especiais/'.$slug, 'class' => 'active'),
         );
 

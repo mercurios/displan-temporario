@@ -26,6 +26,11 @@ class Planos extends CI_Controller
             'metaTags'   => $metaTags
         );
 
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos individuais', 'url' => 'planos-individuais/', 'class' => 'active')
+        );
+
         $this->load->view('inc/header', $dados);
         $this->load->view('planos/individuais', $dados);
         $this->load->view('inc/footer');
@@ -46,6 +51,12 @@ class Planos extends CI_Controller
             'metaTags'   => $metaTags
         );
 
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos empresariais', 'url' => 'planos-empresariais/', 'class' => 'active')
+        );
+
+
         $this->load->view('inc/header', $dados);
         $this->load->view('planos/empresariais', $dados);
         $this->load->view('inc/footer');
@@ -65,6 +76,12 @@ class Planos extends CI_Controller
             'categorias' => $this->categorias->all(),
             'metaTags'   => $metaTags
         );
+
+        $dados['breadcrumb'] = array(
+            array('title' => 'Home', 'url' => '/', 'class' => ''),
+            array('title' => 'Planos para Profissionais', 'url' => 'planos-especiais/', 'class' => 'active')
+        );
+
 
         $this->load->view('inc/header', $dados);
         $this->load->view('planos/especiais', $dados);

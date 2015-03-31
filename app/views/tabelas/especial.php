@@ -102,6 +102,9 @@
                                     <h5>Informações adicionais</h5>
                                     <?= $t->info; ?>
                                 </div>
+                                <div class="share col-md-12">
+                                    <div class="fb-share-button" data-href="<?= base_url($b['url']) ?>" data-layout="button_count"></div>
+                                </div>
                             </div>
                             <div id="tellus" class="col-md-9">
                                 <h3>GOSTOU? LIGUE AGORA (81) 3222.0506</h3>

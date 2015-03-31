@@ -58,9 +58,9 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planos Individuais <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+                            <li class="droponHover">
+                                <a href="<?= base_url('planos-individuais') ?>" class="dropdown-toggle">Planos Individuais <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
                                     <?php foreach ($operadoras as $o) : ?>
                                         <?php
                                         $cat = unserialize($o->categoria);
@@ -71,9 +71,9 @@
                                     <?php endforeach; ?>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planos Empresariais <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+                            <li class="droponHover">
+                                <a href="<?= base_url('planos-empresariais') ?>" class="dropdown-toggle">Planos Empresariais <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
                                     <?php foreach ($operadoras as $o) : ?>
                                         <?php
                                         $cat = unserialize($o->categoria);
@@ -84,9 +84,9 @@
                                     <?php endforeach; ?>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planos para Profissionais <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
+                            <li class="droponHover">
+                                <a href="<?= base_url('planos-especiais') ?>" class="dropdown-toggle">Planos para Profissionais <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
                                     <?php foreach ($categorias as $c) : ?>
                                         <li><a href="<?= base_url('planos-especiais/' . $c->slug) ?>"><?= $c->name ?></a></li>
                                     <?php endforeach; ?>

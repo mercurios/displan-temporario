@@ -1,5 +1,4 @@
 
-
 <?php if(!empty($this->uri->segment(1))) : ?>
 
 <!-- BREADCRUMBS -->

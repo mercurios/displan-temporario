@@ -12,16 +12,16 @@
 
     <!--TAGS do FACEBOOK-->
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="<?= base_url(uri_string()); ?>" />
     <meta property="og:title" content="<?= $metaTags['title'] ?>" />
     <meta property="og:site_name" content="Displan Saúde" />
     <meta property="og:description" content="<?= $metaTags['description'] ?>" />
-    <meta property="og:type" content="website" />
     <!--FACE THUMBNAIL-->
-    <meta property="og:image" content="www.displansaude.com/assets/img/logo.png" />
-    <meta property="og:image:type" content="www.displansaude.com/assets/img/logo.png" />
-    <meta property="og:image:width" content="140" />
-    <meta property="og:image:height" content="85" />
+    <meta property="og:image" content="http://www.displansaude.com/assets/img/logo-face.png" />
+    <meta property="og:image:type" content="http://www.displansaude.com/assets/img/logo-face.png" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
     <!--END FACE TAGS-->
 
     <!-- Style -->

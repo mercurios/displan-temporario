@@ -24,7 +24,7 @@ class CI_Images
 	 	$imagem_ext = $pathinfo['extension'];
 
 	 	// Gera a miniatura
-	 	$imagem_thumb = dirname( $path ) . '/thumb/' . $imagem_name . '_' . $height . '_' . $width . '.' . $imagem_ext;
+	 	$imagem_thumb = dirname( $path ) . '/thumb/' . $imagem_name . '-' . $height . '-' . $width . '.' . $imagem_ext;
 
 	 	// Verifica se já existe uma thumbnail criada, se não, cria uma nova.
 	 	if (!file_exists($imagem_thumb)) {

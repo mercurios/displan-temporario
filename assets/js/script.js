@@ -1,8 +1,29 @@
+
 $(document).ready(function() {
 
+    // Use jQuery via $f(...)
 	var $f = jQuery.noConflict();
 
-     // Use jQuery via $f(...)
+    // Slider
+    $f('.carousel').carousel({
+        interval: 5000
+    });
+
+    // Carregamento assíncrono das imagens
+    $f(function() {
+        setTimeout(function() {
+            $f('div[data-img-src]').each(function() {
+ 
+                var src = $f(this).attr('data-img-src');
+ 
+                $f('<img>')
+                    .attr('src', src)
+                    .addClass('banner span12')
+                    .appendTo(this);
+            });
+        }, 200);
+    });
+
     $f('.btnAbrir').bind('click', function(){
         if ($f(this).parents(".full").children(".mini").attr('data-estado') == 'fechado'){
             $f(this).parents(".full").children(".mini").addClass('listaAberta');
@@ -43,9 +64,4 @@ $(document).ready(function() {
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
-    
-    // Slider
-    $('.carousel').carousel({
-        interval: 5000
-    })
 });

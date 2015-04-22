@@ -34,5 +34,9 @@ class Home extends CI_Controller
             'categorias' => $this->categorias->all(),
             'metaTags'   => $metaTags
         ];
+
+        $this->load->view('inc/header', $dados);		
+        $this->load->view('home/index', $dados);		
+        $this->load->view('inc/footer');
     }   
 }

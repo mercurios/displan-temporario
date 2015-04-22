@@ -134,5 +134,8 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    Time: <?php echo $this->benchmark->elapsed_time();?> <br>
+    Memoria: <?php echo $this->benchmark->memory_usage();?>
 </body>
 </html>

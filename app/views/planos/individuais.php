@@ -31,13 +31,7 @@
                 <p class="explain">Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família. Faça um plano de saúde e garanta já sua saúde e de sua família.</p>
             </div>
 
-            <?php
-            foreach ($operadoras as $o) :
-
-                $cat = unserialize($o->categoria);
-
-                if (in_array('individuais', $cat)) :
-            ?>
+            <?php foreach ($operadoras as $o) : ?>
 
             <div class="plano-box border-right col-md-3">
                 <h2 class="titulo-pequeno"><?= $o->name ?></h2>
@@ -48,10 +42,7 @@
                 </div>
             </div>
 
-            <?php
-                endif;
-            endforeach;
-            ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

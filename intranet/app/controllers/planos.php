@@ -2,6 +2,8 @@
 
 class Planos extends CI_Controller
 {
+    private $userData;
+
     /**
      * Verifica se fez o login
      * Carrega os models
@@ -11,6 +13,9 @@ class Planos extends CI_Controller
         parent::__construct();
 
         checkAuth();
+
+        $userdata = $this->session->all_userdata();
+        $this->userData = $userdata['logged_in'];
 
         $this->load->model('Operadora_model', 'operadoras');
         $this->load->model('Plano_model', 'planos');
@@ -53,7 +58,7 @@ class Planos extends CI_Controller
 
         if ($this->planos->save($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Cadastrou o plano (' . $this->input->post('name') .')');
+            $this->logs->save($this->userData['name'], 'Cadastrou o plano (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Plano cadastrado com sucesso!');
             redirect('planos');
@@ -94,7 +99,7 @@ class Planos extends CI_Controller
 
         if ($this->planos->update($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou o plano (' . $this->input->post('name') .')');
+            $this->logs->save($this->userData['name'], 'Atualizou o plano (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Plano atualizado com sucesso!');
             redirect('planos');
@@ -118,7 +123,7 @@ class Planos extends CI_Controller
         if ($this->planos->delete($id)) {
 
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Deletou uma plano. (' .$dados[0]->name. ')');
+            $this->logs->save($this->userData['name'], 'Deletou uma plano. (' .$dados[0]->name. ')');
 
             $this->session->set_flashdata('msgSuccess', 'Plano deletado com sucesso!');
             redirect('planos');

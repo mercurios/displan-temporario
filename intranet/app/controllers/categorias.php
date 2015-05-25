@@ -2,11 +2,16 @@
 
 class Categorias extends CI_Controller {
 
+    private $userData;
+
     public function __construct()
     {
         parent::__construct();
 
         checkAuth();
+
+        $userdata = $this->session->all_userdata();
+        $this->userData = $userdata['logged_in'];
 
         $this->load->model('Categoria_model', 'categorias');
     }
@@ -36,7 +41,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->save($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Cadastrou a categoria (' . $this->input->post('name') . ')');
+            $this->logs->save($this->userData['name'], 'Cadastrou a categoria (' . $this->input->post('name') . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria cadastrada com sucesso!');
             redirect('categorias');
@@ -72,7 +77,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->update($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou a categoria (' . $this->input->post('name') . ')');
+            $this->logs->save($this->userData['name'], 'Atualizou a categoria (' . $this->input->post('name') . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria atualizada com sucesso!');
             redirect('categorias');
@@ -92,7 +97,7 @@ class Categorias extends CI_Controller {
 
         if ($this->categorias->delete($id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Deletou a categoria (' . $resultado[0]->name . ')');
+            $this->logs->save($this->userData['name'], 'Deletou a categoria (' . $resultado[0]->name . ')');
 
             $this->session->set_flashdata('msgSuccess', 'Categoria deletada com sucesso!');
             redirect('categorias');

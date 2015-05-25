@@ -2,6 +2,7 @@
 
 class Operadoras extends CI_Controller
 {
+    private $userData;
 
     /**
      * Verifica se fez o login
@@ -11,9 +12,10 @@ class Operadoras extends CI_Controller
     {
         parent::__construct();
 
-        $userData = $this->session->userdata('logged_in');
-
         checkAuth();
+
+        $userdata = $this->session->all_userdata();
+        $this->userData = $userdata['logged_in'];
 
         $this->load->model('Operadora_model', 'operadora');
     }
@@ -96,7 +98,7 @@ class Operadoras extends CI_Controller
 
             if ($this->operadora->save($dados)) {
                 $this->load->library('Logs');
-                $this->logs->save($userData['name'], 'Cadastrou a operadora (' . $this->input->post('name') . ')');
+                $this->logs->save($this->userData['name'], 'Cadastrou a operadora (' . $this->input->post('name') . ')');
 
                 $this->session->set_flashdata('msgSuccess', 'Operadora cadastrada com sucesso!');
                 redirect('operadoras');
@@ -153,7 +155,7 @@ class Operadoras extends CI_Controller
 
             if ($this->operadora->update($dados, $id)) {
                 $this->load->library('Logs');
-                $this->logs->save($userData['name'], 'Atualizou a operadora. (' .$this->input->post('name'). ')');
+                $this->logs->save($this->userData['name'], 'Atualizou a operadora. (' .$this->input->post('name'). ')');
 
                 $this->session->set_flashdata('msgSuccess', 'Operadora atualizada com sucesso!');
                 redirect('operadoras');
@@ -180,7 +182,7 @@ class Operadoras extends CI_Controller
             unlink('../uploads/operadoras/' . $imagem);
 
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Deletou a operadora (' .$dados[0]->name. ')');
+            $this->logs->save($this->userData['name'], 'Deletou a operadora (' .$dados[0]->name. ')');
 
             $this->session->set_flashdata('msgSuccess', 'Operadora deletada com sucesso!');
             redirect('operadoras');

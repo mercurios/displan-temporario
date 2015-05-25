@@ -2,11 +2,16 @@
 
 class Users extends CI_Controller {
 
+    private $userData;
+
     public function __construct()
     {
         parent::__construct();
 
         checkAuth();
+
+        $userdata = $this->session->all_userdata();
+        $this->userData = $userdata['logged_in'];
 
         $this->load->model('User_model', 'users');
     }
@@ -50,7 +55,7 @@ class Users extends CI_Controller {
 
         if ($this->users->save($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Cadastrou um administrador (' . $this->input->post('name') .')');
+            $this->logs->save($this->userData['name'], 'Cadastrou um administrador (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Administrador cadastrado com sucesso!');
             redirect('users');
@@ -71,7 +76,7 @@ class Users extends CI_Controller {
 
         if ($this->users->update($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou um administrador (' . $this->input->post('name') .')');
+            $this->logs->save($this->userData['name'], 'Atualizou um administrador (' . $this->input->post('name') .')');
 
             $this->session->set_flashdata('msgSuccess', 'Administrador atualizado com sucesso!');
             redirect('users');
@@ -98,7 +103,7 @@ class Users extends CI_Controller {
                 // Deleta, destroi a sessao e redireciona
                 if ($this->users->delete($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($userData['name'], 'Se auto deletou o.O');
+                    $this->logs->save($this->userData['name'], 'Se auto deletou o.O');
 
                     $this->session->sess_destroy();
                     redirect('auth');
@@ -109,7 +114,7 @@ class Users extends CI_Controller {
             } else {
                 if ($this->users->delete($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($userData['name'], 'Deletou um administrador (' . $user[0]->name .')');
+                    $this->logs->save($this->userData['name'], 'Deletou um administrador (' . $user[0]->name .')');
 
                     $this->session->set_flashdata('msgSuccess', 'Administrador deletado com sucesso!');
                     redirect('users');

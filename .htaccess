@@ -1,10 +1,3 @@
-### PHP
-<IfModule mod_rewrite.c>
-	RewriteEngine on
-	RewriteCond $1 !^(index\.php|assets|intranet|uploads|robots\.txt|sitemap\.xml)
-	RewriteRule ^(.*)$ index.php/$1 [L]
-	AddHandler application/x-httpd-php55  .php55 .php
-</IfModule>
 
 #### Expires By Type
 <IfModule mod_expires.c>
@@ -24,4 +17,19 @@
     <FilesMatch "\\.(ico|jpeg|png|gif|swf|woff)$">
         Header set Cache-Control "max-age=29030400, private"
     </FilesMatch>
+</IfModule>
+
+### PHP
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteCond $1 !^(index\.php|assets|intranet|uploads|robots\.txt|sitemap\.xml)
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+    RewriteCond %{HTTP_HOST} !^www.displansaude.com$ [NC]
+    RewriteRule ^(.*)$ http://www.displansaude.com/ [R=301,NC,L]
+
+#     AddHandler application/x-httpd-php55  .php55 .php
+    RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+    RewriteRule .* – [F,L]
 </IfModule>

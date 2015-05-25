@@ -11,6 +11,8 @@ class Operadoras extends CI_Controller
     {
         parent::__construct();
 
+        $userData = $this->session->userdata('logged_in');
+
         checkAuth();
 
         $this->load->model('Operadora_model', 'operadora');

@@ -9,7 +9,7 @@ class CI_Images
 	public function thumb($path, $width, $height, $alt = null, $class = null, $id = null)
 	{
 		// Define a pasta da imagem
-		$path = '../uploads/' . $path;
+		$path = 'uploads/' . $path;
 
 	 	// Instacia o CI
 	 	$CI =& get_instance();
@@ -24,7 +24,7 @@ class CI_Images
 	 	$imagem_ext = $pathinfo['extension'];
 
 	 	// Gera a miniatura
-	 	$imagem_thumb = dirname( $path ) . '/thumb/' . $imagem_name . '_' . $height . '_' . $width . '.' . $imagem_ext;
+	 	$imagem_thumb = dirname( $path ) . '/thumb/' . $imagem_name . '-' . $height . '-' . $width . '.' . $imagem_ext;
 
 	 	// Verifica se já existe uma thumbnail criada, se não, cria uma nova.
 	 	if (!file_exists($imagem_thumb)) {
@@ -37,7 +37,7 @@ class CI_Images
 	 			'image_library' => 'gd2',
 	 			'source_image' 	=> $path,
 	 			'new_image' 	=> $imagem_thumb,
-	 			'maintain_ratio' => TRUE,
+	 			'maintain_ratio' => FALSE,
 	 			'height' 		=> $height,
 	 			'width' 		=> $width
 	 		);

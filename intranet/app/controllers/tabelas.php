@@ -2,11 +2,16 @@
 
 class Tabelas extends CI_Controller
 {
+    private $userData;
+
     public function __construct()
     {
         parent::__construct();
 
         checkAuth();
+
+        $userdata = $this->session->all_userdata();
+        $this->userData = $userdata['logged_in'];
 
         $this->load->model('Operadora_model', 'operadoras');
         $this->load->model('Plano_model', 'planos');
@@ -181,7 +186,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->save_individual($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Adicionou uma tabela individual.');
+            $this->logs->save($this->userData['name'], 'Adicionou uma tabela individual.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
             redirect('tabelas/listar/individuais');
@@ -227,7 +232,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->update_individual($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou uma tabela individual.');
+            $this->logs->save($this->userData['name'], 'Atualizou uma tabela individual.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
             redirect('tabelas/listar/individuais');
@@ -279,7 +284,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->save_empresarial($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Adicionou uma nova tabela empresarial');
+            $this->logs->save($this->userData['name'], 'Adicionou uma nova tabela empresarial');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
             redirect('tabelas/listar/empresariais');
@@ -331,7 +336,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->update_empresarial($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou uma nova tabela empresarial');
+            $this->logs->save($this->userData['name'], 'Atualizou uma nova tabela empresarial');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
             redirect('tabelas/listar/empresariais');
@@ -382,7 +387,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->save_especial($dados)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Adicionou uma tabela especial.');
+            $this->logs->save($this->userData['name'], 'Adicionou uma tabela especial.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela adicionada com sucesso!');
             redirect('tabelas/listar/especiais');
@@ -430,7 +435,7 @@ class Tabelas extends CI_Controller
 
         if ($this->tabelas->update_especial($dados, $id)) {
             $this->load->library('Logs');
-            $this->logs->save($userData['name'], 'Atualizou uma tabela especial.');
+            $this->logs->save($this->userData['name'], 'Atualizou uma tabela especial.');
 
             $this->session->set_flashdata('msgSuccess', 'Tabela atualizada com sucesso!');
             redirect('tabelas/listar/especiais');
@@ -448,7 +453,7 @@ class Tabelas extends CI_Controller
             case 'individual':
                 if ($this->tabelas->delete_individual($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($userData['name'], 'Deletou uma tabela individual');
+                    $this->logs->save($this->userData['name'], 'Deletou uma tabela individual');
 
                     $this->session->set_flashdata('msgSuccess', 'Tabela deletada com sucesso!');
                     redirect('tabelas/listar/individuais');
@@ -461,7 +466,7 @@ class Tabelas extends CI_Controller
             case 'empresarial':
                 if ($this->tabelas->delete_empresarial($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($userData['name'], 'Deletou uma tabela empresarial');
+                    $this->logs->save($this->userData['name'], 'Deletou uma tabela empresarial');
 
                     $this->session->set_flashdata('msgSuccess', 'Tabela deletada com sucesso!');
                     redirect('tabelas/listar/empresariais');
@@ -474,7 +479,7 @@ class Tabelas extends CI_Controller
             case 'especial':
                 if ($this->tabelas->delete_especial($id)) {
                     $this->load->library('Logs');
-                    $this->logs->save($userData['name'], 'Deletou uma tabela especial');
+                    $this->logs->save($this->userData['name'], 'Deletou uma tabela especial');
 
                     $this->session->set_flashdata('msgSuccess', 'Tabela deletada com sucesso!');
                     redirect('tabelas/listar/especiais');

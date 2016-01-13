@@ -29,7 +29,7 @@
     RewriteCond %{HTTP_HOST} !^www.displansaude.com$ [NC]
     RewriteRule ^(.*)$ http://www.displansaude.com/ [R=301,NC,L]
 
-#     AddHandler application/x-httpd-php55  .php55 .php
+     AddHandler application/x-httpd-php55  .php55 .php
     RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
     RewriteRule .* – [F,L]
-</IfModule>
+#</IfModule>
